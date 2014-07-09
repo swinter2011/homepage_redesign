@@ -1,38 +1,57 @@
 ---
-layout: landing-calltime2
+layout: default
 title: Interact with the livestream
 omit_title_suffix: true
-cssid: pulse
+cssid: calltime2
 og_title: Interact with the livestream
 og_description: Engage with MAYDAY
 ---
 
-{% capture content %}
+{% include header.html %}
 
-  <div class="page-header">
-    <h1>Engage with the livestream </h1>
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-md-8">
+      <div class="videocontent">
+        <iframe width="640" height="480" src="//www.youtube-nocookie.com/embed/HOjNW3l05gE?rel=0" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <p>
+        Some introductory text.
+      </p>
+      <p>
+        Text explaining what the Meeting Pulse Widget is.
+      </p>
+    </div>
   </div>
-  <div class="page-body videostream">
-    
-  	<div class="videocontent">
 
+  <div class="row">
 
-
-      <iframe width="640" height="480" src="//www.youtube-nocookie.com/embed/HOjNW3l05gE?rel=0" frameborder="0" allowfullscreen></iframe>
-
-     <div class="mp">
+    <div class="col-md-8">
+      <div class="mp">
         <div class="mpframe">
           <iframe width="640" height="530" id="mpframe" src="https://www.meetingpulse.net/app/attendee.html?mid=calltime3&embed_mode=on" frameborder="0"></iframe>
         </div>
       </div>
-      Go to "questions" to ask and upvote questions.
-      Rude or inappropriate questions will be deleted.
-      <h3>Next Call Time at 9 p.m. EST, Thursday, July 10.<h3>
-      <h4>Before the meeting begins, you can use the comments section below to ask questions.</h4>
-      <P>We'll start off the interview with the highest voted questions submitted in the comments. During the event, we will take live questions.</P>
-    </div>  
-     {% include discus_code.html %}
+    </div>
 
-{% endcapture %}
+    <div class="col-md-4">
+      <button class="button" onclick="$('#chat').toggle();">Join the Chat</button>
+      <iframe style="display:none;" id="chat" height="530" src="//webchat.freenode.net?channels=%23mayone&uio=MTM9ZmFsc2U1b"></iframe>
+    </div>
 
-{% include pledgeSubpage-newpledge.html %}
+  </div>
+
+  <div class="row">
+    <div class="subpage-content col-md-8">
+{% include discus_code.html %}
+    </div>
+  </div>
+
+</div>
+
+{% include footer.html %}
