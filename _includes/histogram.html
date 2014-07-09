@@ -88,23 +88,26 @@
 <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
 <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css' rel='stylesheet' />
 <script>
+
 function getKey(collection){
   return _.chain(collection)
-    .keys()
-    .filter(function(str){return str != 'NaN'})
-    .sortBy(function(str){return parseInt(str);})
+    .pairs()
+    .sortBy(function(a){return parseInt(a[0]);})
+    .map(function(a){return a[0];})
     .value();
 }
 
 function getValue(collection){
   return _.chain(collection)
-    .values()
-    .value();
+    .pairs()
+    .sortBy(function(a){return parseInt(a[0]);})
+    .map(function(a){return a[1];})
+    .value()
 }
 
 d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
   // ----------------------
-  // format data
+  // format data for graph
   // ----------------------
   var dollars = data.map(function(d){return parseInt(d.dollars)}),
       dollarCounts = _.countBy(dollars);
@@ -115,6 +118,8 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
         categoryCount:parseInt(getValue(dollarCounts)[i])
       };
   });
+
+  dollarsFormatted = _.filter(dollarsFormatted,function(d){return d.category != 'NaN';});
 
   //add states associated with each count
   var statesPerCategory = dollarsFormatted.forEach(function(d){
