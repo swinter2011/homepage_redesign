@@ -86,8 +86,21 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.9/d3.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore.js"></script>
 <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
+<script src="http://maps.stamen.com/js/tile.stamen.js?v1.3.0"></script>
 <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css' rel='stylesheet' />
 <script>
+// ----------------------
+// set up basemap
+// ----------------------
+var map = L.mapbox.map('map','',{
+  minZoom:3,
+  maxZoom:12
+}).setView([40,-98],4);
+
+var base = new L.StamenTileLayer("toner");
+
+map.addLayer(base);
+
 
 function getKey(collection){
   return _.chain(collection)
@@ -284,11 +297,4 @@ $(window).scroll(function(){
   }
 });
 
-// ----------------------
-// set up map
-// ----------------------
-L.mapbox.map('map', 'devseed.ilinehc9',{
-  minZoom:3,
-  maxZoom:12
-}).setView([40,-98],4);
 </script>
