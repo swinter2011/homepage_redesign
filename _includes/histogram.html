@@ -20,6 +20,12 @@
     position:relative;
     height:400px;
   }
+  .leaflet-popup-content {
+    font-size:12px;
+  }
+  .leaflet-popup-content b {
+    color:#cc3333;
+  }
   p {
     font-size:12px;
     margin:10px 0;
@@ -92,16 +98,83 @@
 // ----------------------
 // set up basemap
 // ----------------------
-var map = L.mapbox.map('map','',{
-  minZoom:3,
-  maxZoom:12
+var map = L.map('map',{
+  minZoom:4,
+  maxZoom:10
 }).setView([40,-98],4);
 
 var base = new L.StamenTileLayer("toner");
 
 map.addLayer(base);
 
+d3.csv('{{site.baseurl}}/data/pledges_for_map.csv',function(error,data){
+  function radius(value){
+    if (value >=0 && value <= 5){
+      return 2
+    } else if (value > 5 && value <=10) {
+      return 5
+    } else if (value > 10 && value <= 50) {
+      return 8
+    } else if (value > 50 && value <= 100) {
+      return 11
+    } else if (value > 100 && value <= 200){
+      return value / 10
+    } else if (value > 200 && value <= 500) {
+      return value / 8
+    } else if (value > 500 && value <= 1000 ){
+      return value / 7
+    } else if (value > 1000) {
+      return 150
+    }
+  }
+  // filter out invalid zipcode
+  var valid = data.filter(function(d){
+    return d.zip.length=== 5 && d.longitude.length != 0;
+  })
 
+  var features = valid.map(function(d){
+    return {
+      'type':'Feature',
+      'geometry':{
+        'type':'Point',
+        'coordinates':[parseFloat(d.longitude),parseFloat(d.latitude)]
+      },
+      'properties':{
+        'zip':d.zip,
+        'count':parseInt(d.count),
+        'dollars':parseInt(d.dollars)
+      }
+    }
+  });
+
+  var circleStyle = {
+    color:'#cc3333',
+    fillColor:'#cc3333',
+    weight:0.8,
+    opacity:0.8,
+    fillOpacity:0.5,
+  };
+
+  var featureLayer = L.geoJson(features,{
+    pointToLayer:function(feature,latlng){
+      var circle = new L.circleMarker(latlng, circleStyle);
+      circle.setRadius(radius(feature.properties.count));
+      return circle
+    },
+    onEachFeature:function(feature,layer){
+      var popupContent = 'Zipcode ' + feature.properties.zip + ': </br>' +
+      '<b>' + feature.properties.count + '</b> Donations Totals <b>$' + feature.properties.dollars + '</b> Dollars';
+
+      layer.bindPopup(popupContent);
+    }
+  });
+
+  map.addLayer(featureLayer);
+});
+
+// ----------------------
+// set up graph
+// ----------------------
 function getKey(collection){
   return _.chain(collection)
     .pairs()
