@@ -91,10 +91,11 @@
 </style>
 <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.9/d3.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore.js"></script>
-<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
-<script src="http://maps.stamen.com/js/tile.stamen.js?v1.3.0"></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js'></script>
+<script src='{{site.baseurl}}/js/stamen.js'></script>
 <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css' rel='stylesheet' />
 <script>
+
 // ----------------------
 // set up basemap
 // ----------------------
@@ -103,30 +104,34 @@ var map = L.map('map',{
   maxZoom:10
 }).setView([40,-98],4);
 
-var base = new L.StamenTileLayer("toner");
+var base = new L.StamenTileLayer("watercolor"),
+  labels = new L.StamenTileLayer("toner-labels");
 
-map.addLayer(base);
+map.addLayer(base)
+  .addLayer(labels);
+
+function assignRadius(value){
+  if (value >=0 && value <= 5){
+    return 2
+  } else if (value > 5 && value <=10) {
+    return 5
+  } else if (value > 10 && value <= 50) {
+    return 8
+  } else if (value > 50 && value <= 100) {
+    return 11
+  } else if (value > 100 && value <= 200){
+    return value / 10
+  } else if (value > 200 && value <= 500) {
+    return value / 8
+  } else if (value > 500 && value <= 1000 ){
+    return value / 7
+  } else if (value > 1000) {
+    return 150
+  }
+}
 
 d3.csv('{{site.baseurl}}/data/pledges_for_map.csv',function(error,data){
-  function radius(value){
-    if (value >=0 && value <= 5){
-      return 2
-    } else if (value > 5 && value <=10) {
-      return 5
-    } else if (value > 10 && value <= 50) {
-      return 8
-    } else if (value > 50 && value <= 100) {
-      return 11
-    } else if (value > 100 && value <= 200){
-      return value / 10
-    } else if (value > 200 && value <= 500) {
-      return value / 8
-    } else if (value > 500 && value <= 1000 ){
-      return value / 7
-    } else if (value > 1000) {
-      return 150
-    }
-  }
+
   // filter out invalid zipcode
   var valid = data.filter(function(d){
     return d.zip.length=== 5 && d.longitude.length != 0;
@@ -158,7 +163,7 @@ d3.csv('{{site.baseurl}}/data/pledges_for_map.csv',function(error,data){
   var featureLayer = L.geoJson(features,{
     pointToLayer:function(feature,latlng){
       var circle = new L.circleMarker(latlng, circleStyle);
-      circle.setRadius(radius(feature.properties.count));
+      circle.setRadius(assignRadius(feature.properties.count));
       return circle
     },
     onEachFeature:function(feature,layer){
