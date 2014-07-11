@@ -89,12 +89,19 @@
     fill:#537288;
   }
 </style>
+<script>L_PREFER_CANVAS = true;</script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.9/d3.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore.js"></script>
 <script src='//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js'></script>
 <script src='{{site.baseurl}}/js/stamen.js'></script>
 <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css' rel='stylesheet' />
 <script>
+// ----------------------
+// notes for linked script
+// ----------------------
+// 1. for L_PREFER_CANVAS see https://github.com/Leaflet/Leaflet/issues/2153
+// 2. locally hosted stamen shim with toner-labels and toner-lines added as provider
+// 3. using mapbox.css for unobstrusive map UI
 
 // ----------------------
 // set up basemap
