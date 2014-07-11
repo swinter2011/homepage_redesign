@@ -111,12 +111,25 @@ var map = L.map('map',{
   maxZoom:10
 }).setView([40,-98],4);
 
-var base = new L.StamenTileLayer("watercolor"),
-  labels = new L.StamenTileLayer("toner-labels");
+var base = new L.StamenTileLayer('watercolor'),
+  lines = new L.StamenTileLayer('toner-lines'),
+  labels = new L.StamenTileLayer('toner-labels');
+
+labels.setOpacity(0.7);
 
 map.addLayer(base)
+  .addLayer(lines)
   .addLayer(labels);
 
+map.on('zoomend',function(){
+  if (map.getZoom() >=7) {
+    lines.setOpacity(0.5);
+  } else {
+    if (!map.hasLayer(lines)){
+      lines.setOpacity(1);
+    }
+  }
+})
 function assignRadius(value){
   if (value >=0 && value <= 5){
     return 2
@@ -182,6 +195,7 @@ d3.csv('{{site.baseurl}}/data/pledges_for_map.csv',function(error,data){
   });
 
   map.addLayer(featureLayer);
+
 });
 
 // ----------------------
