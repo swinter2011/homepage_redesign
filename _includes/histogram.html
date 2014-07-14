@@ -1,6 +1,9 @@
 <h2>Up to June 27, we've received more than 22,700 donations from across the nation.</h2>
 <div class='map-container'>
   <div id='map'></div>
+  <div id='circle-legend'>
+    Circles represent the total number of donations received from each zipcode. Select a circle to get the details.
+  </div>
 </div>
 <h2>Scroll down to see the amounts people like you have donated. Click to see where the donations come from.</h2>
 <p>
@@ -13,8 +16,16 @@
 </div>
 <style>
   .map-container {
+    position: relative;
     padding:5px;
     border:1px solid #ddd;
+  }
+  #circle-legend {
+    position: absolute;
+    right: 13px;
+    bottom: 20px;
+    width: 40%;
+    font-size: 12px;
   }
   #map {
     position:relative;
@@ -92,9 +103,8 @@
 <script>L_PREFER_CANVAS = true;</script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.9/d3.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore.js"></script>
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
 <script src='//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js'></script>
-<script src='{{site.baseurl}}/js/stamen.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css' rel='stylesheet' />
 <script>
 // ----------------------
 // notes for linked script
@@ -111,25 +121,10 @@ var map = L.map('map',{
   maxZoom:10
 }).setView([40,-98],4);
 
-var base = new L.StamenTileLayer('watercolor'),
-  lines = new L.StamenTileLayer('toner-lines'),
-  labels = new L.StamenTileLayer('toner-labels');
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+  attribution: 'Map tiles and data by OpenStreetMap, under CC BY SA.'
+}).addTo(map);
 
-labels.setOpacity(0.7);
-
-map.addLayer(base)
-  .addLayer(lines)
-  .addLayer(labels);
-
-map.on('zoomend',function(){
-  if (map.getZoom() >=7) {
-    lines.setOpacity(0.5);
-  } else {
-    if (!map.hasLayer(lines)){
-      lines.setOpacity(1);
-    }
-  }
-})
 function assignRadius(value){
   if (value >=0 && value <= 5){
     return 2
@@ -173,11 +168,11 @@ d3.csv('{{site.baseurl}}/data/pledges_for_map.csv',function(error,data){
   });
 
   var circleStyle = {
-    color:'#cc3333',
+    color:'#000000',
     fillColor:'#cc3333',
-    weight:0.8,
+    weight:0.25,
     opacity:0.8,
-    fillOpacity:0.5,
+    fillOpacity:0.5
   };
 
   var featureLayer = L.geoJson(features,{
