@@ -3,7 +3,7 @@
   <div id='map'></div>
 </div>
 <h2>Scroll down to see the amounts people like you have donated. Click to see where the donations come from.</h2>
-<p>
+<p style="display:none;">
   Rank by
   <a href='#' class='toggle' id='count'>Count of Donation</a>
   <a href='#' class='toggle' id='category'>Amount Donated</a>
@@ -57,6 +57,7 @@
     padding:0 10px 10px;
     border:1px solid #537288;
     font-size:12px;
+    background-color: white;
   }
   .states.fixed {
     position:fixed;
@@ -85,89 +86,94 @@
 </style>
 <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.9/d3.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/1.4.5/numeral.min.js"></script>
 <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
 <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css' rel='stylesheet' />
 <script>
-function getKey(collection){
-  return _.chain(collection)
-    .keys()
-    .filter(function(str){return str != 'NaN'})
-    .sortBy(function(str){return parseInt(str);})
-    .value();
-}
-
-function getValue(collection){
-  return _.chain(collection)
-    .values()
-    .value();
-}
 
 d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
+
+  data.forEach(function(d) {
+    d.dollars = parseInt(d.dollars, 10);
+  });
+
   // ----------------------
   // format data
   // ----------------------
-  var dollars = data.map(function(d){return parseInt(d.dollars)}),
-      dollarCounts = _.countBy(dollars);
 
-  var dollarsFormatted = getKey(dollarCounts).map(function(d,i){
-      return {
-        category:d,
-        categoryCount:parseInt(getValue(dollarCounts)[i])
-      };
+  // Create a kinda-log histogram bins to capture the spread of different donation sizes
+  var binThresholds = [1, 10, 20, 40, 80, 150, 300, 500, 1000, 2000, 3000, 5000, 50000],
+      histogram = (d3.layout.histogram()
+                   // each donation is bucketed by the value of the donation
+                   .value(function(d) {return d.dollars; })
+                   .bins(binThresholds))(data);
+
+  // Calculate the total value of each bucket by summing the donations inside the bucket
+  histogram.forEach(function(bucket, i) {
+    bucket.sum = d3.sum(bucket, function(d) {return d.dollars;});
+    bucket.label = numeral(bucket.x).format('$0,0');
+    bucket.rangeLabel = numeral(bucket.x).format('$0,0') + '-' +
+                        numeral(bucket.x + bucket.dx - (i === histogram.length-1 ? 0 : 1)).format('$0,0')
+    bucket.sumLabel = numeral(bucket.sum).format('$0,0');
+
+    if (i === histogram.length - 1) {
+      bucket.label += '+';
+    }
   });
 
   //add states associated with each count
-  var statesPerCategory = dollarsFormatted.forEach(function(d){
-    var associated = _.where(data,{dollars:d.category});
+  histogram.forEach(function(bucket){
+    var statesIdx = {};
+    bucket.forEach(function(donation) {
+      if (!statesIdx[donation.state]) {
+        statesIdx[donation.state] = {count: 0, sum: 0};
+      }
 
-    var states = _.chain(associated)
-      .map(function(o){return o.state})
-      .countBy()
-      .value();
-
-    d.states = getKey(states).map(function(d,i){
-      return {
-        state:d,
-        stateCount:parseInt(getValue(states)[i])
-      };
+      statesIdx[donation.state].count++;
+      statesIdx[donation.state].sum += donation.dollars;
     });
 
-    d.states = _.sortBy(d.states,function(d){
-      return -d.stateCount;
-    });
+    bucket.states = _.chain(_.keys(statesIdx))
+                    .map(function(state) {
+                      return {
+                        state: state,
+                        stateCount: statesIdx[state].count,
+                        stateSum: numeral(statesIdx[state].sum).format('$0,0')
+                      };
+                    })
+                    .sortBy(function(stateSummary) {
+                      return -stateSummary.stateCount;
+                    })
+                    .value();
   });
-
-  // index data
-  var index = d3.range(dollarsFormatted.length),
-      indexSorted = _.sortBy(index,function(i){return -dollarsFormatted[i].categoryCount;});
 
   // ----------------------
   // set up graph
   // ----------------------
-  var margin = {right:60, left:60},
+  var margin = {right:70, left:60},
     width = 500 - margin.left - margin.right,
     barHeight = 22,
-    height = barHeight * dollarsFormatted.length;
+    height = barHeight * histogram.length;
 
   var svg = d3.select('.histogram').append('svg')
     .attr('width',width + margin.left + margin.right)
-    .attr("height", height )
+    .attr('height', height )
   .append('g')
-    .attr('transform','translate(' + margin.left + ',-80)');
+    .attr('transform','translate(' + margin.left + ',0)');
 
   // cal width
   var x = d3.scale.linear()
       .range([0, width])
-      .domain([0, d3.max(dollarsFormatted,function(d){return d.categoryCount;})]);
+      .domain([0, d3.max(histogram, function(bin){return bin.sum;})]);
 
   // How many bars?
   var y = d3.scale.ordinal()
     .rangeRoundBands([0, height], .1)
-    .domain(indexSorted);
+    .domain(histogram.map(function(bin, i) {return i;}));
 
   // bind data
   var bar = svg.selectAll('.bar')
-    .data(dollarsFormatted)
+    .data(histogram)
   .enter().append('g')
     .attr('class','barGroup')
     .attr('transform', function(d, i) { return 'translate(0,' + y(i) + ')'; });
@@ -175,7 +181,7 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
   // generate bars
   bar.append('rect')
     .attr('class','bar')
-    .attr('width',function(d){return x(d.categoryCount)+2;}) // plus 2 to give small counts a visible width
+    .attr('width',function(d){return x(d.sum)+2;}) // plus 2 to give small counts a visible width
     .attr('height',y.rangeBand())
     .on('click',function(d){
       clearSelection();
@@ -191,8 +197,8 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
     .attr('x', '-60')
     .attr('y', y.rangeBand()-8)
     .attr('dy', '.35em')
-    .text(function(d) {
-        return '$' + d.category;
+    .text(function(bucket) {
+        return bucket.label;
     })
     .on('click',function(d){
       clearSelection();
@@ -205,17 +211,16 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
 
   bar.append('text')
     .attr('class','categoryCount')
-    .attr('x',function(d) { return x(d.categoryCount) + 10; })
+    .attr('x',function(d) { return x(d.sum) + 10; })
     .attr('y',y.rangeBand()-8)
     .attr('dy','.35em')
-    .text(function(d){return d.categoryCount;});
+    .text(function(d){return d.sumLabel;});
 
   d3.selectAll(".toggle").on("click", change);
 
   // ----------------------
   // events
   // ----------------------
-  var listHeight = $('.states').height();
 
   function clearSelection(){
     d3.select('.states').remove();
@@ -226,7 +231,7 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
   function addTable(object){
 
     var table = d3.select('.histogram').append('table');
-    var title = '<p>'+ object.categoryCount + ' Donations of $' + object.category + '</p>',
+    var title = '<p>'+ numeral(object.length).format('0,0') + ' Donations of ' + object.rangeLabel + '</p>',
         html = '';
 
     if ($(window).scrollTop() >= $('svg').offset().top && listHeight < $(window).height() - 100) {
@@ -271,13 +276,6 @@ $('.toggle').on('click',function(e){
   $(this).toggleClass('active');
 });
 
-$(window).scroll(function(){
-  if ($(window).scrollTop() >= $('svg').offset().top && listHeight < $(window).height() - 100) {
-    $('.states').addClass('fixed');
-  } else {
-    $('.states').removeClass('fixed');
-  }
-});
 
 // ----------------------
 // set up map
