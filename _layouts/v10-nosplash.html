@@ -24,6 +24,8 @@
 
 	<link rel="stylesheet" href="../css/reset.css" />
 	<link rel="stylesheet" href="../css/v9green.css?2" />
+	<link rel="stylesheet" href="../css/CoverPop.css">
+
 
 
 	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -72,7 +74,7 @@
 		</div>
 	</header>
 
-	      <section id="preheader">
+      <section id="preheader">
     	<div style="padding:10px; text-align:center; background-color:#f9fbfc; color:#000066; font-size:16px;" class="wrap clearfix">
         <form action="https://pledge.mayday.us/r/subscribe" method="post">Stay tuned for updates: 
           <input type="hidden" name="redirect" value="https://mayday.us/subscribe/" />
@@ -86,8 +88,9 @@
     </section>
 
 
-{% include hero.html %}
-
+	<div id="splash">
+			<img width="100%" src="/images/didit.jpg">
+	</div>
 
 	<div id="subheader">
 		<div class="wrap clearfix">
@@ -314,7 +317,7 @@
 		</div>
 	</section>
 
- 
+
 	<script>
 		// Sticky subnav
 		makeStickyNavi();
@@ -330,7 +333,12 @@
 		}
 		// Sticky subnav - end
 	</script>
-
+	<script src="../js/CoverPop.js"></script>
+	<script>
+    CoverPop.start({
+        expires: 0.01 // super short expiration (14.4 mins) for the demo
+    });
+</script>
 
 	<!-- Markup by Elegant Division (http://e-div.com) -->
          

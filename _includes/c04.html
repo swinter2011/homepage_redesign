@@ -1,0 +1,18 @@
+{% include header.html %}
+  <!--Container for Head-->
+<div class="rally full-width">  	
+<div class="container">
+	 <H1 style="text-align:center; font-family:questrial, helvetica, arial, sans serif; border-bottom:1px solid gray; margin-bottom:20px;">{{ page.candidateheadline }}</H1>
+	 <div class="row">
+          <div style="margin-bottom:10px; background: url(/images/header-background.jpg) repeat; border:1px solid #5990a9;" class="candidate-bio col-md-4"><center><img style="margin:20px;" src="{{ page.image }}"></center><BR>{{ bioblurb | markdownify }}</div>
+
+
+
+          <div class="col-md-8">{{ content | markdownify }}          
+          </div>
+      </div>
+  
+</div>
+</div>
+
+{% include footer.html %}

@@ -1,52 +1,54 @@
 ---
-layout: landing-calltime2
-title: Interact with the livestream
+layout: default
+title: Call Time with Lessig
 omit_title_suffix: true
-cssid: pulse
-og_title: Interact with the livestream
+cssid: calltime2
+og_title: Call Time with Lessig
 og_description: Engage with MAYDAY
 ---
 
-{% capture content %}
+{% include header.html %}
 
-  <div class="page-header">
-    <h1>Call Time With Lessig</h1>
-  </div>
-  <div class="page-body videostream">
+<div class="container-fluid">
+  
+  <h2 style="margin-top:30px;" class="text-center">Call Time: Lawrence Lessig and Ben Wikler</h2>
+  <div class="row row-centered">
+
+    <div class="col-md-8">
+        <iframe width="100%" height="480" src="//www.youtube.com/embed/eAIMRIW-1mY" frameborder="0" allowfullscreen></iframe>
+    </div>
     
-  	<div class="videocontent">
 
-  		<!--
+    <div class="col-md-4">
+          <iframe width="100%" height="480" id="mpframe" src="https://www.meetingpulse.net/app/attendee.html?mid=calltime3&embed_mode=on&q_o=on" frameborder="0"></iframe>
+    </div>
 
-      <iframe width="960" height="540" src="//www.youtube-nocookie.com/embed/HOjNW3l05gE?rel=0" frameborder="0" allowfullscreen></iframe>
+  </div>
 
-     <div class="mp">
-        <div class="mpframe">
-          <iframe width="640" height="530" id="mpframe" src="https://www.meetingpulse.net/app/attendee.html?mid=calltime&embed_mode=on" frameborder="0"></iframe>
-        </div>
-      </div>
-      Go to "questions" to ask and upvote questions.
-      Rude or inappropriate questions will be deleted.
-      !-->
-      <h3>Next Call Time at 9 p.m. EST, Thursday, July 10.<h3>
-               <form action="https://pledge.mayday.us/r/subscribe" method="post"><Strong>RSVP for the event:</Strong>
-          <input type="hidden" name="redirect" value="https://mayday.us/thankyouforRSVP" />
-          <input type="hidden" name="source" value="July10CallTime" />
-          <input name="email" type="text" placeholder="yourname@email.com" />
-          <button class="lilbutton" type="submit" value="subscribe" title="Submit Email" onSubmit="_gaq.push(['_trackEvent', 'Form', 'Submit', 'Front Page Email']);">RSVP
-          </button>
-        </form>
-      <h4>Before the meeting begins, you can use the comments section below to ask questions.</h4>
-      <P>We'll start off the interview with the highest voted questions submitted in the comments.</P>
-      <P>We will also continue to take live questions from the audience during the event. </P>
+  <div class="row row-centered">
 
-    </div>  <HR />
+    <div class="col-md-6 col-centered">
+      <h3 class="text-center">
+      Broadcast begins at 9:00 pm ET/6:00 pm PT
+      </h3>
+      <p>
+      Thanks for joining us! Larry and Ben will start by discussing the questions that have already been submitted and voted on in the comments below. Afterward, they'll address the top questions and comments in the live Q&A that's to the right of the video. Feel free to add or upvote questions there that you want answered, and we'll try to get to as many as possible.
+      </p>
+      
+    </div>
 
 
+  </div>
 
+  <div class="row">
+    <div class="subpage-content col-md-8">
+{% include discus_code.html %}
+<BR>
+<h4>Previous Call Times</h4>
+{% include previous-calltime.html %}
+    </div>
+  </div>
 
-     {% include discus_code.html %}
+</div>
 
-{% endcapture %}
-
-{% include pledgeSubpage-newpledge.html %}
+{% include footer.html %}
