@@ -68,13 +68,25 @@
   .states {
     border-collapse:inherit;
     position:absolute;
-    top:625px;
-    left:625px;
-    width:120px;
-    padding:0 10px 10px;
+    top:850px;
+    left:580px;
+    width:165px;
     border:1px solid #537288;
     font-size:12px;
     background-color: white;
+  }
+  .states thead tr td{
+    padding:10px;
+  }
+  .states tbody {
+    display:block;
+    padding:10px;
+    height:224px;
+    overflow-y:scroll;
+    border-top:1px solid #ddd;
+  }
+  .states tbody tr td {
+    width:60px;
   }
   .states.fixed {
     position:fixed;
@@ -349,7 +361,7 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
   function addTable(object){
 
     var table = d3.select('.histogram').append('table');
-    var title = '<p>'+ numeral(object.length).format('0,0') + ' Donations of ' + object.rangeLabel + '</p>',
+    var thead = '<thead><tr><td>'+ numeral(object.length).format('0,0') + ' Donations of ' + object.rangeLabel + '</tr></td></thead>',
         html = '';
 
     if ($(window).scrollTop() >= $('svg').offset().top && listHeight < $(window).height() - 100) {
@@ -364,7 +376,7 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
               o.stateCount + '</td></tr>';
     });
 
-    table.html(title + html);
+    table.html(thead + '<tbody>' + html +'</tbody>');
   }
 
   function change(){
