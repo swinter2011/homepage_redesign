@@ -1,3 +1,7 @@
+---
+noToc: true
+---
+
 # Suggest a Candidate
 
 ### Tell Us What Candidates MAYDAY Should Support
