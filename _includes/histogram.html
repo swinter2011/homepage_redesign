@@ -6,14 +6,27 @@
   </div>
 </div>
 <h2>Scroll down to see the amounts people like you have donated. Click to see where the donations come from.</h2>
-<p style="display:none;">
-  Rank by
-  <a href='#' class='toggle' id='count'>Count of Donation</a>
-  <a href='#' class='toggle' id='category'>Amount Donated</a>
+<p style="">
+  Show
+  <a href='#' class='toggle' data-measure='count'>Number of Donations</a>
+  <a href='#' class='toggle' data-measure='sum'>Value of Donations</a>
 </p>
 <div class='graph'>
-  <div class='histogram'></div>
+  <div class='histogram'>
+  <svg></svg>
+  <table class='states'>
+    <thead>
+      <tr>
+        <td colspan="2">
+          <p><span id="binMeasureLabel"></span></span></p>
+        </td>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  </div>
 </div>
+
 <style>
   .map-container {
     position: relative;
@@ -93,11 +106,11 @@
     top:10px;
     left:676px;
   }
-  .category {
+  .binLabel {
     cursor:pointer;
   }
-  .category:hover,
-  .category.hover {
+  .binLabel:hover,
+  .binLabel.hover {
     fill:#537288;
   }
   .bar {
@@ -236,23 +249,43 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
                    .value(function(d) {return d.dollars; })
                    .bins(binThresholds))(data);
 
-  // Calculate the total value of each bucket by summing the donations inside the bucket
+  // Parse the buckets: Calculate the different ways of measures buckets: sum, count
   histogram.forEach(function(bucket, i) {
-    bucket.sum = d3.sum(bucket, function(d) {return d.dollars;});
+    bucket.measures = {
+      nil: {
+        value: 0,
+        label: '',
+        byState: []
+      },
+      sum: {
+        value: d3.sum(bucket, function(d) {return d.dollars;})
+        // label: below
+      },
+      count: {
+        value: bucket.length
+        // label: below
+      }
+    };
+
+    bucket.measures.sum.label = numeral(bucket.measures.sum.value).format('$0,0');
+    bucket.measures.count.label = numeral(bucket.measures.count.value).format('0,0');
+
     bucket.label = numeral(bucket.x).format('$0,0');
     bucket.rangeLabel = numeral(bucket.x).format('$0,0') + '-' +
                         numeral(bucket.x + bucket.dx - (i === histogram.length-1 ? 0 : 1)).format('$0,0')
-    bucket.sumLabel = numeral(bucket.sum).format('$0,0');
+
+    bucket.measures.sum.drilldownLabel = bucket.measures.sum.label + ' worth of ' + bucket.rangeLabel + ' Donations';
+    bucket.measures.count.drilldownLabel = bucket.measures.count.label + ' Donations of ' + bucket.rangeLabel;
 
     if (i === histogram.length - 1) {
       bucket.label += '+';
     }
   });
 
-  // dollarsFormatted = _.filter(dollarsFormatted,function(d){return d.category != 'NaN';});
-
-  //add states associated with each count
-  histogram.forEach(function(bucket){
+  // subdivide each measure (sum, count) by US states associated with buckets' donations
+  // we're creating a schema: bucket.measures.<measure>.byState = [{state: {string}, label: {string}}, ...]
+  // (where each byState is sorted in desc order)
+  histogram.forEach(function(bucket) {
     var statesIdx = {};
     bucket.forEach(function(donation) {
       if (!statesIdx[donation.state]) {
@@ -263,18 +296,37 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
       statesIdx[donation.state].sum += donation.dollars;
     });
 
-    bucket.states = _.chain(_.keys(statesIdx))
-                    .map(function(state) {
-                      return {
-                        state: state,
-                        stateCount: statesIdx[state].count,
-                        stateSum: numeral(statesIdx[state].sum).format('$0,0')
-                      };
-                    })
-                    .sortBy(function(stateSummary) {
-                      return -stateSummary.stateCount;
-                    })
-                    .value();
+    var bucketByState = _.chain(_.keys(statesIdx))
+                        .map(function(state) {
+                          return {
+                            state: state,
+                            count: statesIdx[state].count,
+                            sum: statesIdx[state].sum
+                          };
+                        })
+                        .value();
+
+    bucket.measures.sum.byState = _.sortBy(bucketByState, function(stateSummary) {
+                                    return -stateSummary.sum;
+                                  })
+                                  .map(function(stateSummary) {
+                                    return {
+                                      state: stateSummary.state,
+                                      //value: stateSummary.sum,
+                                      label: numeral(stateSummary.sum).format('$0,0')
+                                    };
+                                  });
+
+    bucket.measures.count.byState = _.sortBy(bucketByState, function(stateSummary) {
+                                      return -stateSummary.count;
+                                    })
+                                    .map(function(stateSummary) {
+                                      return {
+                                        state: stateSummary.state,
+                                        //value: stateSummary.count,
+                                        label: numeral(stateSummary.count).format('0,0')
+                                      };
+                                    });
   });
 
   // ----------------------
@@ -285,16 +337,22 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
     barHeight = 22,
     height = barHeight * histogram.length;
 
-  var svg = d3.select('.histogram').append('svg')
+  var svg = d3.select('.histogram > svg')
     .attr('width',width + margin.left + margin.right)
     .attr('height', height )
   .append('g')
     .attr('transform','translate(' + margin.left + ',0)');
 
-  // cal width
-  var x = d3.scale.linear()
-      .range([0, width])
-      .domain([0, d3.max(histogram, function(bin){return bin.sum;})]);
+  // widths for each measure
+  var measureScales = {
+    nil: function(val) {return 0;},
+    sum:   d3.scale.linear()
+           .range([0, width])
+           .domain([0, d3.max(histogram, function(bin) { return bin.measures.sum.value; })]),
+    count: d3.scale.linear()
+           .range([0, width])
+           .domain([0, d3.max(histogram, function(bin) { return bin.measures.count.value; })])
+  }
 
   // How many bars?
   var y = d3.scale.ordinal()
@@ -302,28 +360,19 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
     .domain(histogram.map(function(bin, i) {return i;}));
 
   // bind data
-  var bar = svg.selectAll('.bar')
-    .data(histogram)
-  .enter().append('g')
-    .attr('class','barGroup')
-    .attr('transform', function(d, i) { return 'translate(0,' + y(i) + ')'; });
+  var binGs = svg.selectAll('.bar')
+                .data(histogram)
+              .enter().append('g')
+                .attr('class','barGroup')
+                .attr('transform', function(d, i) { return 'translate(0,' + y(i) + ')'; });
 
-  // generate bars
-  bar.append('rect')
-    .attr('class','bar')
-    .attr('width',function(d){return x(d.sum)+2;}) // plus 2 to give small counts a visible width
-    .attr('height',y.rangeBand())
-    .on('click',function(d){
-      clearSelection();
 
-      d3.select(this).classed({'hover':true,'clicked':true});
-      d3.select(this.parentNode.childNodes[1]).classed({'hover':true}); // text left
+  // Render bin and text labels el's (note: rendering with nil/0-state... changeMeasure() sets the actual sizes)
+  var currentMeasure = 'nil';
 
-      addTable(d);
-    });
-
-  bar.append('text')
-    .attr('class','category')
+  // bin labels
+  binGs.append('text')
+    .attr('class','binLabel')
     .attr('x', '-60')
     .attr('y', y.rangeBand()-8)
     .attr('dy', '.35em')
@@ -336,29 +385,77 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
       d3.select(this).classed({'hover':true});
       d3.select(this.parentNode.childNodes[0]).classed({'hover':true}); // rect
 
-      addTable(d);
+      addTable(d, currentMeasure);
     });
 
-  bar.append('text')
-    .attr('class','categoryCount')
-    .attr('x',function(d) { return x(d.sum) + 10; })
+  // generate bars
+  binGs.append('rect')
+    .attr('class','bar')
+    .attr('width', 2) // 2 to give small visible width
+    .attr('height', y.rangeBand())
+    .on('click',function(d){
+      clearSelection();
+
+      d3.select(this).classed({'hover':true,'clicked':true});
+      d3.select(this.parentNode.childNodes[1]).classed({'hover':true}); // text left
+
+      addTable(d, currentMeasure);
+    });
+
+  // bin measure labels
+  binGs.append('text')
+    .attr('class','binValueLabel')
+    .attr('x', 0)
     .attr('y',y.rangeBand()-8)
     .attr('dy','.35em')
-    .text(function(d){return d.sumLabel;});
-
-  d3.selectAll(".toggle").on("click", change);
+    .text('');
 
   // ----------------------
   // events
   // ----------------------
 
+  /**
+   * Change (and animate) the histogram to show a different measure of the bins
+   * @param {'sum' | 'count' | 'nil'} m Which measure to show
+   */
+  window.changeMeasure = function changeMeasure(m) {
+    if (currentMeasure === m)
+      return;
+    else
+      currentMeasure = m;
+
+    // define common transition
+    d3.transition()
+      .duration(750)
+
+    // apply transition to bars
+    .each(function() {
+      binGs.selectAll('rect').transition()
+      .attr('width', function(bin){return measureScales[m](bin.measures[m].value)+2;}); // plus 2 to give small counts a visible width
+    })
+
+    // apply transition to text labels
+    .each(function() {
+      binGs.selectAll('text.binValueLabel')
+        .style('opacity', 0)
+      .transition()
+        .style('opacity', 1)
+        .attr('x', function(bin) { return measureScales[m](bin.measures[m].value) + 10; })
+        .text(function(bin) { return bin.measures[m].label; })
+    });
+  };
+
   function clearSelection(){
-    d3.select('.states').remove();
+    //d3.select('.states').remove();
     d3.selectAll('rect').classed({'hover':false});
     d3.selectAll('text').classed({'hover':false});
   };
 
-  function addTable(object){
+  function addTable(binData, m){
+
+    $('#binMeasureLabel').html(binData.measures[m].drilldownLabel);
+
+    return;  //TODO: Update the table in place, not recreate it every time
 
     var table = d3.select('.histogram').append('table');
     var thead = '<thead><tr><td>'+ numeral(object.length).format('0,0') + ' Donations of ' + object.rangeLabel + '</tr></td></thead>',
@@ -379,31 +476,17 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
     table.html(thead + '<tbody>' + html +'</tbody>');
   }
 
-  function change(){
-
-    var transition = svg.transition().duration(750);
-
-    if (this.id === 'category') {
-      y.domain(index);
-    } else {
-      y.domain(indexSorted);
-    }
-
-    transition.selectAll('.barGroup')
-      .attr('transform', function(d, i) { return 'translate(0,' + y(i) + ')'; });
-  }
-
 });
 
 // ----------------------
 // page interaction
 // ----------------------
-$('#count').addClass('active');
-
 $('.toggle').on('click',function(e){
   e.preventDefault();
   $('.toggle').removeClass('active');
   $(this).toggleClass('active');
+
+  changeMeasure($(this).attr('data-measure'));
 });
 
 
