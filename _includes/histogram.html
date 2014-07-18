@@ -1,6 +1,9 @@
 <h2>Up to June 27, we've received more than 22,700 donations from across the nation.</h2>
 <div class='map-container'>
   <div id='map'></div>
+  <div id='circle-legend'>
+    Circles represent the total number of donations received from each zipcode. Select a circle to get the details.
+  </div>
 </div>
 <h2>Scroll down to see the amounts people like you have donated. Click to see where the donations come from.</h2>
 <p style="display:none;">
@@ -13,12 +16,26 @@
 </div>
 <style>
   .map-container {
+    position: relative;
     padding:5px;
     border:1px solid #ddd;
+  }
+  #circle-legend {
+    position: absolute;
+    right: 13px;
+    bottom: 20px;
+    width: 40%;
+    font-size: 12px;
   }
   #map {
     position:relative;
     height:400px;
+  }
+  .leaflet-popup-content {
+    font-size:12px;
+  }
+  .leaflet-popup-content b {
+    color:#cc3333;
   }
   p {
     font-size:12px;
@@ -51,13 +68,25 @@
   .states {
     border-collapse:inherit;
     position:absolute;
-    top:625px;
-    left:625px;
-    width:120px;
-    padding:0 10px 10px;
+    top:850px;
+    left:580px;
+    width:165px;
     border:1px solid #537288;
     font-size:12px;
     background-color: white;
+  }
+  .states thead tr td{
+    padding:10px;
+  }
+  .states tbody {
+    display:block;
+    padding:10px;
+    height:224px;
+    overflow-y:scroll;
+    border-top:1px solid #ddd;
+  }
+  .states tbody tr td {
+    width:60px;
   }
   .states.fixed {
     position:fixed;
@@ -84,12 +113,111 @@
     fill:#537288;
   }
 </style>
+<script>L_PREFER_CANVAS = true;</script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.9/d3.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/1.4.5/numeral.min.js"></script>
-<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css' rel='stylesheet' />
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+<script src='//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js'></script>
 <script>
+// ----------------------
+// set up basemap
+// ----------------------
+var map = L.map('map',{
+  minZoom:4,
+  maxZoom:10
+}).setView([40,-98],4);
+
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+  attribution: 'Map tiles and data by OpenStreetMap, under CC BY SA.'
+}).addTo(map);
+
+function assignRadius(value){
+  if (value >=0 && value <= 5){
+    return 2
+  } else if (value > 5 && value <=10) {
+    return 5
+  } else if (value > 10 && value <= 50) {
+    return 8
+  } else if (value > 50 && value <= 100) {
+    return 11
+  } else if (value > 100 && value <= 200){
+    return value / 10
+  } else if (value > 200 && value <= 500) {
+    return value / 8
+  } else if (value > 500 && value <= 1000 ){
+    return value / 7
+  } else if (value > 1000) {
+    return 150
+  }
+}
+
+d3.csv('{{site.baseurl}}/data/pledges_for_map.csv',function(error,data){
+
+  // filter out invalid zipcode
+  var valid = data.filter(function(d){
+    return d.zip.length=== 5 && d.longitude.length != 0;
+  })
+
+  var features = valid.map(function(d){
+    return {
+      'type':'Feature',
+      'geometry':{
+        'type':'Point',
+        'coordinates':[parseFloat(d.longitude),parseFloat(d.latitude)]
+      },
+      'properties':{
+        'zip':d.zip,
+        'count':parseInt(d.count),
+        'dollars':parseInt(d.dollars)
+      }
+    }
+  });
+
+  var circleStyle = {
+    color:'#000000',
+    fillColor:'#cc3333',
+    weight:0.25,
+    opacity:0.8,
+    fillOpacity:0.5
+  };
+
+  var featureLayer = L.geoJson(features,{
+    pointToLayer:function(feature,latlng){
+      var circle = new L.circleMarker(latlng, circleStyle);
+      circle.setRadius(assignRadius(feature.properties.count));
+      return circle
+    },
+    onEachFeature:function(feature,layer){
+      var popupContent = 'Zipcode ' + feature.properties.zip + ': </br>' +
+      '<b>' + feature.properties.count + '</b> Donations Totals <b>$' + feature.properties.dollars + '</b> Dollars';
+
+      layer.bindPopup(popupContent);
+    }
+  });
+
+  map.addLayer(featureLayer);
+
+});
+
+// ----------------------
+// set up graph
+// ----------------------
+function getKey(collection){
+  return _.chain(collection)
+    .pairs()
+    .sortBy(function(a){return parseInt(a[0]);})
+    .map(function(a){return a[0];})
+    .value();
+}
+
+function getValue(collection){
+  return _.chain(collection)
+    .pairs()
+    .sortBy(function(a){return parseInt(a[0]);})
+    .map(function(a){return a[1];})
+    .value()
+}
 
 d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
 
@@ -98,7 +226,7 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
   });
 
   // ----------------------
-  // format data
+  // format data for graph
   // ----------------------
 
   // Create a kinda-log histogram bins to capture the spread of different donation sizes
@@ -120,6 +248,8 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
       bucket.label += '+';
     }
   });
+
+  // dollarsFormatted = _.filter(dollarsFormatted,function(d){return d.category != 'NaN';});
 
   //add states associated with each count
   histogram.forEach(function(bucket){
@@ -231,7 +361,7 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
   function addTable(object){
 
     var table = d3.select('.histogram').append('table');
-    var title = '<p>'+ numeral(object.length).format('0,0') + ' Donations of ' + object.rangeLabel + '</p>',
+    var thead = '<thead><tr><td>'+ numeral(object.length).format('0,0') + ' Donations of ' + object.rangeLabel + '</tr></td></thead>',
         html = '';
 
     if ($(window).scrollTop() >= $('svg').offset().top && listHeight < $(window).height() - 100) {
@@ -246,7 +376,7 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
               o.stateCount + '</td></tr>';
     });
 
-    table.html(title + html);
+    table.html(thead + '<tbody>' + html +'</tbody>');
   }
 
   function change(){
@@ -277,11 +407,4 @@ $('.toggle').on('click',function(e){
 });
 
 
-// ----------------------
-// set up map
-// ----------------------
-L.mapbox.map('map', 'devseed.ilinehc9',{
-  minZoom:3,
-  maxZoom:12
-}).setView([40,-98],4);
 </script>
