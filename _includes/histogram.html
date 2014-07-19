@@ -8,8 +8,8 @@
 <h2>Scroll down to see the amounts people like you have donated. Click to see where the donations come from.</h2>
 <p style="">
   Show
-  <a href='#' class='toggle' data-measure='count'>Number of Donations</a>
-  <a href='#' class='toggle' data-measure='sum'>Value of Donations</a>
+  <a href='#' class='toggle measure-count' data-measure='count'>Number of Donations</a>
+  <a href='#' class='toggle measure-sum' data-measure='sum'>Value of Donations</a>
 </p>
 <div class='graph'>
   <div class='histogram'>
@@ -491,6 +491,22 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
     rows.append('td')
     .html(function(d) { return d.label; });
   }
+
+
+  // create scrollspy the starts the histogram when it first comes into view
+  var triggerPageY = $('div.histogram').position().top + 200;
+  function scrollspy() {
+    if (window.pageYOffset + $(window).height() < triggerPageY)
+      return;
+
+    setTimeout(function() {
+      $('.toggle.measure-count').trigger('click');
+    }, 250);
+    $(window).off('scroll', scrollspy);
+  };
+
+  $(window).on('scroll', scrollspy);
+  scrollspy(); // try it once incase user already here
 
 });
 
