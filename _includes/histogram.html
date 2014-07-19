@@ -14,17 +14,18 @@
 <div class='graph'>
   <div class='histogram'>
   <svg></svg>
+  </div>
   <table id='states-drilldown' style='display:none'>
     <thead>
       <tr>
         <td colspan="2">
-          <p><span id="binMeasureLabel"></span></span></p>
+          <p>Donations of <span id="binLabel"></span></p>
+          <div><span id="binMeasureLabel"></span></span></div>
         </td>
       </tr>
     </thead>
-    <tbody></tbody>
+    <tbody class='histogram'></tbody>
   </table>
-  </div>
 </div>
 
 <style>
@@ -78,6 +79,7 @@
     font-size:14px;
     font-family:'Questrial',Arial,sans-serif;
   }
+
   @media (max-width:1200px) and (min-width:950px) {
     #states-drilldown {
       border-collapse:inherit;
@@ -90,7 +92,6 @@
       background-color: white;
       z-index: 100;
     }
-  }
 
   #states-drilldown thead tr td{
     padding:10px;
@@ -98,8 +99,6 @@
   #states-drilldown tbody {
     display:block;
     padding:10px;
-    height:224px;
-    overflow-y:scroll;
     border-top:1px solid #ddd;
     background-color: whitesmoke;
   }
@@ -279,8 +278,8 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
     bucket.rangeLabel = numeral(bucket.x).format('$0,0') + '-' +
                         numeral(bucket.x + bucket.dx - (i === histogram.length-1 ? 0 : 1)).format('$0,0')
 
-    bucket.measures.sum.drilldownLabel = bucket.measures.sum.label + ' worth of ' + bucket.rangeLabel + ' Donations';
-    bucket.measures.count.drilldownLabel = bucket.measures.count.label + ' Donations of ' + bucket.rangeLabel;
+    bucket.measures.sum.drilldownLabel = 'Total value: ' + bucket.measures.sum.label;
+    bucket.measures.count.drilldownLabel = bucket.measures.count.label + ' donations';
 
     if (i === histogram.length - 1) {
       bucket.label += '+';
@@ -475,6 +474,7 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
 
     var m = currentMeasure;
 
+    $('#binLabel').html(binData.rangeLabel);
     $('#binMeasureLabel').html(binData.measures[m].drilldownLabel);
 
     // clear out previous rows
