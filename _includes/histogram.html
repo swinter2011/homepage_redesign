@@ -246,8 +246,8 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
   // format data for graph
   // ----------------------
 
-  // Create a kinda-log histogram bins to capture the spread of different donation sizes
-  var binThresholds = [1, 10, 20, 40, 80, 150, 300, 500, 1000, 2000, 3000, 5000, 50000],
+  // Create kinda-log approximately-doubling histogram bins to capture the spread of different donation sizes
+  var binThresholds = [1, 11, 21, 41, 81, 151, 301, 501, 1001, 2001, 3001, 5001, 50001],
       histogram = (d3.layout.histogram()
                    // each donation is bucketed by the value of the donation
                    .value(function(d) {return d.dollars; })
@@ -274,16 +274,12 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
     bucket.measures.sum.label = numeral(bucket.measures.sum.value).format('$0,0');
     bucket.measures.count.label = numeral(bucket.measures.count.value).format('0,0');
 
-    bucket.label = numeral(bucket.x).format('$0,0');
+    bucket.label = numeral(bucket.x + bucket.dx - 1).format('$0,0');
     bucket.rangeLabel = numeral(bucket.x).format('$0,0') + '-' +
-                        numeral(bucket.x + bucket.dx - (i === histogram.length-1 ? 0 : 1)).format('$0,0')
+                        numeral(bucket.x + bucket.dx - 1).format('$0,0')
 
     bucket.measures.sum.drilldownLabel = 'Total value: ' + bucket.measures.sum.label;
     bucket.measures.count.drilldownLabel = bucket.measures.count.label + ' donations';
-
-    if (i === histogram.length - 1) {
-      bucket.label += '+';
-    }
   });
 
   // subdivide each measure (sum, count) by US states associated with buckets' donations
