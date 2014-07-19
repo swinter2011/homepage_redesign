@@ -292,6 +292,9 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
   histogram.forEach(function(bucket) {
     var statesIdx = {};
     bucket.forEach(function(donation) {
+      if (!donation.state)
+        donation.state = 'n/a';
+
       if (!statesIdx[donation.state]) {
         statesIdx[donation.state] = {count: 0, sum: 0};
       }
