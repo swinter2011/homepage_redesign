@@ -14,7 +14,7 @@
 <div class='graph'>
   <div class='histogram'>
   <svg></svg>
-  <table class='states'>
+  <table id='states-drilldown' style='display:none'>
     <thead>
       <tr>
         <td colspan="2">
@@ -78,42 +78,35 @@
     font-size:14px;
     font-family:'Questrial',Arial,sans-serif;
   }
-  .states {
-    border-collapse:inherit;
-    position:absolute;
-    top:850px;
-    left:580px;
-    width:165px;
-    border:1px solid #537288;
-    font-size:12px;
-    background-color: white;
-  }
   @media (max-width:1200px) and (min-width:950px) {
-	.states {
-		position: relative;
-		top: 0;
-		left: 0;
-		width:50%
-	}
-	.states tr{
-		//display: block;
-		//float: left;
-	}
+    #states-drilldown {
+      border-collapse:inherit;
+      position:absolute;
+      top:850px;
+      left:580px;
+      width:165px;
+      border:1px solid #537288;
+      font-size:12px;
+      background-color: white;
+      z-index: 100;
+    }
   }
-  .states thead tr td{
+
+  #states-drilldown thead tr td{
     padding:10px;
   }
-  .states tbody {
+  #states-drilldown tbody {
     display:block;
     padding:10px;
     height:224px;
     overflow-y:scroll;
     border-top:1px solid #ddd;
+    background-color: whitesmoke;
   }
-  .states tbody tr td {
+  #states-drilldown tbody tr td {
     width:60px;
   }
-  .states.fixed {
+  #states-drilldown.fixed {
     position:fixed;
     top:10px;
     left:676px;
@@ -397,7 +390,7 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
       d3.select(this).classed({'hover':true});
       d3.select(this.parentNode.childNodes[0]).classed({'hover':true}); // rect
 
-      addTable(d, currentMeasure);
+      updateTable(d);
     });
 
   // generate bars
@@ -411,7 +404,7 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
       d3.select(this).classed({'hover':true,'clicked':true});
       d3.select(this.parentNode.childNodes[1]).classed({'hover':true}); // text left
 
-      addTable(d, currentMeasure);
+      updateTable(d);
     });
 
   // bin measure labels
@@ -435,6 +428,9 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
       return;
     else
       currentMeasure = m;
+
+    // update the drilldown table
+    updateTable();
 
     // define common transition
     d3.transition()
@@ -463,29 +459,37 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
     d3.selectAll('text').classed({'hover':false});
   };
 
-  function addTable(binData, m){
+  var lastBin;
+  function updateTable(binData){
+
+    if (binData && binData !== lastBin)
+      lastBin = binData;
+    else if (!binData)
+      binData = lastBin;
+    // else, we may be updating measure, re-run anyways.
+
+    if (!binData)
+      return; // no bin has been selected yet
+
+    d3.select('#states-drilldown').style('display', 'table');
+
+    var m = currentMeasure;
 
     $('#binMeasureLabel').html(binData.measures[m].drilldownLabel);
 
-    return;  //TODO: Update the table in place, not recreate it every time
+    // clear out previous rows
+    d3.select('#states-drilldown tbody').selectAll('tr').remove();
 
-    var table = d3.select('.histogram').append('table');
-    var thead = '<thead><tr><td>'+ numeral(object.length).format('0,0') + ' Donations of ' + object.rangeLabel + '</tr></td></thead>',
-        html = '';
+    //make new rows
+    var rows = d3.select('#states-drilldown tbody').selectAll('tr')
+                 .data(binData.measures[m].byState)
+               .enter().append('tr');
 
-    if ($(window).scrollTop() >= $('svg').offset().top && listHeight < $(window).height() - 100) {
-      table.attr('class','states fixed')
-    } else {
-      table.attr('class','states')
-    };
+    rows.append('td')
+    .html(function(d) { return d.state; });
 
-    object.states.forEach(function(o){
-      name = (o.state.length > 0) ? o.state : 'N/A';
-      html += '<tr><td>' + name  + '</td><td>' +
-              o.stateCount + '</td></tr>';
-    });
-
-    table.html(thead + '<tbody>' + html +'</tbody>');
+    rows.append('td')
+    .html(function(d) { return d.label; });
   }
 
 });
