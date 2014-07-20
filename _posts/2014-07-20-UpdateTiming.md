@@ -3,7 +3,7 @@ layout: post
 title: Update on timing for announcement
 pubdate: 2014-07-20
 author: Team MAYDAY
-comments: true
+comments: false
 ---
 
 Our team wanted to send you a quick update on the timing of our announcement of the district campaigns for 2014.
