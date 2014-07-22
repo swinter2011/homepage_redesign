@@ -177,10 +177,9 @@ li.step.active {
 		height: auto;
 		margin: auto;
 	}
-	
-}
-@media (max-width: 500px){
-
+	body{
+		min-width: 0;
+	}
 	.jumbotron{
 		padding: 0;
 		height: auto;
@@ -192,6 +191,8 @@ li.step.active {
 		font-size: 18px;
 		
 	}
+
+	
 }
 .step-2-container{
 display:none;
