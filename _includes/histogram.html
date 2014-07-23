@@ -83,18 +83,17 @@
     font-family:'Questrial',Arial,sans-serif;
   }
 
-  @media (max-width:1200px) and (min-width:950px) {
-    #states-drilldown {
-      border-collapse:inherit;
-      position:absolute;
-      top:850px;
-      left:580px;
-      width:165px;
-      border:1px solid #537288;
-      font-size:12px;
-      background-color: white;
-      z-index: 100;
-    }
+  #states-drilldown {
+    border-collapse:inherit;
+    position:absolute;
+    top:850px;
+    left:580px;
+    width:165px;
+    border:1px solid #537288;
+    font-size:12px;
+    background-color: white;
+    z-index: 100;
+  }
 
   #states-drilldown thead tr td{
     padding:10px;
@@ -102,17 +101,29 @@
   #states-drilldown tbody {
     display:block;
     padding:10px;
+    height: 224px;
+    overflow-y: scroll;
     border-top:1px solid #ddd;
     background-color: whitesmoke;
   }
   #states-drilldown tbody tr td {
     width:60px;
   }
-  #states-drilldown.fixed {
-    position:fixed;
-    top:10px;
-    left:676px;
+
+  @media (max-width:1200px) and (min-width:950px) {
+    #states-drilldown {
+      position: relative;
+      top: 0;
+      left: 0;
+      width:50%
+    }
+
+    #states-drilldown tbody {
+      overflow-y:visible;
+      height: initial;
+    }
   }
+
   .binLabel {
     cursor:pointer;
   }
