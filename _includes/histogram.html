@@ -509,7 +509,7 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
 
 
   // create scrollspy the starts the histogram when it first comes into view
-  var triggerPageY = $('div.histogram').position().top + 200;
+  var triggerPageY = $('div.histogram > svg').position().top + 200;
   function scrollspy() {
     if (window.pageYOffset + $(window).height() < triggerPageY)
       return;
