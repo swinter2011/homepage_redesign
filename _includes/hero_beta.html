@@ -2,16 +2,24 @@
 
 @import url(http://fonts.googleapis.com/css?family=Permanent+Marker);
 
+.herosection{
+    background-image: url("/images/usa-flag.jpg");
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    overflow:hidden;
+}
+
 .co2014hero{
-  background-image:url('/images/co2014bg.jpg');
+  max-width:960px;
+  margin:auto;
   background-repeat:no-repeat;
   overflow:hidden;
   background-size: 100% 100%;
 }
 
 .co2014hero h1 {
-  font-family:"Permanent Marker";
-  color:white;
+  font-family:"Questrial", Helvetica, Arial, Sans Serif;
+  color:black;
   text-align:center;
   font-size:60px;
   margin-left:10%;
@@ -19,8 +27,8 @@
 }
 
 .co2014hero h2 {
-  font-family:"Permanent Marker";
-  color:white;
+  font-family:"Merriweather", Georgia, Times New Roman, Serif;
+  color:black;
   text-align:center;
   font-size:40px;
 }
@@ -29,10 +37,10 @@
     width: 16%;
     margin: 0 2% 0 2%;  /*2% right +2% left = 4% margin*/
     float:left;
-    font-family:Questrial, Helvetica, Arial, Sans Serif;
+    font-family:"Merriweather", Georgia, Times New Roman, Serif;
     font-size:22px;
     text-align:center;
-    color:#FFF;
+    color:black;
 }
 
 .herocolumn img{
@@ -42,19 +50,90 @@
 .herocolumn img:hover{
     outline: 2px solid yellow;
 }
+.herocolumn-two {
+    width: 46%;
+    margin: 0 2% 0 2%;  /*2% right +2% left = 4% margin*/
+    float:left;
+    font-family:"Merriweather", Georgia, Times New Roman, Serif;
+    font-size:22px;
+    text-align:center;
+    color:black;
+}
+
+.herocolumn-two img{
+    width:100%;
+    box-shadow: 2px 2px 5px #888888;
+    background-color:blue;
+}
+
+.herocolumn-two img:hover{
+    opacity:0.8;
+
+}
+.heroheadline {
+      text-align:center;
+      font-size:70px;
+      line-height:70px;
+      padding-top:10px;
+      padding-bottom:10px;
+      margin-bottom:30px;
+
+background: rgb(30,87,153); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(30,87,153,1) 0%, rgba(41,137,216,1) 50%, rgba(32,124,202,1) 51%, rgba(125,185,232,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(50%,rgba(41,137,216,1)), color-stop(51%,rgba(32,124,202,1)), color-stop(100%,rgba(125,185,232,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+
+
+
+      color:white;
+      font-family:'Questrial', Helvetica, Arial, Sans Serif;
+}
+
+.herosubheadline {
+      text-align:center;
+      font-size:40px;
+      line-height:40px;
+      padding-top:10px;
+      padding-bottom:10px;
+      margin-top:30px;
+
+background: rgb(30,87,153); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(30,87,153,1) 0%, rgba(41,137,216,1) 50%, rgba(32,124,202,1) 51%, rgba(125,185,232,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(50%,rgba(41,137,216,1)), color-stop(51%,rgba(32,124,202,1)), color-stop(100%,rgba(125,185,232,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+
+
+
+
+      color:white;
+      font-family:'Questrial', Helvetica, Arial, Sans Serif;
+}
+.herosubheadline a{
+      color:yellow;
+      text-decoration:none;
+}
+
+.herosubheadline a:hover{
+      color:yellow;
+      text-decoration:underline;
+}
+
 
 </style>
-
+  <div class="heroheadline">OUR FIRST&nbsp;TWO PICKS OF&nbsp;2014</div>
+  <div class="herosection">
   <div class="co2014hero">
-  <h1>Meet the MAYDAY&nbsp;PAC Class&nbsp;of&nbsp;2014</h1>
-      <div class="herocolumn"><P>TX-08</P><a href="/smith"><img src="/images/smith.png"></a><P>State Sen.<BR>Matt Smith</P></div>
-      <div class="herocolumn"><P>MN-Senate</P><a href="/smith"><img src="/images/tennant.png"></a><P>Mr. David Tennant</P></div>
-      <div class="herocolumn"><P>KY-01</P><a href="/smith"><img src="/images/eccleston.png"></a><P>State Rep.<BR> Christopher Eccleston</P></div>
-      <div class="herocolumn"><P>NJ-13</P><a href="/smith"><img src="/images/hurt.png"></a><P>Atlantic City Mayor<BR>John Hurt</P></div>
-      <div class="herocolumn"><P>HI-01</P><a href="/smith"><img src="/images/mcgann.png"></a><P>Mr. Paul McGann</P></div>
-      <div style="clear:both;"></div>
 
-
-
-      <h2 style="margin:0 10% 20px 10%;">Click on the candidates to find out more about why we’ve chosen their races to make&nbsp;corruption <u>THE</u>&nbsp;issue&nbsp;of&nbsp;2014.</h2>
+      <div class="herocolumn-two"><a href="/kennedy"><img src="/images/kennedyvnixon.png"></a></div>
+      <div class="herocolumn-two"><a href="/dole"><img src="/images/dolevclinton.png"></a></div>
+  </div>
+    <div class="herosubheadline"><a href="/races">Find out more about why we chose&nbsp;these&nbsp;races</a></div>
   </div>
