@@ -1,0 +1,127 @@
+.candidate-bio {
+	font-family:"Merriweather", Georgia, Times New Roman, Sans Serif;
+	font-size:10px;
+	line-height:10px;
+	margin-bottom:10px; 
+	background: url(/images/header-background.jpg) repeat; 
+	border:1px solid #5990a9;
+	padding-top:15px;
+}
+
+.candidate-bio img {
+	margin-bottom:10px; 
+	border:1px solid #5990a9;
+}
+
+.candidate-bio p{
+	font-family:"Merriweather", Georgia, Times New Roman, Sans Serif;
+	font-size:16px;
+	line-height:16px;
+	margin-bottom:10px; 
+}
+
+.candidate-header{
+	margin-bottom:10px; 
+	color:white;
+	background-color: #313945;
+	border:1px solid #5990a9;
+	padding-left:20px;
+	padding-right:20px;
+	padding-top:10px;
+}
+.candidate-header h1, h2 {
+	font-family:"Merriweather", Georgia, Times New Roman, Sans Serif;
+	font-size:60px;
+	line-height:30px;
+}
+.candidate-header h3, h4, h5, h6 {
+	font-family:"Merriweather", Georgia, Times New Roman, Sans Serif;
+	font-size:20px;
+	line-height:15px;
+
+}
+.candidate-body {
+	padding-left:20px;
+	padding-right:20px;
+}
+
+.officialpage{
+	font-family:"Merriweather", Georgia, Times New Roman, Sans Serif;
+	font-size:20px;
+	line-height:15px;
+	padding:10px;
+background-color: #d53a38;
+border-radius: 5px;
+color: #FFF;
+font-weight: bold;
+text-align: center;
+border: none;
+display: inline-block;
+text-align:center;
+}
+
+.officialpage:hover{
+	text-decoration:none;
+	color:yellow;
+}
+
+.oppcontainer {
+	float:right;
+	width:250px;
+	margin-right:-20px;
+	margin-top:10px;
+	margin-left:20px;
+	margin-bottom:10px;
+	border:1px solid #5990a9;
+}
+.oppopp {
+	font-family:"questrial", helvetica, arial, sans serif;
+	font-size:20px;
+	line-height:20px;
+	margin-bottom:10px;
+	margin-top:0; 
+	background-color: #313945;
+	color:white;
+	padding:10px;
+}
+
+.opp {
+	float:right;
+	width:250px;
+	padding:10px;
+}
+
+.opp p{
+	font-family:"questrial", helvetica, arial, sans serif;
+	font-size:12px;
+	line-height:12px;
+	margin-bottom:10px;
+	margin-top:0; 
+}
+
+.opp img{
+	float:left;
+	width:75px;
+	margin-right:10px;
+}
+
+.opp h3{
+	font-family:"questrial", helvetica, arial, sans serif;
+	font-size:20px;
+	line-height:8px;
+	font-weight:bold;
+	margin-bottom:30px;
+}
+
+.opp h4{
+	font-family:"questrial", helvetica, arial, sans serif;
+	font-size:16px;
+	line-height:8px;
+	font-weight:bold;
+}
+
+.opp h5{
+	font-family:"questrial", helvetica, arial, sans serif;
+	font-size:14px;
+	line-height:8px;
+}
