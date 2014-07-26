@@ -5,8 +5,13 @@
 <div class="container">
 	
 	 <div class="row">
-          <div class="candidate-bio col-md-4"><img style="width:100%;" src="{{ page.image }}">
-<center><a class="officialpage" href="{{ page.officialpage }}">Official Page of {{ page.candidatename }}</a></center>
+          <div class="candidate-bio col-md-4">	          
+          <img style="width:100%;" src="{{ page.image }}">
+
+<center><a class="supportthiscandidate" href="/newpledge">Support This Campaign</a></center>
+
+          {{ bioblurb | markdownify }}
+
 <div style="margin-top:15px;"class="block">
   <div class="social" id="sidesocial">
     <div class="twitter"><a href="https://twitter.com/home?status={{ page.twitterstatus }}" title="Share on Twitter"><span>Share on Twitter</span></a></div>
@@ -18,14 +23,16 @@
   </div>
 </div>
 
-
-
-          {{ bioblurb | markdownify }}</div>
+          </div>
 
 
 
           <div class="col-md-8">
-	          <div class="candidate-header">{{ candidateheader | markdownify }}</div>
+	          <div class="candidate-header">
+	          {{ candidateheader | markdownify }}
+	          	<HR>
+	          	          <div class="rightalign"><a class="officialpage" href="{{ page.officialpage }}">Go to the official website of the {{ page.candidatename }} campaign</a></div>
+	          </div>
 
 
 	 	      <div class="candidate-body">

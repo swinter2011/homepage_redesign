@@ -28,6 +28,7 @@
 	padding-left:20px;
 	padding-right:20px;
 	padding-top:10px;
+	overflow: hidden;
 }
 .candidate-header h1, h2 {
 	font-family:"Merriweather", Georgia, Times New Roman, Sans Serif;
@@ -47,6 +48,28 @@
 
 .officialpage{
 	font-family:"Merriweather", Georgia, Times New Roman, Sans Serif;
+	font-size:12px;
+	line-height:12px;
+	color:yellow;
+font-weight: bold;
+border: none;
+display: inline-block;
+margin-bottom:10px;
+
+text-align:right;
+}
+
+.rightalign{
+	float:right;
+}
+
+.officialpage:hover{
+text-decoration:none;
+	color:white;
+}
+
+.supportthiscandidate{
+	font-family:"Merriweather", Georgia, Times New Roman, Sans Serif;
 	font-size:20px;
 	line-height:15px;
 	padding:10px;
@@ -60,7 +83,7 @@ display: inline-block;
 text-align:center;
 }
 
-.officialpage:hover{
+.supportthiscandidate:hover{
 	text-decoration:none;
 	color:yellow;
 }
