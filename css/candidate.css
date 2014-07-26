@@ -48,24 +48,19 @@
 
 .officialpage{
 	font-family:"Merriweather", Georgia, Times New Roman, Sans Serif;
-	font-size:12px;
-	line-height:12px;
-	color:yellow;
+	font-size:16px;
+	line-height:16px;
 font-weight: bold;
 border: none;
 display: inline-block;
 margin-bottom:10px;
-
-text-align:right;
 }
 
 .rightalign{
-	float:right;
+
 }
 
 .officialpage:hover{
-text-decoration:none;
-	color:white;
 }
 
 .supportthiscandidate{

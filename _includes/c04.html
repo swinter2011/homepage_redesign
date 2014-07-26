@@ -12,16 +12,9 @@
 
           {{ bioblurb | markdownify }}
 
-<div style="margin-top:15px;"class="block">
-  <div class="social" id="sidesocial">
-    <div class="twitter"><a href="https://twitter.com/home?status={{ page.twitterstatus }}" title="Share on Twitter"><span>Share on Twitter</span></a></div>
-    <div class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://mayday.us/{{ page.facebookshare }}" title="Share on Facebook"><span>Share on Facebook</span></a></div>
-    <div class="email">
-        <a href='{{ page.emailshare }}'
-        target="_blank" title="Share with Email"><span>Share with Email</span></a>
-    </div>
-  </div>
-</div>
+                <HR><a class="officialpage" href="{{ page.officialpage }}">Official website of {{ page.candidatename }}</a>
+
+
 
           </div>
 
@@ -31,7 +24,18 @@
 	          <div class="candidate-header">
 	          {{ candidateheader | markdownify }}
 	          	<HR>
-	          	          <div class="rightalign"><a class="officialpage" href="{{ page.officialpage }}">Go to the official website of the {{ page.candidatename }} campaign</a></div>
+
+	          	<div style="margin-top:15px;"class="block">
+  <div style="margin-left:auto; width:200px;" class="social" id="sidesocial">
+    <div class="twitter"><a href="https://twitter.com/home?status={{ page.twitterstatus }}" title="Share on Twitter"><span>Share on Twitter</span></a></div>
+    <div class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://mayday.us/{{ page.facebookshare }}" title="Share on Facebook"><span>Share on Facebook</span></a></div>
+    <div class="email">
+        <a style="margin-bottom: 15px;" href='{{ page.emailshare }}'
+        target="_blank" title="Share with Email"><span>Share with Email</span></a>
+    </div>
+  </div>
+</div>
+	          	    
 	          </div>
 
 
