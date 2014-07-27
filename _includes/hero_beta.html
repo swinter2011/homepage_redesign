@@ -7,7 +7,7 @@
   overflow:hidden;
   border-top:2px solid #888888;
   border-bottom:2px solid #888888;
-  padding:20px;
+  padding:20px 2% 20px 2%;
 }
 
 .reflectivehero{
@@ -36,8 +36,27 @@ max-width:400px;
 
 }
 
+.herocolumn {
+    width: 19%;
+    float:left;
+    font-family:Questrial, Helvetica, Arial, Sans Serif;
+    font-size:22px;
+    text-align:center;
+    color:#FFF;
+}
 
-.reflectivehero img:hover{
+#firstcolumn {
+  margin-left:2.5%;
+}
+
+#lastcolumn {
+  margin-right:2.5%;
+}
+
+.herocolumn img{
+    width:100%;
+}
+.herocolumn img:hover{
 opacity:0.8;
 }
 
@@ -57,9 +76,11 @@ opacity:0.8;
 
 </style>
 <div class="herobackground">
-  <div class="splashheadline">OUR FIRST&nbsp;TWO PICKS OF&nbsp;2014</div>
-    <div class="reflectivehero">
-      <img style="float:left;" src="/images/reflective_dole.png">
-      <img style="float:right;" src="/images/reflective_kennedy.png">
+  <div class="splashheadline">OUR PICKS FOR 2014</div>
+    <div name="firstcolumn" class="herocolumn"><img src="/images/dolevclinton.png"></div>
+    <div class="herocolumn"><img src="/images/kennedyvnixon.png"></div>
+    <div class="herocolumn"><img src="/images/tba.png"></div>
+    <div class="herocolumn"><img src="/images/tba.png"></div>
+    <div name="lastcolumn" class="herocolumn"><img src="/images/tba.png"></div>
     </div>
 </div>
