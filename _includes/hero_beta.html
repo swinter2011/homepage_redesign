@@ -3,54 +3,24 @@
 .herobackground{
   background-image:url(/images/chrome4.png);
   background-size:100% 100%;
-  width:100%;
   overflow:hidden;
   border-top:2px solid #888888;
   border-bottom:2px solid #888888;
-  padding:20px 2% 20px 2%;
 }
 
-.reflectivehero{
-  max-width:960px;
-  margin:auto;
-  text-align:center;
-  padding-bottom:30px;
-}
-
-
-.reflectivehero img{
-margin-right:5px;
-margin-left:5px;
-max-width:400px;
-
-}
-
-@media (max-width: 840px) {
-
-  .reflectivehero img{
-  margin-right:5px;
-  margin-left:5px;
-  max-width:350px;
-
-  }
-
+.herocolumn-container{
+    width:96%;
+    margin-left:2%;
+    margin-right:2%;
 }
 
 .herocolumn {
-    width: 19%;
+    width: 20%;
     float:left;
     font-family:Questrial, Helvetica, Arial, Sans Serif;
     font-size:22px;
     text-align:center;
     color:#FFF;
-}
-
-#firstcolumn {
-  margin-left:2.5%;
-}
-
-#lastcolumn {
-  margin-right:2.5%;
 }
 
 .herocolumn img{
@@ -77,10 +47,11 @@ opacity:0.8;
 </style>
 <div class="herobackground">
   <div class="splashheadline">OUR PICKS FOR 2014</div>
-    <div name="firstcolumn" class="herocolumn"><img src="/images/dolevclinton.png"></div>
+    <div class="herocolumn-container">
+    <div class="herocolumn"><img src="/images/dolevclinton.png"></div>
     <div class="herocolumn"><img src="/images/kennedyvnixon.png"></div>
     <div class="herocolumn"><img src="/images/tba.png"></div>
     <div class="herocolumn"><img src="/images/tba.png"></div>
-    <div name="lastcolumn" class="herocolumn"><img src="/images/tba.png"></div>
+    <div class="herocolumn"><img src="/images/tba.png"></div>
     </div>
 </div>

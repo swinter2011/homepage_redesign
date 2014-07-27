@@ -38,7 +38,7 @@
 .candidate-header h3, h4, h5, h6 {
 	font-family:"Merriweather", Georgia, Times New Roman, Sans Serif;
 	font-size:20px;
-	line-height:15px;
+	line-height:30px;
 
 }
 .candidate-body {
@@ -68,19 +68,23 @@ margin-bottom:10px;
 	font-size:20px;
 	line-height:20px;
 	padding:10px;
-background-color: #d53a38;
-border-radius: 5px;
+background: #c33 no-repeat 100% 50%;
+border-radius: 20px;
 color: #FFF;
 font-weight: bold;
 text-align: center;
 border: none;
 display: inline-block;
 text-align:center;
+padding-right: 54px;
+padding-left:20px;
+background-image: url(../images/button-array.png);
 }
 
 .supportthiscandidate:hover{
 	text-decoration:none;
-	color:yellow;
+    background-color: #b01a1a;
+    color: #FFF;
 }
 
 .oppcontainer {
