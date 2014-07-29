@@ -1,12 +1,12 @@
 {% include header.html %}
   <!--Container for Head-->
-<div class="rally full-width">  	
+<div class="rally full-width">
 <div class="container">
 	 <div class="row">
-          <div class="subpage-content col-md-8">{{content | markdownify}}</div>
-          <div class="sidebar col-md-4">{% include sidebar.html %}</div>
+          <div class="subpage-content {% unless page.hideSidebar %}col-md-8{% else %}col-md-12{% endunless %}">{{content | markdownify}}</div>
+          {% unless page.hideSidebar %}<div class="sidebar col-md-4">{% include sidebar.html %}</div>{% endunless %}
       </div>
-  
+
 </div>
 </div>
 

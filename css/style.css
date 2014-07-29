@@ -263,7 +263,7 @@ h1#page_title {
   text-decoration:underline;
 }
 
-#subscribe label {
+#subscribe label, #join_form label {
   padding-top: 15px;
 }
 
@@ -633,7 +633,7 @@ display:inline;
   max-width: 500px;
   margin: 0 auto;
 }
-#subscribe #content #submitButton {
+#subscribe #content #submitButton, #join_form #submitButton {
   border-radius: 5px;
   padding: 15px 40px;
   background-color: #d53a38;
@@ -656,6 +656,15 @@ display:inline;
    margin-left: 12%;
    margin-right: 13%;
    text-align: center;
+}
+
+label.error{
+  color:#d53a38;
+}
+
+input.error{
+  border: 1px solid #d53a38;
+  background: rgba(213,58,56,0.1);
 }
 
 .social-icons{

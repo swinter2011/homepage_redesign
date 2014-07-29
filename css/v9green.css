@@ -89,7 +89,9 @@ h2 {
 	}
 /* // Common styles - end */
 
-
+input.spinner, button.spinner{
+	background-image: url(/static/danger-spinner.gif);background:-10px middle no-repeat;
+}
 /* Site styles
 ======================================================================== */
 #header {
