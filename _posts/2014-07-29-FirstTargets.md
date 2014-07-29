@@ -22,6 +22,8 @@ In the **New Hampshire Senate GOP primary**, Rubens has pledged support for fund
 
 In the Iowa 3rd, Appel has championed reform and supports voluntary small dollar matching funds to help finance federal elections. She also supports a constitutional amendment to overturn the Citizens United ruling, and helped introduce a bill in the state senate that would have established public financing for elections in Iowa. Meanwhile Young has deep ties to special interest money, and received more money from lobbyists than from any other industry. 
 
+Fuller fact sheets on each candidate's record on reform can be found online here: [https://mayday.us/factsheet/](https://mayday.us/factsheet/)
+
 In May, the Mayday PAC launched its first crowd-funded campaign to get money out of politics. After surpassing its initial goal of raising $1 million in only 13 days – which was matched by technology entrepreneurs from all sides of the political debate – the PAC launched a second crowd-funding campaign to raise $5 million by July 4th,, which it also met. As with the first campaign, the commitments made in the second were contingent upon meeting the $5 million target. 
 
 Like other Super PACs, Mayday PAC will spend its money independently of any political candidate. Unlike other Super PACs, the names of all contributors above $200 will be reported to the Federal Election Commission. It will not accept effectively anonymous contributions from groups that hide the identities of their funders, and has recently announced plans to publish detailed contribution reports with donor names every two weeks, starting August 5.
