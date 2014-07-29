@@ -140,7 +140,7 @@ background-image: url(../images/button-array.png);
 .opp h3{
 	font-family:"questrial", helvetica, arial, sans serif;
 	font-size:20px;
-	line-height:8px;
+	line-height:20px;
 	font-weight:bold;
 	margin-bottom:30px;
 }
@@ -148,12 +148,12 @@ background-image: url(../images/button-array.png);
 .opp h4{
 	font-family:"questrial", helvetica, arial, sans serif;
 	font-size:16px;
-	line-height:8px;
+	line-height:16px;
 	font-weight:bold;
 }
 
 .opp h5{
 	font-family:"questrial", helvetica, arial, sans serif;
 	font-size:14px;
-	line-height:8px;
+	line-height:14px;
 }
