@@ -581,6 +581,7 @@ display:inline;
 			margin: 0 auto;
 			position: relative;
 			text-align: center;
+			font-size:0.6em
 		}
 		#header .logo {
 			top: -30px;
