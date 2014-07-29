@@ -1,35 +1,46 @@
 <style>
 
-.herobackground{
-  background-size:100% 100%;
-  overflow:hidden;
+.heroWrap{
+  background:#E0F0FF;
 }
 
+.herobackground{
+  overflow:hidden;
+  margin: 0 auto;
+  background:#fff;
+  width:1050px;
+}
+
+
+
 .splashheadline {
-  background: transparent url('/images/candidates/home_candidate_header.png') center 0 no-repeat;
-  text-align:center;
-  padding:15px 0 45px;
-  margin:0px;
-  color:#313945;
-  font:normal bold 41px/50px 'Merriweather', Georgia, Times New Roman, serif;
-  position:absolute;
-  width:100%;
+  background: transparent url('/images/header-background.jpg') center 0 repeat;
+  text-align: center;
+  padding: 10px 0 10px;
+  margin: 0px;
+  color: #313945;
+  font: normal bold 41px/50px 'Merriweather', Georgia, Times New Roman, serif;
+  position: absolute;
+  width: 100%;
   z-index: 200;
+  box-shadow: 0 12px 12px rgba(0,0,0,0.4);
+  border-top: 1px solid #ddd;
 }
 
 .herocolumn-container{
     width:100%;
-    padding-top:40px;
+    padding-top:60px;
+    margin: 0;
 }
 
 .herocolumn {
-  width: 20%;
+  width: 343px;
   float:left;
   font-size:22px;
   font-family:Questrial, Helvetica, Arial, Sans Serif;
   text-align:center;
   color:#FFF;
-  padding:280px 0 40px;
+  padding:281px 0 40px;
   margin-right:5px;
 }
 .herocolumn.stacked {
@@ -64,18 +75,25 @@
 
 }
 
-.herocolumn h3{
-  position:absolute;
-  right:5%;
-  top:0;
-  margin:0;
-
+.herocolumn h3 {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  margin: 0;
 }
 
-  .stateIconWrap strong{
+  .stateIconWrap strong {
     z-index: 20;
     position: relative;
-    font-size:0.7em;
+    font-size: 0.6em;
+    display: block;
+    line-height: 1em;
+    top: 13px;
+    right: 4px;
+    text-align: center;
+  }
+  .democrat .stateIconWrap strong {
+    top:10px;
   }
   .stateIconWrap span {
     font-family: StateFaceRegular;
@@ -85,13 +103,16 @@
   }
 
   .stateIconWrap span.stateIA {
-    top: -140%;
-    right: -30%;
+    top: -32px;
+    right: -17px;
+    font-size: 3em;
+    text-shadow: 0 0 0.2em rgba(244,241,232,0.5);
   }
   .stateIconWrap span.stateNH {
-    font-size: 3em;
-    top: -90%;
-    right: 15%
+    font-size: 3.5em;
+    top: -40px;
+    right: -4px;
+    text-shadow: 0 0 0.3em #313945;
   }
 
   .republican .stateIconWrap span{
@@ -142,15 +163,21 @@
   box-shadow:         inset 0 0 30px rgba(30,30,30,0.3);
   padding:10px;
   border:5px solid #fff;
+  border-width:0px 5px 5px;
   overflow:hidden;
+  background:#fff;
+  margin:0 auto;
+  width:1020px;
 }
 
-  .heroCallToAction h4{
-    font-size:1.1em;
-    float:left;
+  .heroCallToAction h4 {
+    font-size: 1.3em;
+    float: left;
+    margin: 0.3em;
   }
   .heroCallToAction form{
     float:right;
+    margin: 0.3em;
   }
 
     .heroCallToAction input{
@@ -163,12 +190,13 @@
     .heroCallToAction input[type="email"]{
       width:160px;
     }
-    .heroCallToAction input[type="number"]{
+    .heroCallToAction input[name="zipcode"]{
       width:60px;
     }
     .heroCallToAction input[type="submit"]{
       background:#313945;
       color:#f4f1e8;
+      font-weight:700;
     }
 
 @font-face {
@@ -184,17 +212,20 @@
 
 </style>
 
-<div class="herobackground">
-  <div class="splashheadline">Welcome Our Class of 2014!</div>
+
+<div class="splashheadline">Welcome Our Class of 2014!</div>
+<div class="heroWrap">
+
+  <div class="herobackground">
     <div class="herocolumn-container">
-      <a class="herocolumn" href="/smith" style="background:transparent url('/images/kennedy.jpg');background-size:cover">
+      <a class="herocolumn" href="/rubens" style="background:transparent url('/images/candidates/rubens-inset_small.jpg');background-size:cover">
         <div class="candidateLabel republican">
-          <h2>Jim Rubenss (R)</h2>
-          <h3 class="stateIconWrap"><span class="stateNH">d</span><strong>NH</strong></h3>
-          <h4>vs Jeanne Shaheen (D)</h4>
+          <h2>Jim Rubens (R)</h2>
+          <h3 class="stateIconWrap"><span class="stateNH">d</span><strong>NH<br/>SEN</strong></h3>
+          <h4>vs Scott Brown (R - Primary)</h4>
         </div>
       </a>
-      <a class="herocolumn" href="/smith" style="background:transparent url('/images/kennedy.jpg');background-size:cover">
+      <a class="herocolumn" href="/appel" style="background:transparent url('/images/candidates/appel-inset_small.jpg');background-size:cover">
         <div class="candidateLabel democrat">
           <h2>Staci Apple (D)</h2>
           <h3 class="stateIconWrap"><span class="stateIA">L</span><strong>IA-03</strong></h3>
@@ -208,16 +239,17 @@
       </div>
     </div>
   </div>
-</div>
 
-<div class="col-md-12 heroCallToAction">
-  <h4>Reduce the influence of Money in Politics. Vote with Us</h4>
-  <form action="https://pledge.mayday.us/r/subscribe" method="post" accept-charset="utf-8">
-    <input type="hidden" name="redirect" value="https://mayday.us/subscribe/" />
-    <input type="hidden" name="source" value="frontpage" />
+  <div class="col-md-12 heroCallToAction">
+    <h4>Reduce the influence of Money in Politics. Vote with Us!</h4>
+    <form action="https://pledge.mayday.us/r/subscribe" method="post" accept-charset="utf-8">
+      <input type="hidden" name="redirect" value="https://mayday.us/subscribe/" />
+      <input type="hidden" name="source" value="frontpage" />
 
-    <input type="email" id="email_input" name="email" value="" required="" placeholder="Email Address">
-    <input type="number" name="zipcode" value="" placeholder="Zip">
-    <input type="submit" id="submitButton" name="" value="I'm Commited!">
-  </form>
+      <input type="email" id="email_input" name="email" value="" required="" placeholder="Email Address">
+      <input type="text" name="zipcode" value="" placeholder="Zip">
+      <input type="submit" id="submitButton" name="" value="I'm Commited!">
+    </form>
+  </div>
+
 </div>

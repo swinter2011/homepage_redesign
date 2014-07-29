@@ -1,61 +1,59 @@
 {% include header.html %}
-  <!--Container for Head-->
+<!--Container for Head-->
 <link rel="stylesheet" type="text/css" href="/css/candidate.css">
-<div style="margin-top:20px;" class="rally full-width">  	
-<div class="container">
-	
-	 <div class="row">
-          <div class="candidate-bio col-md-4">	          
-          <img style="width:100%;" src="{{ page.image }}">
+<div style="margin-top:20px;" class="rally full-width">
 
-<center><a class="supportthiscandidate" href="{{ page.candidatepledgepage }}">Donate Now</a></center>
+  <div class="container">
+    <div class="row">
 
+
+      <div class="candidate-bio col-md-4">
+        <img style="width:100%;" src="{{ page.image }}">
+
+        <div class="col-md-12">
           {{ bioblurb | markdownify }}
 
-                <HR><a class="officialpage" href="{{ page.officialpage }}">Official website of {{ page.candidatename }}</a>
+          <hr />
+          <h4>{{ page.candidatename }} Links</h4>
+          <ul>
+            <li><a href="{{ page.officialpage }}">Official website</a></li>
+            <li><a href="{{ page.officialtwitter }}" title="Twitter">Twitter</a></li>
+            <li><a href="{{ page.officialfacebook }}" title="Facebook">Facebook</a></li>
+          </ul>
+          <hr />
+          <h3 class="row-centered">Support our fight for {{ page.candidatefirstname }}</h3>
+          <p class="row-centered"><a class="supportthiscandidate" href="{{ page.candidatepledgepage }}">Donate Now</a></p>
+        </div>
+      </div>
 
 
 
+      <div class="col-md-8">
+        <div class="candidate-header">
+          {{ candidateheader | markdownify }}
+          <hr />
+          {{ candidateraceinfo | markdownify }}
+        </div>
+
+
+        <div class="candidate-body">
+          <div class="oppcontainer">
+            <div class="oppopp">Opponent:</div>
+            <div class="opp">
+              <img src="{{ page.oppimage }}">
+              <h4>{{ page.oppname }}</h4>
+              <h5>{{ page.oppdesc }}</h5>
+
+              {{ oppblurb | markdownify}}
+            </div>
           </div>
+          {{ content | markdownify }}
+        </div>
+      </div>
 
-
-
-          <div class="col-md-8">
-	          <div class="candidate-header">
-	          {{ candidateheader | markdownify }}
-	          	<HR>
-
-	          	<div style="margin-top:15px;"class="block">
-  <div style="margin-left:auto; width:200px;" class="social" id="sidesocial">
-    <div class="twitter"><a href="https://twitter.com/home?status={{ page.twitterstatus }}" title="Share on Twitter"><span>Share on Twitter</span></a></div>
-    <div class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://mayday.us/{{ page.facebookshare }}" title="Share on Facebook"><span>Share on Facebook</span></a></div>
-    <div class="email">
-        <a style="margin-bottom: 15px;" href='{{ page.emailshare }}'
-        target="_blank" title="Share with Email"><span>Share with Email</span></a>
     </div>
   </div>
 </div>
-	          	    
-	          </div>
 
-
-	 	      <div class="candidate-body">
-			 	    <div class="oppcontainer">
-				 	    <div class="oppopp">Opponent:</div>
-						  <div class="opp">
-				          <img src="{{ page.oppimage }}">
-				          <H4>{{ page.oppname }}</H4>
-				          <H5>{{ page.oppdesc }}</H5>
-
-				          {{ oppblurb | markdownify}}</div>
-			         </div>
-
-	          {{ content | markdownify }}     
-	          </div>     
-          </div>
-      </div>
-  
-</div>
-</div>
 
 {% include footer.html %}
