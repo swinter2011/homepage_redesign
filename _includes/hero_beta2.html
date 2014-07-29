@@ -3,23 +3,27 @@
 .herobackground{
   background-size:100% 100%;
   overflow:hidden;
+  margin-bottom: 0;
 }
 
 .splashheadline {
-  background: transparent url('/images/candidates/home_candidate_header.png') center 0 no-repeat;
-  text-align:center;
-  padding:15px 0 45px;
-  margin:0px;
-  color:#313945;
-  font:normal bold 41px/50px 'Merriweather', Georgia, Times New Roman, serif;
-  position:absolute;
-  width:100%;
+  background: transparent url('/images/header-background.jpg') center 0 repeat;
+  text-align: center;
+  padding: 10px 0 10px;
+  margin: 0px;
+  color: #313945;
+  font: normal bold 41px/50px 'Merriweather', Georgia, Times New Roman, serif;
+  position: absolute;
+  width: 100%;
   z-index: 200;
+  box-shadow: 0 12px 12px rgba(0,0,0,0.4);
+  border-top: 1px solid #ddd;
 }
 
 .herocolumn-container{
     width:100%;
-    padding-top:40px;
+    padding-top:60px;
+    margin: 0;
 }
 
 .herocolumn {
@@ -29,7 +33,7 @@
   font-family:Questrial, Helvetica, Arial, Sans Serif;
   text-align:center;
   color:#FFF;
-  padding:280px 0 40px;
+  padding:281px 0 40px;
   margin-right:5px;
 }
 .herocolumn.stacked {
@@ -142,15 +146,18 @@
   box-shadow:         inset 0 0 30px rgba(30,30,30,0.3);
   padding:10px;
   border:5px solid #fff;
+  border-width:0px 5px 5px;
   overflow:hidden;
 }
 
-  .heroCallToAction h4{
-    font-size:1.1em;
-    float:left;
+  .heroCallToAction h4 {
+    font-size: 1.3em;
+    float: left;
+    margin: 0.3em;
   }
   .heroCallToAction form{
     float:right;
+    margin: 0.3em;
   }
 
     .heroCallToAction input{
@@ -211,7 +218,7 @@
 </div>
 
 <div class="col-md-12 heroCallToAction">
-  <h4>Reduce the influence of Money in Politics. Vote with Us</h4>
+  <h4>Reduce the influence of Money in Politics. Vote with Us!</h4>
   <form action="https://pledge.mayday.us/r/subscribe" method="post" accept-charset="utf-8">
     <input type="hidden" name="redirect" value="https://mayday.us/subscribe/" />
     <input type="hidden" name="source" value="frontpage" />
