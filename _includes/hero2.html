@@ -8,10 +8,8 @@
   overflow:hidden;
   margin: 0 auto;
   background:#fff;
-  width:1050px;
+  max-width:1050px;
 }
-
-
 
 .splashheadline {
   background: transparent url('/images/header-background.jpg') center 0 repeat;
@@ -34,23 +32,35 @@
 }
 
 .herocolumn {
-  width: 343px;
+  width: 32.6%;
   float:left;
   font-size:22px;
   font-family:Questrial, Helvetica, Arial, Sans Serif;
   text-align:center;
   color:#FFF;
   padding:281px 0 40px;
-  margin-right:5px;
+  margin-right:0.5%;
 }
 .herocolumn.stacked {
   padding:0;
 }
 
 .herocolumn-container .herocolumn:first-child{
-  margin-left:5px;
+  margin-left:0.5%;
 }
 
+/*.herocolumn-container .herocolumn:last-child{
+  margin-right:0px;
+}
+*/
+
+@media screen and (max-width: 800px) {
+  .herocolumn.stacked{
+    display:none;
+  }
+  .herocolumn {
+    width: 49.25%;
+}
 .herocolumn .candidateLabel{
   position:relative;
   color:#f4f1e8;
@@ -167,7 +177,7 @@
   overflow:hidden;
   background:#fff;
   margin:0 auto;
-  width:1020px;
+  max-width:1020px;
 }
 
   .heroCallToAction h4 {
