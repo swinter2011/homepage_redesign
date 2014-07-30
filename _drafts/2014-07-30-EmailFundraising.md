@@ -28,6 +28,5 @@ I'm eager to see how this experiment works. (If you like it,  [tweet](https://tw
 
 Thank you again for your support.
 
-- Lessig
 
 PS: Check out our first schwag at Zazzle! (I'm really proud we raised our $7.7+ so far with zero schwag, but everyone needs coffee mugs.) (And yes, this is an ambiguous case between fundraising and not, but here's the rule: We'll always point you to schwag!).
