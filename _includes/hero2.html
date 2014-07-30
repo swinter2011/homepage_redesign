@@ -268,7 +268,7 @@
     $('.heroCallToAction form').submit(function(e){
       e.preventDefault();
       $.cookie('userZip',$(this).find('#zipcode').val())
-        var storedZip = $.cookie('userZip');
+      $.cookie('userEmail',$(this).find('#email_input').val())
       this.submit();
     });
   });
