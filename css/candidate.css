@@ -157,3 +157,11 @@ background-image: url(../images/button-array.png);
 	font-size:14px;
 	line-height:14px;
 }
+
+.strategynotes h3{
+	font-size:16px;
+}
+
+.strategynotes p{
+	font-size:12px;
+}
