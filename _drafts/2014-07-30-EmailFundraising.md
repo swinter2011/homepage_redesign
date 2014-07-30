@@ -16,7 +16,7 @@ I wanted to try something different -- a campaign where we continue to keep you 
 
 But I may be wrong, and as more have pushed back, I've decided we should let you decide *individually* whether our asking you for money is something you'd rather we didn't do. 
 
-So here's the idea:
+So here's the idea: 
 
 If you're on our mailing list, you should have recieved an e-mail today, with a link. Clicking the link put you on our "DO NOT ASK" list. If you clicked that link, we won't ask you for money, though we'll keep you informed about our work and about the campaigns (and we may ask for non-financial help). Of course, you're still free to give. We're pretty sure you can find the website if you'd like to. But we won't send you emails with requests to contribute. That choice will be up to you.
 
