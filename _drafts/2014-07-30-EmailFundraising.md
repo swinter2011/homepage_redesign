@@ -27,6 +27,3 @@ Either way, on every email we'll give you a link to change your DO NOT ASK prefe
 I'm eager to see how this experiment works. (If you like it,  [tweet](https://twitter.com/home?status=%23MaydayPAC%20just%20asked%20me%20if%20I%20wanted%20to%20opt-out%20of%20fundraising%20emails.%20(Wish%20more%20political%20groups%20would%20do%20that.)%20http://goo.gl/ar6VoM) about it? (Or  [give one last time](/newpledge)!) And as always, I am happy to read your feedback. 
 
 Thank you again for your support.
-
-
-PS: Check out our first schwag at Zazzle! (I'm really proud we raised our $7.7+ so far with zero schwag, but everyone needs coffee mugs.) (And yes, this is an ambiguous case between fundraising and not, but here's the rule: We'll always point you to schwag!).
