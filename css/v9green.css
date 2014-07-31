@@ -1,4 +1,4 @@
-/* 
+/*
 ========================================================================
               / by --- Elegant Division (http://e-div.com)
     Markup  --- for -- http://mayday.us/
@@ -67,10 +67,10 @@ h2 {
 	padding: 0 30px;
 	border-radius: 30px;
 	overflow: hidden;
-	
-	-webkit-user-select: none;  
-	-moz-user-select: none;    
-	-ms-user-select: none;      
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
 	user-select: none;
 }
 .button:hover {
@@ -89,9 +89,6 @@ h2 {
 	}
 /* // Common styles - end */
 
-input.spinner, button.spinner{
-	background-image: url(/static/danger-spinner.gif);background:-10px middle no-repeat;
-}
 /* Site styles
 ======================================================================== */
 html{
@@ -149,7 +146,7 @@ html{
 				color: #c33;
 				word-spacing: 2px;
 			}
-			
+
 		#subheader .aside {
 			width: 264px;
 			margin-top: -4px;
@@ -200,7 +197,7 @@ html{
 		right: 0;
 		z-index: 666;
 	}
-  
+
 		#subnav li {
 			display: inline-block;
 			background: url(../images/star.png) no-repeat 100% 50%;
@@ -216,7 +213,7 @@ html{
 			#subnav a {
 				text-decoration: none;
 			}
-		
+
 #videobox {
 	padding: 46px 0 65px;
 	background: url("../images/usa-flag.jpg") no-repeat 50% 0;
@@ -249,7 +246,7 @@ html{
 			float:right;
 			margin:0 200px 0 2%;
 			}
-		
+
 #about-mayday {
 	padding: 66px 0 74px;
 	text-align: center;
@@ -258,7 +255,7 @@ html{
 	#about-mayday .btn-group {
 		margin-top: 25px;
 	}
-			
+
 #running-time {
 	padding: 56px 0 52px;
 	text-align: center;
@@ -308,21 +305,21 @@ html{
 				word-spacing: .6px;
 				line-height: 1.5em;
 			}
-			
+
 #fixing-democracy {
 	padding: 63px 0;
 	text-align: center;
 	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAGCAYAAAACEPQxAAAAHUlEQVQImWM4Y2z8n+GMsfF/hv///0MJMcc4CAEA8s8Pw3YWtQgAAAAASUVORK5CYII=) repeat-x 0 0,
 	            url("../images/usa-house.jpg") no-repeat 50% 100%,
 	            #fff;
-}		
+}
 	#fixing-democracy h2 {
 		margin-bottom: .8em;
 	}
 	#fixing-democracy .btn-group {
 		margin-top: 33px;
 	}
-			
+
 #supporters {
 	padding: 60px 0 67px;
 	text-align: center;
@@ -573,7 +570,7 @@ display:inline;
   .button {
   	font: 400 18px/35px 'Questrial', Arial, sans-serif;
   }
-  
+
 	.wrap,
 	#help-us .colls {
 		width: 94%;
@@ -595,7 +592,7 @@ display:inline;
 		#header blockquote {
 			bottom: -29px;
 		}
-			
+
 	#subheader {
 		padding: 44px 80px 64px;
 		position: relative;
@@ -612,7 +609,7 @@ display:inline;
 			}
 			#subheader .content .button {
 			}
-			
+
 		#subheader .aside {
 			width: auto;
 			float: none;
@@ -693,7 +690,7 @@ display:inline;
 				#running-time .goals dt {
 					color: #313a45;
 				}
-	
+
 	#help-us {
 		padding: 54px 0 39px;
 		font-size: 15
@@ -745,12 +742,12 @@ display:inline;
 	border:0px;
 	border-radius: 10px;
 	overflow: hidden;
-	
-	-webkit-user-select: none;  
-	-moz-user-select: none;    
-	-ms-user-select: none;      
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
 	user-select: none;
-  
+
 }
 #preheader button:hover {
 	background: #44c no-repeat 100% 50%;
@@ -769,12 +766,12 @@ display:inline;
 	border:0px;
 	border-radius: 2px;
 	overflow: hidden;
-	
-	-webkit-user-select: none;  
-	-moz-user-select: none;    
-	-ms-user-select: none;      
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
 	user-select: none;
-  
+
 }
 
 
