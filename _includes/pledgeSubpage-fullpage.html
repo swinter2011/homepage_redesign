@@ -1,17 +1,29 @@
 {% include header.html %}
   <!--Container for Head-->
 <div class="rally full-width">
-<div class="container">
   <div class="row">
-    <div class="subpage-content col-md-8">{{content | markdownify}}</div>
+    <div class="subpage-content col-md-12">{{content}}</div>
+  </div>
+  <div class="row">
     <div class="col-md-4">
       {% include pledgeform-newpledge.html %}
+    </div>
+    <div class="col-md-8">
       {% include pledge-rules.html %}
     </div>
   </div>
+</div>
 
-</div>
-</div>
+<style type="text/css" media="screen">
+  #pledgecol-sidebar .panel{
+    margin:0 10px 10px;
+    /*border:none;*/
+    border:1px solid #e1e1e1;
+  }
+  .rules{
+    border:none;
+  }
+</style>
 
 {% include footer.html %}
 <!-- /container -->
