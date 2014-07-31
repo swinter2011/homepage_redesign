@@ -1,0 +1,89 @@
+---
+layout: default
+title: MayDay.us - Change Email Preferences
+omit_title_suffix: true
+cssid: change_email_prefs
+---
+
+
+{% capture subhead %}
+
+{% endcapture %}
+
+{% capture pageid %}
+
+Change Email Preferences
+
+{% endcapture %}
+
+{% capture content %}
+
+<!-- 
+User's email address: id="user_email_address"
+Form Name: name="changeEmailPrefs"
+action: changeEmailPrefs();
+Field: "fundraiseok" - values are TRUE and FALSE. 
+-->
+
+<h1>Change e-mail preferences</h1>
+
+<p>Here, you will be able to change your e-mail preferences to opt-in or opt-out of fundraising e-mails. For more information on our policy, check out <a href="/2014/07/30/EmailFundraising/">our blog post on email fundraising</a>.</p>
+
+<p>Your E-Mail Address:&nbsp;<span id="user_email_address" style="text-weight:bold;">Email</span></p>
+
+<form name="changeEmailPrefs" action="changeEmailPrefs();" method="get">
+<input style="vertical-align: baseline;" type="radio" name="fundraiseok" value="TRUE"><label><strong>&nbsp;&nbsp;&nbsp;Send Me All E-mails Including Fundraising E-mails</strong></label><br />
+I want to recieve them and help out some more as we hit crucial milestones in our campaign leading up to Election Day.&nbsp;</span><br><BR>
+<input style="vertical-align: baseline;" type="radio" name="fundraiseok" value="FALSE"><label><strong>&nbsp;&nbsp;&nbsp;Do Not Send Me Fundraising E-mails</strong></label><br />
+I&#39;m just interested in how I can help out non-financially at this stage, as well as getting news and updates from the campaign. If I need to donate, I&#39;m pretty sure I&#39;ll remember the &quot;Mayday.US&quot; address, after all.&nbsp;</span>
+<BR><BR>
+<input type="submit" value="Submit">
+</form>
+
+
+{% endcapture %}
+
+{% include subpage_nomarkdown.html %}
+
+<script>
+
+function post_to_url(path, params, method) {
+  method = method || "POST"; // Set method to post by default, if not specified.
+
+  // The rest of this code assumes you are not using a library.
+  // It can be made less wordy if you use one.
+  var form = document.createElement("form");
+  form.setAttribute("method", method);
+  form.setAttribute("action", path);
+
+  for (var key in params) {
+    if (params.hasOwnProperty(key)) {
+      var hiddenField = document.createElement("input");
+      hiddenField.setAttribute("type", "hidden");
+      hiddenField.setAttribute("name", key);
+      hiddenField.setAttribute("value", params[key]);
+      form.appendChild(hiddenField);
+    }
+  }
+
+  document.body.appendChild(form);
+  form.submit();
+}
+
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+$(document).ready( function() {
+  var emailToUnsub = getParameterByName('unsub') || null;
+  if (emailToUnsub) {
+    var params = {'email':emailToUnsub, 'MERGE13':'No', 'redirect':'https://mayday.us/thanks_dna/'};  
+    post_to_url("https://pledge.mayday.us/r/subscribe", params);
+    // $('#emailAddress').text('(At ' + email + ')');
+  }
+});
+
+</script>
