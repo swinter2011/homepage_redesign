@@ -252,13 +252,24 @@
   <div class="col-md-12 heroCallToAction">
     <h4>Reduce the influence of Money in Politics. Vote with Us!</h4>
     <form action="https://pledge.mayday.us/r/subscribe" method="post" accept-charset="utf-8">
-      <input type="hidden" name="redirect" value="https://mayday.us/subscribe/" />
+      <input type="hidden" name="redirect" value="https://mayday.us/thank-you-for-commiting/" />
       <input type="hidden" name="source" value="frontpage" />
 
       <input type="email" id="email_input" name="email" value="" required="" placeholder="Email Address">
-      <input type="text" name="zipcode" value="" placeholder="Zip">
+      <input type="text" id="zipcode" name="zipcode" value="" placeholder="Zip">
       <input type="submit" id="submitButton" name="" value="I'm Commited!">
     </form>
   </div>
 
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.heroCallToAction form').submit(function(e){
+      e.preventDefault();
+      $.cookie('userZip',$(this).find('#zipcode').val())
+      $.cookie('userEmail',$(this).find('#email_input').val())
+      this.submit();
+    });
+  });
+</script>

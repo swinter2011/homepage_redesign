@@ -1,0 +1,85 @@
+---
+layout: default
+title: MayDay.us - Join Our Voting Block
+omit_title_suffix: true
+cssid: thank-you-for-commiting
+hideSidebar: true
+---
+
+
+{% capture subhead %}
+
+A citizen-funded super PAC, to end all super PACs.
+
+{% endcapture %}
+
+{% capture pageid %}
+
+Thank You - Mobile Number
+
+{% endcapture %}
+
+{% capture content %}
+
+<h2>Glad to have you with us!</h2>
+
+<p>The next most important thing you can do to help MAYDAY is to identify yourself as a voter committed to our issue. We've launched a "voting block for fundamental reform." Join the MAYDAY voting block &ndash; to be reminded to register, and get updates which  candidates in your district are commited to fundamental reform. </p>
+
+<div id="content" class="row" style="max-width:500px;margin:0 auto 30px">
+  <div class="row">
+    <form accept-charset="UTF-8" action="https://www.votingblocks.com/join" id="join_form" method="post" _lpchecked="1" target="voting-block-iframe">
+      <input name="utf8" type="hidden" value="✓" />
+      <input name="email" type="hidden" value="" id="email" />
+      <input id="block_id" name="block_id" type="hidden" value="4" />
+
+      <div class="row">
+        <div class="input-group input-group-lg">
+          <label>Mobile (required)</label>
+          <input id="mobile" type="tel" placeholder="MOBILE #" name="mobile" class="form-control" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-group input-group-lg">
+          <label>Zipcode</label>
+          <input id="zip" type="text" placeholder="ZIP CODE" name="zip_code" class="form-control" />
+        </div>
+      </div>
+      <div class="row">
+         <div class="input-group-btn">
+            <button id="submitButton" type="submit" class="btn btn-primary">Count My Vote!</button>
+          </div>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+{% endcapture %}
+<script type="text/javascript" charset="utf-8" async defer>
+  $(document).ready(function(){
+    $('#join_form').validate({
+      rules: {
+        mobile: {required: true, phoneUS: true },
+        zip: {required: true, minlength: 5 }
+      },
+      submitHandler: function(form) {
+        $(form).find('#submitButton').text('Loading...')
+        form.submit()
+        setTimeout(function () {
+           window.location.href = "https://mayday.us/newpledge";
+        }, 1000); //delay redirect to ensure form submission is good, since we can't test the ifame.
+      }
+    });
+    var storedData = $.cookie();
+    if(typeof storedData.userZip != 'undefined' && storedData.userZip != ''){
+      $('#zip').val(storedData.userZip);
+    }
+    if(typeof storedData.userEmail != 'undefined' && storedData.userEmail != ''){
+      $('#email').val(storedData.userEmail);
+    }
+  });
+</script>
+<!-- form is submited through invisible iframe to skirt around cross-domain issues. -->
+<iframe src="about:blank" name="voting-block-iframe" style="display:none"></iframe>
+{% include subpage.html %}
