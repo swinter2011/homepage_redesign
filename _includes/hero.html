@@ -1,57 +1,275 @@
 <style>
 
+.heroWrap{
+  background:#E0F0FF;
+}
+
 .herobackground{
-  background-image:url(/images/chrome4.png);
-  background-size:100% 100%;
   overflow:hidden;
-  border-top:2px solid #888888;
-  border-bottom:2px solid #888888;
-}
-
-.herocolumn-container{
-    width:96%;
-    margin-left:2%;
-    margin-right:2%;
-}
-
-.herocolumn {
-    width: 20%;
-    float:left;
-    font-family:Questrial, Helvetica, Arial, Sans Serif;
-    font-size:22px;
-    text-align:center;
-    color:#FFF;
-}
-
-.herocolumn img{
-    width:100%;
-}
-.herocolumn img:hover{
-opacity:0.8;
+  margin: 0 auto;
+  background:#fff;
+  max-width:1050px;
 }
 
 .splashheadline {
-      text-align:center;
-      font-size:41px;
-      line-height:50px;
-      padding-top:10px;
-      padding-bottom:10px;
-      margin-bottom:30px;
-      color:white;
-      font-weight:bold;
-      font-family:'Merriweather', Georgia, Times New Roman, serif;
+  background: transparent url('/images/header-background.jpg') center 0 repeat;
+  text-align: center;
+  padding: 10px 0 10px;
+  margin: 0px;
+  color: #313945;
+  font: normal bold 41px/50px 'Merriweather', Georgia, Times New Roman, serif;
+  position: absolute;
+  width: 100%;
+  z-index: 200;
+  box-shadow: 0 12px 12px rgba(0,0,0,0.4);
+  border-top: 1px solid #ddd;
 }
 
+.herocolumn-container{
+    width:100%;
+    padding-top:60px;
+    margin: 0;
+}
 
+.herocolumn {
+  width: 32.6%;
+  float:left;
+  font-size:22px;
+  font-family:Questrial, Helvetica, Arial, Sans Serif;
+  text-align:center;
+  color:#FFF;
+  padding:281px 0 40px;
+  margin-right:0.5%;
+}
+.herocolumn.stacked {
+  padding:0;
+}
+
+.herocolumn-container .herocolumn:first-child{
+  margin-left:0.5%;
+}
+
+.herocolumn .candidateLabel{
+  position:relative;
+  color:#f4f1e8;
+  width:94%;
+  padding: 0 3%;
+}
+
+.herocolumn img{
+  width:100%;
+}
+
+.herocolumn, .herocolumn h2, .herocolumn h3, .herocolumn h4{
+  text-align:left;
+  color:#f4f1e8;
+  text-decoration: none;
+  text-shadow:2px 2px #313945;
+}
+
+.herocolumn h2{
+  font-size:1.2em;
+  margin:0;
+}
+
+.herocolumn h3 {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  margin: 0;
+}
+
+  .stateIconWrap strong {
+    z-index: 20;
+    position: relative;
+    font-size: 0.6em;
+    display: block;
+    line-height: 1em;
+    top: 13px;
+    right: 4px;
+    text-align: center;
+  }
+  .democrat .stateIconWrap strong {
+    top:10px;
+  }
+  .stateIconWrap span {
+    font-family: StateFaceRegular;
+    font-size: 4em;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .stateIconWrap span.stateIA {
+    top: -32px;
+    right: -17px;
+    font-size: 3em;
+    text-shadow: 0 0 0.2em rgba(244,241,232,0.5);
+  }
+  .stateIconWrap span.stateNH {
+    font-size: 3.5em;
+    top: -40px;
+    right: -4px;
+    text-shadow: 0 0 0.3em #313945;
+  }
+
+  .republican .stateIconWrap span{
+    color:#cc3333;
+  }
+
+  .democrat .stateIconWrap span{
+    color:#313945;
+  }
+
+.herocolumn h4{
+  font-size:0.8em;
+  margin:0;
+}
+
+.herocolumn .candidateLabel.republican{
+  background: rgba(204,51,51,0.5);
+}
+.herocolumn .candidateLabel.democrat{
+  background: rgba(49,57,69, 0.5);
+}
+
+.herocolumn .comingSoon{
+  background: transparent 0 center;
+  background-size: cover;
+  height:124px;
+  position: relative;
+  margin-bottom: 5px;
+}
+.herocolumn .comingSoon.imageOne{background-image: url('/images/candidates/candidate_photos_fake_001.jpg');}
+.herocolumn .comingSoon.imageTwo{background-image: url('/images/candidates/candidate_photos_fake_002.jpg')}
+.herocolumn .comingSoon.imageThree{background-image: url('/images/candidates/candidate_photos_fake_003.jpg')}
+
+.herocolumn .comingSoon p {
+  background-color:rgba(204,51,51,0.5);
+  position:absolute;
+  bottom:0;
+  width:98%;
+  margin:0;
+  padding:4px 1%;
+}
+
+@media screen and (max-width: 800px) {
+  .herocolumn.stacked{
+    width:100%;
+  }
+  .herocolumn.stacked .comingSoon{
+    width:32.7%;
+    float:left;
+    margin: 0.5% 0 0 0.5%;
+  }
+  .herocolumn {
+    width: 49.25%;
+  }
+}
+
+.heroCallToAction{
+  -moz-box-shadow:    inset 0 0 30px rgba(30,30,30,0.3);
+  -webkit-box-shadow: inset 0 0 30px rgba(30,30,30,0.3);
+  box-shadow:         inset 0 0 30px rgba(30,30,30,0.3);
+  padding:10px;
+  border:5px solid #fff;
+  border-width:0px 5px 5px;
+  overflow:hidden;
+  background:#fff;
+  margin:0 auto;
+  max-width:1020px;
+}
+
+  .heroCallToAction h4 {
+    font-size: 1.3em;
+    float: left;
+    margin: 0.3em;
+  }
+  .heroCallToAction form{
+    float:right;
+    margin: 0.3em;
+  }
+
+    .heroCallToAction input{
+      background:#fff;
+      border:3px solid #313945;
+      padding:2px;
+      font-family:'Merriweather', Georgia, Times New Roman, serif;
+    }
+
+    .heroCallToAction input[type="email"]{
+      width:160px;
+    }
+    .heroCallToAction input[name="zipcode"]{
+      width:60px;
+    }
+    .heroCallToAction input[type="submit"]{
+      background:#313945;
+      color:#f4f1e8;
+      font-weight:700;
+    }
+
+@font-face {
+  font-family: 'StateFaceRegular';
+  src: url('/font/stateface-regular-webfont.eot');
+  src: url('/font/stateface-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/font/stateface-regular-webfont.woff') format('woff'),
+       url('/font/stateface-regular-webfont.ttf') format('truetype'),
+       url('/font/stateface-regular-webfont.svg#StateFaceRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 </style>
-<div class="herobackground">
-  <div class="splashheadline">OUR PICKS FOR 2014</div>
+
+
+<div class="splashheadline">Welcome Our Class of 2014!</div>
+<div class="heroWrap">
+
+  <div class="herobackground">
     <div class="herocolumn-container">
-    <div class="herocolumn"><a href="/appel"><img src="/images/appel.png"></A></div>
-    <div class="herocolumn"><a href="/rubens"><img src="/images/rubens.png"></a></div>
-    <div class="herocolumn"><img src="/images/tba.png"></div>
-    <div class="herocolumn"><img src="/images/tba.png"></div>
-    <div class="herocolumn"><img src="/images/tba.png"></div>
+      <a class="herocolumn" href="/rubens" style="background:transparent url('/images/candidates/rubens-inset_small.jpg');background-size:cover">
+        <div class="candidateLabel republican">
+          <h2>Jim Rubens (R)</h2>
+          <h3 class="stateIconWrap"><span class="stateNH">d</span><strong>NH<br/>SEN</strong></h3>
+          <h4>vs Scott Brown (R) <em><span style="font-size:66%;">GOP Primary</span></em></h4>
+        </div>
+      </a>
+      <a class="herocolumn" href="/appel" style="background:transparent url('/images/candidates/appel-inset_small.jpg?1');background-size:cover">
+        <div class="candidateLabel democrat">
+          <h2>Staci Appel (D)</h2>
+          <h3 class="stateIconWrap"><span class="stateIA">L</span><strong>IA-03</strong></h3>
+          <h4>vs David Young (R)</h4>
+        </div>
+      </a>
+      <div class="herocolumn stacked">
+        <div class="comingSoon imageOne"><p>Coming Soon..</p></div>
+        <div class="comingSoon imageTwo"><p>Coming Soon..</p></div>
+        <div class="comingSoon imageThree"><p>Coming Soon..</p></div>
+      </div>
     </div>
+  </div>
+
+  <div class="col-md-12 heroCallToAction">
+    <h4>Reduce the influence of Money in Politics. Vote with Us!</h4>
+    <form action="https://pledge.mayday.us/r/subscribe" method="post" accept-charset="utf-8">
+      <input type="hidden" name="redirect" value="https://mayday.us/thank-you-for-commiting/" />
+      <input type="hidden" name="source" value="frontpage" />
+
+      <input type="email" id="email_input" name="email" value="" required="" placeholder="Email Address">
+      <input type="text" id="zipcode" name="zipcode" value="" placeholder="Zip">
+      <input type="submit" id="submitButton" name="" value="I'm Commited!">
+    </form>
+  </div>
+
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.heroCallToAction form').submit(function(e){
+      e.preventDefault();
+      $.cookie('userZip',$(this).find('#zipcode').val())
+      $.cookie('userEmail',$(this).find('#email_input').val())
+      this.submit();
+    });
+  });
+</script>
