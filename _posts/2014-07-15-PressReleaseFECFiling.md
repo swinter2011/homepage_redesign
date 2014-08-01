@@ -2,7 +2,7 @@
 layout: post
 title: PRESS RELEASE - Crowd-Funded Super PAC Files FEC Report Detailing $3.3 Million in Contributions
 pubdate: 2014-07-15
-author: Perry Sacks (Berlin-Rosen)
+blogauthor: Perry Sacks (Berlin-Rosen)
 comments: true
 ---
 
