@@ -4,7 +4,7 @@ BE SURE TO REMOVE "noIndex" ON "your-donation-beta" BEFORE GOING LIVE
 
  -->
 <div class="col-md-12">
-  <h2>You have spoken: 54,000 donations for over $7,741,819 from across the nation.</h2>
+  <h2>You have spoken: <span id="numPledges">54,000</span> donations for <span id="totalAmount">over $7,755,378</span> from across the nation.</h2>
   <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </h4>
   <div class='map-container'>
     <div id='map'></div>
@@ -43,78 +43,14 @@ BE SURE TO REMOVE "noIndex" ON "your-donation-beta" BEFORE GOING LIVE
     </div>
   </div>
   <div class="col-md-6">
-    <h3>Top Donors<br/><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. </small></h3>
-    <table class="topDonors">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Donations</th>
-          <th>Total</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>John Smithingson</td>
-          <td>2</td>
-          <td>$14,000</td>
-        </tr>
-        <tr>
-          <td>John Smithingson</td>
-          <td>2</td>
-          <td>$14,000</td>
-        </tr>
-        <tr>
-          <td>John Smithingson</td>
-          <td>2</td>
-          <td>$14,000</td>
-        </tr>
-        <tr>
-          <td>John Smithingson</td>
-          <td>2</td>
-          <td>$14,000</td>
-        </tr>
-        <tr>
-          <td>John Smithingson</td>
-          <td>2</td>
-          <td>$14,000</td>
-        </tr>
-        <tr>
-          <td>John Smithingson</td>
-          <td>2</td>
-          <td>$14,000</td>
-        </tr>
-        <tr>
-          <td>John Smithingson</td>
-          <td>2</td>
-          <td>$14,000</td>
-        </tr>
-        <tr>
-          <td>John Smithingson</td>
-          <td>2</td>
-          <td>$14,000</td>
-        </tr>
-        <tr>
-          <td>John Smithingson</td>
-          <td>2</td>
-          <td>$14,000</td>
-        </tr>
-        <tr>
-          <td>John Smithingson</td>
-          <td>2</td>
-          <td>$14,000</td>
-        </tr>
-        <tr>
-          <td>John Smithingson</td>
-          <td>2</td>
-          <td>$14,000</td>
-        </tr>
-        <tr>
-          <td>John Smithingson</td>
-          <td>2</td>
-          <td>$14,000</td>
-        </tr>
-      </tbody>
-    </table>
+    <h3>Download Anonymized Donor Data<br/><small>We are commited to Donor transparency.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. </small></h3>
+    <div class="donorDownload">
+      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <a href="/data/donors.csv" title="" class="btn downloadBtn">Download</a>
+
+    </div>
   </div>
 </div>
 
@@ -122,6 +58,14 @@ BE SURE TO REMOVE "noIndex" ON "your-donation-beta" BEFORE GOING LIVE
   .subpage-content h3{
     line-height:normal;
   }
+  .donorDownload{
+    font-size:14px;
+  }
+    .downloadBtn{
+      font-size: 1.4em;
+      background-color: #ccc;
+      float: right;
+    }
   .topDonors{
     width:100%;
   }
@@ -149,10 +93,14 @@ BE SURE TO REMOVE "noIndex" ON "your-donation-beta" BEFORE GOING LIVE
   }
   #circle-legend {
     position: absolute;
-    right: 13px;
-    bottom: 20px;
+    right: 25px;
+    bottom: 40px;
     width: 40%;
-    font-size: 12px;
+    max-width: 530px;
+    background: rgba(255,255,255,0.6);
+    padding: 6px;
+    font-size: 1.2em;
+    text-shadow: 0 0 0.2em #fff;
   }
   #map {
     position:relative;
@@ -165,9 +113,8 @@ BE SURE TO REMOVE "noIndex" ON "your-donation-beta" BEFORE GOING LIVE
     color:#cc3333;
   }
   p {
-    font-size:12px;
+    font-size:14px;
     margin:10px 0;
-    font-weight:bold;
   }
   .toggle:first-child {
     margin-left:12px;
@@ -193,12 +140,17 @@ BE SURE TO REMOVE "noIndex" ON "your-donation-beta" BEFORE GOING LIVE
     font-family:'Questrial',Arial,sans-serif;
   }
 
+  .graph{
+    position:relative;
+    min-height: 270px;
+  }
+
   #states-drilldown {
     border-collapse:inherit;
     position:absolute;
-    top:850px;
-    left:580px;
-    width:165px;
+    top:0;
+    right:0;
+    width:185px;
     border:1px solid #537288;
     font-size:12px;
     background-color: white;
@@ -206,15 +158,19 @@ BE SURE TO REMOVE "noIndex" ON "your-donation-beta" BEFORE GOING LIVE
   }
 
   #states-drilldown thead tr td{
-    padding:10px;
+    padding: 10px 10px;
+  }
+  #states-drilldown thead tr td p {
+    margin: 0
   }
   #states-drilldown tbody {
     display:block;
     padding:10px;
-    height: 224px;
+    height: 194px;
+    line-height: 16px;
     overflow-y: scroll;
     border-top:1px solid #ddd;
-    background-color: whitesmoke;
+    background-color: #efefef;
   }
   #states-drilldown tbody tr td {
     width:60px;
@@ -260,6 +216,7 @@ BE SURE TO REMOVE "noIndex" ON "your-donation-beta" BEFORE GOING LIVE
 <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/1.4.5/numeral.min.js"></script>
 <link href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" rel="stylesheet" />
 <script src='//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js'></script>
+<script src="/js/v8.js?6"></script>
 <script>
 // ----------------------
 // set up basemap
