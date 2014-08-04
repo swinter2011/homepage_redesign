@@ -496,7 +496,6 @@ html{
 				}
 
 	#subpage-nav .navigation {
-		height: 34px;
 		line-height: 15px;
 	}
 		#subpage-nav .navigation li {
@@ -504,6 +503,10 @@ html{
 			font-size:16px;
 			margin: 0 16px;
 		}
+
+			#subpage-nav .navigation li a{
+				padding: 10px 15px 7px;
+			}
 
 	#subpage-nav .disclaimer {
 		border-bottom: 1px solid #ddd;
