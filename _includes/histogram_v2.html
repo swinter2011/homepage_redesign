@@ -6,7 +6,7 @@ BE SURE TO REMOVE "noIndex" ON "your-donation-beta" BEFORE GOING LIVE
 <div class="col-md-12">
   <h2><span id="numPledges">54,000</span> donations for <span id="totalAmount">over $7,755,378</span> from across the nation.</h2>
   <div class='map-container'>
-    <div id='map'></div>
+    <div id='map'><span class="loading">Loading donation database, please wait...</span></div>
     <div id='circle-legend'>
       Circles represent the total number of donations received from each zipcode. Select a circle to get the details.
     </div>
@@ -52,6 +52,12 @@ BE SURE TO REMOVE "noIndex" ON "your-donation-beta" BEFORE GOING LIVE
 </div>
 
 <style>
+#map .loading{
+  display:block;text-align:center;font-size:1.6em;line-height:200px;color:#313945;"
+}
+#map, #map .loading{
+  font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
+}
   .subpage-content h3{
     line-height:normal;
   }
@@ -166,7 +172,7 @@ BE SURE TO REMOVE "noIndex" ON "your-donation-beta" BEFORE GOING LIVE
   #states-drilldown tbody {
     display:block;
     padding:10px;
-    height: 194px;
+    height: 256px;
     line-height: 16px;
     overflow-y: scroll;
     border-top:1px solid #ddd;
@@ -328,7 +334,7 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
   // ----------------------
 
   // Create kinda-log approximately-doubling histogram bins to capture the spread of different donation sizes
-  var binThresholds = [1, 11, 21, 41, 81, 151, 301, 501, 1001, 2001, 3001, 5001, 50001, 100001, 1000001],
+  var binThresholds = [1, 11, 21, 41, 81, 151, 301, 501, 1001, 2001, 3001, 5001, 50001, 100001, 250001, 500001],
       histogram = (d3.layout.histogram()
                    // each donation is bucketed by the value of the donation
                    .value(function(d) {return d.dollars; })
@@ -416,7 +422,7 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
   // ----------------------
   // set up graph
   // ----------------------
-  var margin = {right:163, left:60},
+  var margin = {right:163, left:70},
     width = 500 - margin.left - margin.right,
     barHeight = 22,
     height = barHeight * histogram.length;
@@ -457,7 +463,7 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
   // bin labels
   binGs.append('text')
     .attr('class','binLabel')
-    .attr('x', '-60')
+    .attr('x', '-70')
     .attr('y', y.rangeBand()-8)
     .attr('dy', '.35em')
     .text(function(bucket) {
