@@ -39,6 +39,9 @@ h2 {
 	color: #313945;
 	margin: 0 0 .5em;
 }
+h3{
+	color: #313945;
+}
 .title-caption {
 	font-size: 18px;
 	color: #313945;
@@ -426,9 +429,9 @@ html{
 /* Subpage nav
 ======================================================================== */
 #subpage-nav {
-	padding: 10px 0 10px;
+	border-top:3px solid #cc3333;
+	border-bottom:3px solid #313945;
 	text-align: center;
-	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAGCAYAAAACEPQxAAAAHUlEQVQImWM4Y2z8n+GMsfF/hv///0MJMcc4CAEA8s8Pw3YWtQgAAAAASUVORK5CYII=) repeat-x 0 0, #fff;
 }
 	#subpage-nav .colls {
 		width: 894px;
@@ -493,10 +496,6 @@ html{
 				}
 
 	#subpage-nav .navigation {
-		border: solid #ddd;
-		border-width: 1px 0;
-		margin-top: 10px;
-		height: 30px;
 		line-height: 15px;
 	}
 		#subpage-nav .navigation li {
@@ -504,6 +503,10 @@ html{
 			font-size:16px;
 			margin: 0 16px;
 		}
+
+			#subpage-nav .navigation li a{
+				padding: 10px 15px 7px;
+			}
 
 	#subpage-nav .disclaimer {
 		border-bottom: 1px solid #ddd;

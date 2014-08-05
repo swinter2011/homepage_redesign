@@ -4,18 +4,19 @@
   <title>{{ page.title }}</title>
   <meta name="viewport" content="width=device-width">
   <meta name="google-site-verification" content="eotfmNVR-r4qTL0MAFLUR0XVumvKeC2i87xYg102u7I" />
+  {% if page.noIndex %}<meta name="robots" content="noindex, nofollow">{% endif %}
 
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" id="googlefonts-css" type="text/css" media="all" href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|Lato:400,700&amp;subset=latin" />
-  <link rel="stylesheet" href="/css/style.css?6" />
+  <link rel="stylesheet" href="/css/style.css?7" />
   <link rel="stylesheet" href="/css/sidebar.css " />
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Questrial" />
 
   <link rel="stylesheet" href="/css/reset.css" />
-  <link rel="stylesheet" href="/css/v9green.css?4" />
+  <link rel="stylesheet" href="/css/v9green.css?5" />
 
   <meta property="og:url" content="https://mayday.us{{ page.url }}"/>
   <meta property="og:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}
