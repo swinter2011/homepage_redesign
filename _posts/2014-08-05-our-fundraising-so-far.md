@@ -4,6 +4,7 @@ title: Our Fundraising So Far
 pubdate: 2014-08-05
 author: Lessig
 comments: true
+draft: true
 ---
 
 ### Our Fundraising So Far
