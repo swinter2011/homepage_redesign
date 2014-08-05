@@ -1,8 +1,8 @@
-MayDay US Homepage
+Mayday PAC US Homepage
 ==================
 
 ### What's this?
-This replaces the old homepage for [MayDay PAC](mayday.us).
+This replaces the old homepage for [Mayday PAC](mayday.us).
 We're currently running this repo in production.
 
 ### How can I help?
