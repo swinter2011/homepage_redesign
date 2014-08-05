@@ -9,7 +9,7 @@ layout: none
     <link>{{ site.url }}</link>
     <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
     {% for post in site.posts limit:10 %}
-      {% if post.publish == "TRUE" % }
+        {% unless post.draft %}
       <item>
         <title>{{ post.title | xml_escape }}</title>
         <description>{{ post.content | xml_escape }}</description>
@@ -17,7 +17,7 @@ layout: none
         <link>{{ site.url }}{{ post.url }}</link>
         <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
       </item>
-    {% endif %}
+        {% endunless %}
     {% endfor %}
   </channel>
 </rss>
