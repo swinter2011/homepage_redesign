@@ -36,8 +36,8 @@ zip,dollars,timestamp,date,city,state,latitude,longitude
 00092,100,"",5/8/14,  ,0,"",""
 00092,100,"",7/4/14,  ,0,"",""
 "",10,"",7/3/14,Bear Creek, Wi.,"",""
-08000,50,"",7/4/14,��rhus C,0,"",""
-08000,10,"",7/6/14,��rhus C,0,"",""
+08000,50,"",7/4/14,rhus C,0,"",""
+08000,10,"",7/6/14,rhus C,0,"",""
 98102,25,"",7/4/14,Seattle,WA,47.6302,-122.321
 "",20,"",6/20/14,9RF,0,"",""
 "",25,"",7/4/14,AA,0,"",""
@@ -114,7 +114,7 @@ zip,dollars,timestamp,date,city,state,latitude,longitude
 "",50,"",7/3/14,Tucson,AZ,"",""
 "",50,"",7/1/14,Tucson,AZ,"",""
 00001,50,"",6/4/14,B,0,"",""
-67098,10,"",7/4/14,Bad D�_rkheim,0,"",""
+67098,10,"",7/4/14,Bad D_rkheim,0,"",""
 21218,100,"",7/3/14,Baltimore,MD,39.3265,-76.6048
 21299,25,"",5/16/14,Baltimore,MD,"",""
 80020,1,"",7/4/14,Barranquilla,0,39.9245,-105.0609
@@ -355,8 +355,8 @@ zip,dollars,timestamp,date,city,state,latitude,longitude
 71891,100,"",5/13/14,Jersey City,0,"",""
 96908,10,"",6/20/14,Jerusalem,0,"",""
 02193,10,"",6/8/14,Johannesburg,0,42.4464,-71.4594
-02400,50,"",7/4/14,K��benhavn NV,0,"",""
-01709,10,"",5/7/14,K��benhavn V,0,"",""
+02400,50,"",7/4/14,Kbenhavn NV,0,"",""
+01709,10,"",5/7/14,Kbenhavn V,0,"",""
 89208,25,"",7/4/14,Kagoshima,0,"",""
 96736,150,"",7/1/14,Kapa,0,"",""
 "",50,"",7/5/14,Kawasaki,0,"",""
@@ -374,9 +374,9 @@ zip,dollars,timestamp,date,city,state,latitude,longitude
 50480,25,"",7/4/14,Kuala Lumpur,0,43.2456,-94.0367
 "",25,"",7/8/14,Kumamoto,0,"",""
 "",25,"",7/4/14,"Kurashiki, Okayama",0,"",""
-21335,25,"",7/3/14,L�_neburg,0,"",""
-21335,10,"",7/4/14,L�_neburg,0,"",""
-21335,10,"",7/4/14,L�_neburg,0,"",""
+21335,25,"",7/3/14,L_neburg,0,"",""
+21335,10,"",7/4/14,L_neburg,0,"",""
+21335,10,"",7/4/14,L_neburg,0,"",""
 78045,100,"",6/13/14,Laredo,0,27.6357,-99.5923
 04157,25,"",7/4/14,Leipzig,0,"",""
 01054,100,"",7/5/14,Leverett,0,42.4682,-72.4993
@@ -625,7 +625,7 @@ zip,dollars,timestamp,date,city,state,latitude,longitude
 98120,200,"",5/9/14,Seattle ,WA,"",""
 95472,50,"",5/18/14,sebastopol,0,38.3941,-122.8433
 20013,1,"",6/5/14,Shanghai,0,38.8933,-77.0146
-20012,20,"",6/10/14,Shanghai - ��_���,0,38.9757,-77.0282
+20012,20,"",6/10/14,Shanghai - _,0,38.9757,-77.0282
 "",25,"",7/4/14,Sheffield,0,"",""
 "",25,"",7/4/14,Shiroishi,0,"",""
 15103,100,"",7/4/14,singapore,0,"",""
@@ -16768,7 +16768,7 @@ zip,dollars,timestamp,date,city,state,latitude,longitude
 "",50,"",6/13/14,Edinburgh,"Edinburgh, City Of","",""
 40013,10,"",7/4/14,Castel Maggiore,Emilia-Romagna,37.9125,-85.4658
 "",10,"",7/4/14,Brentwood,Essex,"",""
-02770,10,"",6/29/14,Espoo,Etel�_-Suomen,41.7591,-70.8523
+02770,10,"",6/29/14,Espoo,Etel_-Suomen,41.7591,-70.8523
 32615,1000,"",5/7/14,Alachua,FL,29.8135,-82.472
 32615,25,"",5/11/14,Alachua,FL,29.8135,-82.472
 32615,10,"",7/4/14,Alachua,FL,29.8135,-82.472
@@ -22235,10 +22235,10 @@ zip,dollars,timestamp,date,city,state,latitude,longitude
 04144,50,"",7/4/14,Arlesheim,Kanton Basel-Landschaft,"",""
 04144,30,"",6/21/14,Arlesheim,Kanton Basel-Landschaft,"",""
 03011,50,"",6/29/14,Bern,Kanton Bern,"",""
-08135,100,"",7/1/14,Langnau am Albis,Kanton Z�_rich,"",""
-08032,50,"",7/2/14,Z�_rich,Kanton Z�_rich,39.7788,-75.0601
-08005,50,"",7/4/14,Z�_rich,Kanton Z�_rich,39.7552,-74.247
-08005,5,"",7/4/14,Z�_rich,Kanton Z�_rich,39.7552,-74.247
+08135,100,"",7/1/14,Langnau am Albis,Kanton Z_rich,"",""
+08032,50,"",7/2/14,Z_rich,Kanton Z_rich,39.7788,-75.0601
+08005,50,"",7/4/14,Z_rich,Kanton Z_rich,39.7552,-74.247
+08005,5,"",7/4/14,Z_rich,Kanton Z_rich,39.7552,-74.247
 "",100,"",7/5/14,London,Kensington And Chelsea,"",""
 "",25,"",7/4/14,London,Kensington And Chelsea,"",""
 "",200,"",5/10/14,Dartford,Kent,"",""
@@ -38041,10 +38041,10 @@ zip,dollars,timestamp,date,city,state,latitude,longitude
 14174,25,"",6/7/14,Youngstown,NY,43.2461,-79.0245
 12791,100,"",5/20/14,Youngsville,NY,41.8032,-74.8888
 82223,0,"",6/6/14,Eichenau,Oberbayern,42.1346,-104.332
-80469,500,"",6/27/14,M�_nchen,Oberbayern,40.1907,-106.9735
-80469,250,"",5/12/14,M�_nchen,Oberbayern,40.1907,-106.9735
-80689,100,"",5/10/14,M�_nchen,Oberbayern,"",""
-81829,50,"",7/4/14,M�_nchen,Oberbayern,"",""
+80469,500,"",6/27/14,M_nchen,Oberbayern,40.1907,-106.9735
+80469,250,"",5/12/14,M_nchen,Oberbayern,40.1907,-106.9735
+80689,100,"",5/10/14,M_nchen,Oberbayern,"",""
+81829,50,"",7/4/14,M_nchen,Oberbayern,"",""
 44301,150,"",5/9/14,Akron,OH,41.0449,-81.52
 44301,150,"",6/27/14,Akron,OH,41.0449,-81.52
 44306,100,"",5/10/14,Akron,OH,41.0479,-81.4916
@@ -42419,7 +42419,7 @@ zip,dollars,timestamp,date,city,state,latitude,longitude
 04064,0,"",7/5/14,Paddington,QLD,43.5254,-70.3883
 04064,0,"",6/21/14,Paddington,QLD,43.5254,-70.3883
 04005,10,"",7/5/14,Tenerriffe,QLD,43.4935,-70.4883
-40699,10,"",6/12/14,Erkrath,Reg.-Bez. D�_sseldorf,"",""
+40699,10,"",6/12/14,Erkrath,Reg.-Bez. D_sseldorf,"",""
 64625,50,"",6/27/14,Bensheim,Reg.-Bez. Darmstadt,39.7582,-93.8068
 60488,25,"",7/4/14,Frankfurt am Main,Reg.-Bez. Darmstadt,"",""
 69117,25,"",7/4/14,Heidelberg,Reg.-Bez. Karlsruhe,"",""
@@ -42930,7 +42930,7 @@ zip,dollars,timestamp,date,city,state,latitude,longitude
 "",10,"",6/6/14,Frome,Somerset,"",""
 "",100,"",5/13/14,Sherborne,Somerset,"",""
 "",25,"",6/30/14,London,Southwark,"",""
-12948,150,"",6/11/14,H�_gersten,Stockholm,"",""
+12948,150,"",6/11/14,H_gersten,Stockholm,"",""
 14557,100,"",7/4/14,Norsborg,Stockholm,43.0416,-78.0573
 11321,50,"",7/4/14,Stockholm,Stockholm,"",""
 11227,15,"",5/6/14,Stockholm,Stockholm,"",""
@@ -46542,12 +46542,12 @@ zip,dollars,timestamp,date,city,state,latitude,longitude
 84088,10,"",7/4/14,West Jordan,UT,40.5959,-111.9644
 84088,10,"",7/3/14,West Jordan,UT,40.5959,-111.9644
 84119,10,"",7/4/14,"West Valley, UT",UT,40.7016,-111.9461
-41672,100,"",5/6/14,G̦teborg,V�_stra G̦taland,"",""
-47170,10,"",6/18/14,H̦viksn�_s,V�_stra G̦taland,38.6885,-85.7987
-43166,25,"",6/26/14,M̦lndal,V�_stra G̦taland,"",""
-43130,10,"",7/1/14,M̦lndal,V�_stra G̦taland,39.7187,-82.6031
-42676,100,"",6/22/14,V�_stra Fr̦lunda,V�_stra G̦taland,"",""
-42676,100,"",6/27/14,V�_stra Fr̦lunda,V�_stra G̦taland,"",""
+41672,100,"",5/6/14,G̦teborg,V_stra G̦taland,"",""
+47170,10,"",6/18/14,H̦viksn_s,V_stra G̦taland,38.6885,-85.7987
+43166,25,"",6/26/14,M̦lndal,V_stra G̦taland,"",""
+43130,10,"",7/1/14,M̦lndal,V_stra G̦taland,39.7187,-82.6031
+42676,100,"",6/22/14,V_stra Fr̦lunda,V_stra G̦taland,"",""
+42676,100,"",6/27/14,V_stra Fr̦lunda,V_stra G̦taland,"",""
 24211,50,"",7/14/14,Abingdon,VA,36.6673,-81.9648
 24211,25,"",8/5/14,Abingdon,VA,36.6673,-81.9648
 24210,25,"",8/5/14,Abingdon,VA,36.6916,-82.02
