@@ -328,7 +328,7 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
   // ----------------------
 
   // Create kinda-log approximately-doubling histogram bins to capture the spread of different donation sizes
-  var binThresholds = [1, 11, 21, 41, 81, 151, 301, 501, 1001, 2001, 3001, 5001, 50001],
+  var binThresholds = [1, 11, 21, 41, 81, 151, 301, 501, 1001, 2001, 3001, 5001, 50001, 100001, 1000001],
       histogram = (d3.layout.histogram()
                    // each donation is bucketed by the value of the donation
                    .value(function(d) {return d.dollars; })
