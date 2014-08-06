@@ -44,7 +44,7 @@ var validateEmail = function(email) {
           document.getElementById('error').innerHTML = 'Please enter a name.';
           return;
         }
-        if (! validateEmail($scope.ctrl.email.length)) {
+        if (! validateEmail($scope.ctrl.email)) {
           $scope.ctrl.error = true;
           document.getElementById('error').innerHTML = 'Please enter a valid email address.';
           return;
