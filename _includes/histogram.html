@@ -1,48 +1,96 @@
-<h2>Up to June 27, we've received more than 22,700 donations from across the nation.</h2>
-<div class='map-container'>
-  <div id='map'></div>
-  <div id='circle-legend'>
-    Circles represent the total number of donations received from each zipcode. Select a circle to get the details.
+<!--
+
+BE SURE TO REMOVE "noIndex" ON "your-donation-beta" BEFORE GOING LIVE
+
+ -->
+<div class="col-md-12">
+  <h2>60,075 donations for over $7,821,463 from across the nation.</h2>
+  <div class='map-container'>
+    <div id='map'><span class="loading">Loading donation database, please wait...</span></div>
+    <div id='circle-legend'>
+      Circles represent the total number of donations received from each zipcode. Select a circle to get the details.
+    </div>
   </div>
 </div>
-<h2>Scroll down to see the amounts people like you have donated. Click to see where the donations come from.</h2>
-<p style="">
-  Show
-  <a href='#' class='toggle measure-count' data-measure='count'>Number of Donations</a>
-  <a href='#' class='toggle measure-sum' data-measure='sum'>Value of Donations</a>
-</p>
-<div class='graph'>
-  <div class="histogram loading">Loading donation database, please wait...
-  </div>
+<div class="col-md-12">
+  <div class="col-md-6">
+    <h3>
+      Donations by Amount/Value <br />
+      <small>Scroll down to see the amounts people like you have donated. Click to see where the donations come from.</small>
+    </h3>
+      <a href="#" class="toggle measure-count" data-measure="count">Number of Donations</a>
+      <a href="#" class="toggle measure-sum" data-measure="sum">Value of Donations</a>
+    </p>
+    <div class="graph">
+      <div class="histogram loading">Loading donation database, please wait...
+      </div>
 
-  <div class='histogram'>
-  <svg></svg>
+      <div class="histogram">
+      <svg></svg>
+      </div>
+      <table id="states-drilldown" style="display:none">
+        <thead>
+          <tr>
+            <td colspan="2">
+              <p>Donations of <span id="binLabel"></span></p>
+              <div><span id="binMeasureLabel"></span></span></div>
+            </td>
+          </tr>
+        </thead>
+        <tbody class='histogram'></tbody>
+      </table>
+    </div>
   </div>
-  <table id='states-drilldown' style='display:none'>
-    <thead>
-      <tr>
-        <td colspan="2">
-          <p>Donations of <span id="binLabel"></span></p>
-          <div><span id="binMeasureLabel"></span></span></div>
-        </td>
-      </tr>
-    </thead>
-    <tbody class='histogram'></tbody>
-  </table>
+  <div class="col-md-6">
+    <h3>Download Anonymized Donor Data<br/></h3>
+    <div class="donorDownload">
+      <p> MAYDAY is committed to transparency. Every two weeks, we'll release aggregated donation data &ndash; anonymized for donors under $10,000.</p>
+      <a href="/data/donors.csv" title="" class="btn downloadBtn">Download</a> <a href="/your-donations-top-donors" title="" class="btn downloadBtn">Top Donors</a>
+    </div>
+  </div>
 </div>
 
 <style>
+#map .loading{
+  display:block;text-align:center;font-size:1.6em;line-height:200px;color:#313945;"
+}
+#map, #map .loading{
+  font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
+}
+  .subpage-content h3{
+    line-height:normal;
+  }
+  .donorDownload{
+    font-size:14px;
+  }
+    .downloadBtn{
+      font-size: 1.2em;
+      background-color: #ccc;
+      float: right;
+      margin-left: 15px;
+    }
+  .subpage-content h2{
+    padding:0 0 5px;
+  }
+  .subpage-content h4{
+    padding:0.5em 0 0.7em;
+  }
   .map-container {
     position: relative;
     padding:5px;
     border:1px solid #ddd;
+    margin-bottom:10px;
   }
   #circle-legend {
     position: absolute;
-    right: 13px;
-    bottom: 20px;
+    right: 25px;
+    bottom: 40px;
     width: 40%;
-    font-size: 12px;
+    max-width: 530px;
+    background: rgba(255,255,255,0.6);
+    padding: 6px;
+    font-size: 1.2em;
+    text-shadow: 0 0 0.2em #fff;
   }
   #map {
     position:relative;
@@ -55,9 +103,8 @@
     color:#cc3333;
   }
   p {
-    font-size:12px;
+    font-size:14px;
     margin:10px 0;
-    font-weight:bold;
   }
   .toggle:first-child {
     margin-left:12px;
@@ -83,12 +130,17 @@
     font-family:'Questrial',Arial,sans-serif;
   }
 
+  .graph{
+    position:relative;
+    min-height: 270px;
+  }
+
   #states-drilldown {
     border-collapse:inherit;
     position:absolute;
-    top:850px;
-    left:580px;
-    width:165px;
+    top:0;
+    right:0;
+    width:185px;
     border:1px solid #537288;
     font-size:12px;
     background-color: white;
@@ -96,15 +148,19 @@
   }
 
   #states-drilldown thead tr td{
-    padding:10px;
+    padding: 10px 10px;
+  }
+  #states-drilldown thead tr td p {
+    margin: 0
   }
   #states-drilldown tbody {
     display:block;
     padding:10px;
-    height: 224px;
+    height: 256px;
+    line-height: 16px;
     overflow-y: scroll;
     border-top:1px solid #ddd;
-    background-color: whitesmoke;
+    background-color: #efefef;
   }
   #states-drilldown tbody tr td {
     width:60px;
@@ -150,6 +206,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/1.4.5/numeral.min.js"></script>
 <link href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" rel="stylesheet" />
 <script src='//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js'></script>
+<script src="/js/v8.js?6"></script>
 <script>
 // ----------------------
 // set up basemap
@@ -261,7 +318,7 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
   // ----------------------
 
   // Create kinda-log approximately-doubling histogram bins to capture the spread of different donation sizes
-  var binThresholds = [1, 11, 21, 41, 81, 151, 301, 501, 1001, 2001, 3001, 5001, 50001],
+  var binThresholds = [1, 11, 21, 41, 81, 151, 301, 501, 1001, 2001, 3001, 5001, 50001, 100001, 250001, 500001],
       histogram = (d3.layout.histogram()
                    // each donation is bucketed by the value of the donation
                    .value(function(d) {return d.dollars; })
@@ -349,7 +406,7 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
   // ----------------------
   // set up graph
   // ----------------------
-  var margin = {right:70, left:60},
+  var margin = {right:163, left:70},
     width = 500 - margin.left - margin.right,
     barHeight = 22,
     height = barHeight * histogram.length;
@@ -390,7 +447,7 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
   // bin labels
   binGs.append('text')
     .attr('class','binLabel')
-    .attr('x', '-60')
+    .attr('x', '-70')
     .attr('y', y.rangeBand()-8)
     .attr('dy', '.35em')
     .text(function(bucket) {
