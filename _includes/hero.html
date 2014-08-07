@@ -1,212 +1,46 @@
 <style>
 
-.heroWrap{
-  background:#E0F0FF;
+.heroWrap{background:#E0F0FF}
+.herobackground{overflow:hidden;background:#fff;max-width:1050px;margin:0 auto}
+.splashheadline{background:transparent url(/images/header-background.jpg) center 0 repeat;text-align:center;color:#313945;font:normal bold 41px/50px Merriweather, Georgia, Times New Roman, serif;position:absolute;width:100%;z-index:200;box-shadow:0 12px 12px rgba(0,0,0,0.4);border-top:1px solid #ddd;margin:0;padding:10px 0}
+.herocolumn-container{width:100%;padding-top:60px;margin:0}
+.herocolumn{width:32.6%;float:left;font-size:22px;font-family:Questrial, Helvetica, Arial, Sans Serif;text-align:center;color:#FFF;margin-right:.5%;padding:281px 0 40px}
+  .herocolumn.stacked{padding:0}
+  .herocolumn-container .herocolumn:first-child{margin-left:.5%}
+  .herocolumn .candidateLabel{position:relative;color:#f4f1e8;width:94%;padding:0 3%}
+  .herocolumn img{width:100%}
+  .herocolumn,.herocolumn h2,.herocolumn h3,.herocolumn h4{text-align:left;color:#f4f1e8;text-decoration:none;text-shadow:2px 2px #313945}
+  .herocolumn h2{font-size:1.2em;margin:0}
+  .herocolumn h3{position:absolute;right:20px;top:10px;margin:0}
+
+  .stateIconWrap strong{z-index:20;position:relative;font-size:.6em;display:block;line-height:1em;top:13px;right:4px;text-align:center}
+    .democrat .stateIconWrap strong{top:10px}
+    .stateIconWrap span{font-family:StateFaceRegular;font-size:4em;position:absolute;z-index:1}
+    .stateIconWrap span.stateIA{top:-32px;right:-17px;font-size:3em;text-shadow:0 0 .2em rgba(244,241,232,0.5)}
+    .stateIconWrap span.stateNH{font-size:3.5em;top:-40px;right:-4px;text-shadow:0 0 .3em #313945}
+    .republican .stateIconWrap span{color:#c33}
+    .democrat .stateIconWrap span{color:#313945}
+
+  .herocolumn h4{font-size:.8em;margin:0}
+  .herocolumn .candidateLabel.republican{background:rgba(204,51,51,0.5)}
+  .herocolumn .candidateLabel.democrat{background:rgba(49,57,69,0.5)}
+  .herocolumn .comingSoon{background:transparent 0 center;background-size:cover;height:124px;position:relative;margin-bottom:5px}
+    .herocolumn .comingSoon.imageOne{background-image:url(/images/candidates/candidate_photos_fake_001.jpg)}
+    .herocolumn .comingSoon.imageTwo{background-image:url(/images/candidates/candidate_photos_fake_002.jpg)}
+    .herocolumn .comingSoon.imageThree{background-image:url(/images/candidates/candidate_photos_fake_003.jpg)}
+  .herocolumn .comingSoon p{background-color:rgba(204,51,51,0.5);position:absolute;bottom:0;width:98%;margin:0;padding:4px 1%}
+.heroCallToAction{-moz-box-shadow:inset 0 0 30px rgba(30,30,30,0.3);-webkit-box-shadow:inset 0 0 30px rgba(30,30,30,0.3);box-shadow:inset 0 0 30px rgba(30,30,30,0.3);border:5px solid #fff;overflow:hidden;background:#fff;max-width:1020px;border-width:0 5px 5px;margin:0 auto;padding:10px}
+  .heroCallToAction h4{font-size:1.3em;float:left;margin:.3em}
+  .heroCallToAction form{float:right;margin:.3em}
+    .heroCallToAction input{background:#fff;border:3px solid #313945;font-family:Merriweather, Georgia, Times New Roman, serif;padding:2px}
+    .heroCallToAction input[type=email]{width:160px}
+    .heroCallToAction input[name=zipcode]{width:60px}
+    .heroCallToAction input[type=submit]{background:#313945;color:#f4f1e8;font-weight:700}
+@media screen and max-width 800px {
+  .herocolumn.stacked{width:100%}
+  .herocolumn.stacked .comingSoon{width:32.7%;float:left;margin:.5% 0 0 .5%}
+  .herocolumn{width:49.25%}
 }
-
-.herobackground{
-  overflow:hidden;
-  margin: 0 auto;
-  background:#fff;
-  max-width:1050px;
-}
-
-.splashheadline {
-  background: transparent url('/images/header-background.jpg') center 0 repeat;
-  text-align: center;
-  padding: 10px 0 10px;
-  margin: 0px;
-  color: #313945;
-  font: normal bold 41px/50px 'Merriweather', Georgia, Times New Roman, serif;
-  position: absolute;
-  width: 100%;
-  z-index: 200;
-  box-shadow: 0 12px 12px rgba(0,0,0,0.4);
-  border-top: 1px solid #ddd;
-}
-
-.herocolumn-container{
-    width:100%;
-    padding-top:60px;
-    margin: 0;
-}
-
-.herocolumn {
-  width: 32.6%;
-  float:left;
-  font-size:22px;
-  font-family:Questrial, Helvetica, Arial, Sans Serif;
-  text-align:center;
-  color:#FFF;
-  padding:281px 0 40px;
-  margin-right:0.5%;
-}
-.herocolumn.stacked {
-  padding:0;
-}
-
-.herocolumn-container .herocolumn:first-child{
-  margin-left:0.5%;
-}
-
-.herocolumn .candidateLabel{
-  position:relative;
-  color:#f4f1e8;
-  width:94%;
-  padding: 0 3%;
-}
-
-.herocolumn img{
-  width:100%;
-}
-
-.herocolumn, .herocolumn h2, .herocolumn h3, .herocolumn h4{
-  text-align:left;
-  color:#f4f1e8;
-  text-decoration: none;
-  text-shadow:2px 2px #313945;
-}
-
-.herocolumn h2{
-  font-size:1.2em;
-  margin:0;
-}
-
-.herocolumn h3 {
-  position: absolute;
-  right: 20px;
-  top: 10px;
-  margin: 0;
-}
-
-  .stateIconWrap strong {
-    z-index: 20;
-    position: relative;
-    font-size: 0.6em;
-    display: block;
-    line-height: 1em;
-    top: 13px;
-    right: 4px;
-    text-align: center;
-  }
-  .democrat .stateIconWrap strong {
-    top:10px;
-  }
-  .stateIconWrap span {
-    font-family: StateFaceRegular;
-    font-size: 4em;
-    position: absolute;
-    z-index: 1;
-  }
-
-  .stateIconWrap span.stateIA {
-    top: -32px;
-    right: -17px;
-    font-size: 3em;
-    text-shadow: 0 0 0.2em rgba(244,241,232,0.5);
-  }
-  .stateIconWrap span.stateNH {
-    font-size: 3.5em;
-    top: -40px;
-    right: -4px;
-    text-shadow: 0 0 0.3em #313945;
-  }
-
-  .republican .stateIconWrap span{
-    color:#cc3333;
-  }
-
-  .democrat .stateIconWrap span{
-    color:#313945;
-  }
-
-.herocolumn h4{
-  font-size:0.8em;
-  margin:0;
-}
-
-.herocolumn .candidateLabel.republican{
-  background: rgba(204,51,51,0.5);
-}
-.herocolumn .candidateLabel.democrat{
-  background: rgba(49,57,69, 0.5);
-}
-
-.herocolumn .comingSoon{
-  background: transparent 0 center;
-  background-size: cover;
-  height:124px;
-  position: relative;
-  margin-bottom: 5px;
-}
-.herocolumn .comingSoon.imageOne{background-image: url('/images/candidates/candidate_photos_fake_001.jpg');}
-.herocolumn .comingSoon.imageTwo{background-image: url('/images/candidates/candidate_photos_fake_002.jpg')}
-.herocolumn .comingSoon.imageThree{background-image: url('/images/candidates/candidate_photos_fake_003.jpg')}
-
-.herocolumn .comingSoon p {
-  background-color:rgba(204,51,51,0.5);
-  position:absolute;
-  bottom:0;
-  width:98%;
-  margin:0;
-  padding:4px 1%;
-}
-
-@media screen and (max-width: 800px) {
-  .herocolumn.stacked{
-    width:100%;
-  }
-  .herocolumn.stacked .comingSoon{
-    width:32.7%;
-    float:left;
-    margin: 0.5% 0 0 0.5%;
-  }
-  .herocolumn {
-    width: 49.25%;
-  }
-}
-
-.heroCallToAction{
-  -moz-box-shadow:    inset 0 0 30px rgba(30,30,30,0.3);
-  -webkit-box-shadow: inset 0 0 30px rgba(30,30,30,0.3);
-  box-shadow:         inset 0 0 30px rgba(30,30,30,0.3);
-  padding:10px;
-  border:5px solid #fff;
-  border-width:0px 5px 5px;
-  overflow:hidden;
-  background:#fff;
-  margin:0 auto;
-  max-width:1020px;
-}
-
-  .heroCallToAction h4 {
-    font-size: 1.3em;
-    float: left;
-    margin: 0.3em;
-  }
-  .heroCallToAction form{
-    float:right;
-    margin: 0.3em;
-  }
-
-    .heroCallToAction input{
-      background:#fff;
-      border:3px solid #313945;
-      padding:2px;
-      font-family:'Merriweather', Georgia, Times New Roman, serif;
-    }
-
-    .heroCallToAction input[type="email"]{
-      width:160px;
-    }
-    .heroCallToAction input[name="zipcode"]{
-      width:60px;
-    }
-    .heroCallToAction input[type="submit"]{
-      background:#313945;
-      color:#f4f1e8;
-      font-weight:700;
-    }
 
 @font-face {
   font-family: 'StateFaceRegular';
