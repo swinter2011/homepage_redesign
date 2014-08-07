@@ -28,9 +28,11 @@ blog
 
 <ul>
 	{% for post in site.posts %}
-	  <LI>
-	    <a href="{{ post.url }}">{{ post.pubdate}}&nbsp;&mdash;&nbsp;{{ post.title }}</a>
+    {% unless post.draft %}	  
+      <LI>
+        <a href="{{ post.url }}">{{ post.pubdate}}&nbsp;&mdash;&nbsp;{{ post.title }}</a>
 	   </LI>
+     {% endunless %}
    {% endfor %}
 </ul>
 
