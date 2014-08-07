@@ -1,6 +1,12 @@
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
 <script src="//fgnass.github.io/spin.js/spin.min.js"></script>
 <script>
+
+var validateEmail = function(email) {
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+};
+
    angular.module('contactApp',[]).controller('contactController',
                    ['$scope', '$http', function($scope, $http) {
     $scope.ctrl = {
@@ -31,6 +37,24 @@
               top: '50%', // Top position relative to parent
               left: '50%' // Left position relative to parent
         };
+
+        /* Validate field elements, should only trigger on safari */
+        if ($scope.ctrl.name.length == 0) {
+          $scope.ctrl.error = true;
+          document.getElementById('error').innerHTML = 'Please enter a name.';
+          return;
+        }
+        if (! validateEmail($scope.ctrl.email)) {
+          $scope.ctrl.error = true;
+          document.getElementById('error').innerHTML = 'Please enter a valid email address.';
+          return;
+        }
+        if ($scope.ctrl.subject.length == 0) {
+          $scope.ctrl.error = true;
+          document.getElementById('error').innerHTML = 'Please enter a subject for your email.';
+          return;
+        }
+
         $scope.ctrl.spinning = true;
         var target = document.getElementById('spinButton');
         var spinner = new Spinner(spin_opts).spin(target);
