@@ -35,8 +35,8 @@
           {{ candidateraceinfo | markdownify }}
         </div>
 
-
         <div class="candidate-body">
+          {% if page.oppname %}          
           <div class="oppcontainer">
             <div class="oppopp">Opponent:</div>
             <div class="opp">
@@ -47,6 +47,8 @@
               {{ oppblurb | markdownify}}
             </div>
           </div>
+          {% endif %}
+          
           {{ content | markdownify }}
           <div class="strategynotes">{{ strategynotes | markdownify }}</div>
         </div>
