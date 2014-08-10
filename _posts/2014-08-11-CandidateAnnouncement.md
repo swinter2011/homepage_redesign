@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Mayday PAC Expands Targets, Announces New Candidates and Places Radio Ads
+og_title: Mayday PAC Expands Targets, Announces New Candidates and Places Radio Ads
+og_description: Mayday PAC expands their number of targeted races from five to eight. Mayday PAC will increase its campaign spending due to better than expected fundraising and broad citizen support. The additional three targets will be announced once field teams and campaigners are in place.  In addition, today Mayday PAC announces three more of the eight total candidates it will support.
 pubdate: 2014-08-11 
 author: Allison Bryan
 comments: true
@@ -9,7 +11,7 @@ comments: true
  
 # Campaign Will Now Target Eight Total Races, Including Three Candidates Announced Today. First Radio Ads to Air in New Hampshire.
 
-WASHINGTON, D.C. – Today, Mayday PAC expands their number of targeted races from five to eight.Mayday PAC will increase its campaign spending due to better than expected fundraising and broad citizen support. The additional three targets will be announced once field teams and campaigners are in place.
+WASHINGTON, D.C. – Today, Mayday PAC expands their number of targeted races from five to eight. Mayday PAC will increase its campaign spending due to better than expected fundraising and broad citizen support. The additional three targets will be announced once field teams and campaigners are in place.
 
 In addition, today Mayday PAC announces three more of the eight total candidates it will support: Walter Jones (R, NC-3), Carol Shea-Porter (D, NH-1) and Ruben Gallego, Democratic candidate in Arizona’s seventh congressional district to replace retiring Congressman Ed Pastor.
 
