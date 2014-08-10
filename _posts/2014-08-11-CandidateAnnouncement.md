@@ -20,3 +20,35 @@ A fact sheet and additional information on each candidate’s record on reform c
 “Today we’re taking several big steps in Mayday’s plan to retake our Democracy. All eight of our candidates are leaders on reform and, when elected to Congress, they will help us reach our goal of constitutional amendment,” said Lawrence Lessig, Mayday PAC co-founder with Mark McKinnon, Republican strategists.
 
 “For both Republicans and Democrats, reform is a winning issue. Our expansion to eight targets is both a testament to successful citizen-up fundraising and evidence of this movement’s broad support,” added McKinnon.
+
+----
+
+<a name="factsheet"></a>
+
+# FACT SHEET ON MAYDAY PAC 2014 TARGETS
+
+###Which Candidates Will Fight Back Against Big Money in Politics?
+
+__Mayday PAC supports Republican Walter Jones, NC-3 House general election:__
+
+Republican Congressman Walter Jones prevailed over his most competitive challenge to date in the NC-3 Republican primary — his opponent was largely funded by outside money. He is now running against Marshall Adame, a retired Marine and former U.S. diplomat, in the general election. Jones has represented the third district for 10 terms.
+
+FACTS: Congressman Walter Jones is the [only Republican](http://www.huffingtonpost.com/2014/04/23/walter-jones-taylor-griffin_n_5187262.html) House member who vocally supports campaign finance reform. He [called](https://www.youtube.com/watch?v=R13_Ud0rSQw) [Citizens United](https://www.youtube.com/watch?v=R13_Ud0rSQw) "one of the worst decisions by the Supreme Court in my adult lifetime." Jones is proof that campaign finance reform is an issue that gains [traction on both sides of the aisle](https://www.youtube.com/watch?v=R13_Ud0rSQw).
+
+FACTS: Congressman Jones is an original co-sponsor of the [Government By the People Act](http://www.publicampaign.org/blog/2014/02/21/republican-walter-jones-supports-government-people-act). Jones’ history of sponsoring legislation to get money out of politics includes the [Fair Elections Now Act](http://action.fairelectionsnow.org/fairelections) from 2008, which was reintroduced in the House in 2011. In 2013, he introduced H.R. 3466 or [No Political Funds for Personal Use](https://beta.congress.gov/bill/113th-congress/house-bill/3466), a bill that would close the personal use loophole for all [political committees](http://www.huffingtonpost.com/2013/11/22/republican-campaign-finance-reform_n_4324754.html). 
+
+__Mayday PAC supports Democrat Carol Shea-Porter, NH-1 House general election:__
+
+Democrat Congresswoman Carol Shea-Porter is running against Frank Guinta, the former incumbent who lost to Shea-Porter in 2012. The race has been rated as a “toss-up” by most major news organizations. 
+
+FACTS: Congresswoman Shea-Porter co-sponsored the [Government By the People Act](http://www.ontheissues.org/house/Carol_Shea-Porter_Government_Reform.htm). In addition, campaign finance reform is a cornerstone of her [re-election campaign](http://www.sheaporter.com/Issues/2012-08-campaign-finance-reform). Shea-Porter is a co-sponsor of the [Fair Elections Now Act](https://beta.congress.gov/bill/113th-congress/house-bill/269/cosponsors) and participated in the [“New Hampshire Rebellion”](http://blog.ted.com/2014/01/24/larry-lessig-completes-185-mile-walk-across-new-hampshire/) protest in 2014. 
+
+FACTS: Guinta was named one of Citizens for Responsibility and Ethics in Washington’s [Most Corrupt](http://www.crewsmostcorrupt.org/mostcorrupt/entry/frank-guinta) members of congress during his first term. He was [placed under federal investigation](http://www.citizensforethics.org/page/-/PDFs/Reports/Most Corrupt Reports/Guinta, Frank.pdf?nocdn=1) for irregularities in his 2010 campaign finances. In 2012, Guinta’s top donors included [Citizens United and Koch Industries](https://www.opensecrets.org/politicians/contrib.php?cycle=2012&cid=N00030801). 
+
+__Mayday PAC supports Democrat Reuben Gallego, AZ-7 primary election:__
+
+Democrat Reuben Gallego is a former Arizona state representative running against Mary Rose Wilcox, the Maricopa County Supervisor. The district is currently represented by retiring democratic congressman Ed Pastor.
+
+FACTS: Gallego supports changing the way elections are funded. In response to a candidate questionnaire conducted by the Progressive Change Campaign Committee (PCCC), Gallego supports establishing a system of elections in which candidates who choose to accept only small donations (below a level around $150) receive matching funds, allowing candidates to spend more time talking to voters and less time calling wealthy out-of-state donors. The [public polling](http://act.boldprogressives.org/survey/post_gallego_polling/) part of this survey is available on the PCCC’s website.
+
+FACTS: Gallego has received several high profile endorsements, including current Rep. Raul Grijalva (D-Ariz) who has received praise from the [Fair Elections Now Coalition](http://www.prnewswire.com/news-releases/fair-elections-now-coalition-praises-rep-raul-grijalva-for-cosponsoring-fair-elections-now-act-60778672.html) for co-sponsoring the Fair Elections Now Act. Grijalva endorsed Gallego in a [written statement](http://www.politico.com/story/2014/03/raul-grijalva-arizona-2014-primary-104818.html#ixzz39ofR6WmW), saying “I worked with Ed Pastor for many years. He was the best partner I could have asked for in Phoenix, and I couldn’t think of a better candidate to replace him than Ruben Gallego.” 
