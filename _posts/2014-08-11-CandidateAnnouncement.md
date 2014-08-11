@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mayday PAC Expands Targets, Announces New Candidates and Places Radio Ads
-og_title: Exciting news: We are announcing support for three new campaigns today.  Check them out!
+og_title: Exciting news - We're announcing support for three new campaigns today.  Check them out!
 og_description: Today, Mayday PAC announces three more of the eight total candidates it will support. Mayday PAC expands their number of targeted races from five to eight. Mayday PAC will increase its campaign spending due to better than expected fundraising and broad citizen support. The additional three targets will be announced soon.
 pubdate: 2014-08-11
 author: Allison Bryan
