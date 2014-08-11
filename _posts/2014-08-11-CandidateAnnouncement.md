@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Mayday PAC Expands Targets, Announces New Candidates and Places Radio Ads
-og_title: Mayday PAC Expands Targets, Announces New Candidates and Places Radio Ads
-og_description: Mayday PAC expands their number of targeted races from five to eight. Mayday PAC will increase its campaign spending due to better than expected fundraising and broad citizen support. The additional three targets will be announced once field teams and campaigners are in place.  In addition, today Mayday PAC announces three more of the eight total candidates it will support.
+og_title: Exciting news: We're announcing support for three new campaigns today.  Check them out!
+og_description: Today, Mayday PAC announces three more of the eight total candidates it will support. Mayday PAC expands their number of targeted races from five to eight. Mayday PAC will increase its campaign spending due to better than expected fundraising and broad citizen support. The additional three targets will be announced soon.
 pubdate: 2014-08-11
 author: Allison Bryan
 comments: true
@@ -53,6 +53,6 @@ __Mayday PAC supports Democrat Reuben Gallego, AZ-7 primary election:__
 
 Democrat Reuben Gallego is a former Arizona state representative running against Mary Rose Wilcox, the Maricopa County Supervisor. The district is currently represented by retiring democratic congressman Ed Pastor.
 
-FACTS: Gallego believes that the only way to get Washington working again is to take money out of politics. [He supports](http://gallegoforarizona.com/money-in-politics/) the Government by the People Act and a constitutional amendment that would overturn the Citizens United decision. 
+FACTS: Gallego believes that the only way to get Washington working again is to take money out of politics. [He supports](http://gallegoforarizona.com/money-in-politics/) the Government by the People Act and a constitutional amendment that would overturn the Citizens United decision.
 
 FACTS: Gallego has received several high profile endorsements, including current Rep. Raul Grijalva (D-Ariz) who has received praise from the [Fair Elections Now Coalition](http://www.prnewswire.com/news-releases/fair-elections-now-coalition-praises-rep-raul-grijalva-for-cosponsoring-fair-elections-now-act-60778672.html) for co-sponsoring the Fair Elections Now Act. Grijalva endorsed Gallego in a [written statement](http://www.politico.com/story/2014/03/raul-grijalva-arizona-2014-primary-104818.html#ixzz39ofR6WmW), saying "I worked with Ed Pastor for many years. He was the best partner I could have asked for in Phoenix, and I couldn’t think of a better candidate to replace him than Ruben Gallego."
