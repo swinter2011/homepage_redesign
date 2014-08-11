@@ -15,11 +15,13 @@ WASHINGTON, D.C. – Today, Mayday PAC expands their number of targeted races fr
 
 In addition, today Mayday PAC announces three more of the eight total candidates it will support: Walter Jones (R, NC-3), Carol Shea-Porter (D, NH-1) and Ruben Gallego, Democratic candidate in Arizona’s seventh congressional district to replace retiring Congressman Ed Pastor.
 
-With this announcement, Mayday PAC continues to meet its commitment to work with candidates who support reform on both sides of the aisle. Mayday PAC will be communicating directly with voters in these districts with specific messages on political cronyism and reform. With consulting help from the Progressive Change Campaign Committee (PCCC), Mayday PAC will be working to make changing the way elections are funded a fundamental issue in each of these races.
+With this announcement, Mayday PAC continues to meet its commitment to work with candidates who support reform on both sides of the aisle. Mayday PAC will be communicating directly with voters in these districts with specific messages on political cronyism and reform. Mayday PAC will be working to make changing the way elections are funded a fundamental issue in each of these races.
 
-A fact sheet and additional information on each candidate’s record on reform can be found here. Today Mayday PAC also announces the placement of its first radio ads in New Hampshire, in support of Senate candidate Jim Rubens. These ads make it clear to voters that the only way to reclaim our democracy and get government working again is to reduce money in politics. These ads can be found here.
+A fact sheet and additional information on each candidate’s record on reform can be found [here](https://mayday.us/2014/08/11/CandidateAnnouncement/#fact-sheet-on-mayday-pac-2014-targets).
 
-"Today we’re taking several big steps in Mayday’s plan to retake our Democracy. All eight of our candidates are leaders on reform and, when elected to Congress, they will help us reach our goal of electing a Congress to pass fundamental reform of the way elections are funded by 2016," said Lawrence Lessig, Mayday PAC co-founder with Mark McKinnon, Republican strategists.
+Today Mayday PAC also announces the placement of its first radio ads in New Hampshire, in support of Senate candidate Jim Rubens. These ads make it clear to voters that the only way to reclaim our democracy and get government working again is to reduce money in politics. These ads can be found [here](https://mayday.us/rubens/#radioAds).
+
+"Today we’re taking several big steps in Mayday’s plan to retake our Democracy. All eight of our candidates are leaders on reform and, when elected to Congress, they will help us reach our goal of electing a Congress to pass fundamental reform of the way elections are funded by 2016," said Lawrence Lessig, Mayday PAC co-founder with Mark McKinnon, Republican strategist.
 
 "For both Republicans and Democrats, reform is a winning issue. Our expansion to eight targets is both a testament to successful citizen-up fundraising and evidence of this movement’s broad support," added McKinnon.
 
