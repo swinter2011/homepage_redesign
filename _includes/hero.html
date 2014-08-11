@@ -5,6 +5,14 @@
 .splashheadline{background:transparent url(/images/header-background.jpg) center 0 repeat;text-align:center;color:#313945;font:normal bold 41px/50px Merriweather, Georgia, Times New Roman, serif;position:absolute;width:100%;z-index:200;box-shadow:0 12px 12px rgba(0,0,0,0.4);border-top:1px solid #ddd;margin:0;padding:10px 0}
 .herocolumn-container{width:100%;padding-top:60px;margin:0;display:block;}
 .herocolumn{width:19.4%;float:left;font-size:22px;font-family:Questrial, Helvetica, Arial, Sans Serif;text-align:center;color:#FFF;margin:0 0.5% 0 0;padding:311px 0 15px;background-position:center 0;background-size:cover;}
+  .shea{ background-image:url('/images/candidates/Carol_Shea-Porter_inset_small.jpg?1')}
+  .jones{ background-image:url('/images/candidates/walter_jones_inset_small.jpg?3')}
+  .gallego{ background-image:url('/images/candidates/ruben_gallego_inset_small.jpg?2')}
+  .rubens{ background-image:url('/images/candidates/rubens-inset_small.jpg?1')}
+  .appel{ background-image:url('/images/candidates/appel-inset_small.jpg?2')}
+  @media screen and (min-width:1300px) {
+    .gallego{background-image:url('/images/candidates/ruben_gallego_inset_medium.jpg?1')}
+  }
   .herocolumn.stacked{padding:0}
   .herocolumn-container .herocolumn:first-child{margin-left:.5%}
   .herocolumn img{width:100%}
@@ -69,7 +77,7 @@
   .herocolumn-container .herocolumn:nth-child(5){margin: 0.5% 15% 0 0.5%;}
 }
 
-@media screen and (min-width:1020px;max-width:1280px) {
+@media screen and (min-width:1020px) and (max-width:1300px) {
   .stateIconWrap.stateNC span {font-size:2.4em;top:-20px}
 }
 @media screen and (max-width:920px) {
@@ -94,35 +102,35 @@
 
   <div class="herobackground">
     <div class="herocolumn-container">
-      <a class="herocolumn firstRow" href="/shea-porter" style="background-image:url('/images/candidates/Carol_Shea-Porter_inset_small.jpg')">
+      <a class="herocolumn shea firstRow" href="/shea-porter">
         <div class="candidateLabel democrat">
           <h2>Carol Shea-Porter (D)</h2>
           <h3 class="stateIconWrap stateNH2"><span>d</span><strong>NH<br />01</strong></h3>
           <h4>vs <small>(undetermined)</small></h4>
         </div>
       </a>
-      <a class="herocolumn firstRow" href="/jones" style="background-image:url('/images/candidates/walter_jones_inset_small.jpg')">
+      <a class="herocolumn jones firstRow" href="/jones">
         <div class="candidateLabel republican">
           <h2>Walter Jones (R)</h2>
           <h3 class="stateIconWrap stateNC"><span>a</span><strong>NC-3</strong></h3>
           <h4>vs Marshall Adame (D)</h4>
         </div>
       </a>
-      <a class="herocolumn firstRow" href="/gallego" style="background-image:url('/images/candidates/ruben_gallego_inset_small.jpg?1')">
+      <a class="herocolumn gallego firstRow" href="/gallego">
         <div class="candidateLabel democrat">
           <h2>Ruben Gallego (D)</h2>
           <h3 class="stateIconWrap stateAZ"><span>D</span><strong>AZ-7</strong></h3>
           <h4><small>Democratic Primary</small></h4>
         </div>
       </a>
-      <a class="herocolumn" href="/rubens" style="background-image:url('/images/candidates/rubens-inset_small.jpg')">
+      <a class="herocolumn rubens" href="/rubens">
         <div class="candidateLabel republican">
           <h2>Jim Rubens (R)</h2>
           <h3 class="stateIconWrap stateNH"><span>d</span><strong>NH<br/>SEN</strong></h3>
           <h4>vs Scott Brown (R) <em> <span style="font-size:66%;">GOP Primary</span></em></h4>
         </div>
       </a>
-      <a class="herocolumn" href="/appel" style="background-image:url('/images/candidates/appel-inset_small.jpg?1')">
+      <a class="herocolumn appel" href="/appel">
         <div class="candidateLabel democrat">
           <h2>Staci Appel (D)</h2>
           <h3 class="stateIconWrap stateIA"><span>L</span><strong>IA-03</strong></h3>
