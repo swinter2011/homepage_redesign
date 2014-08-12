@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Mayday PAC Expands Targets, Announces New Candidates and Places Radio Ads
-og_title: Mayday PAC Expands Targets, Announces New Candidates and Places Radio Ads
-og_description: Mayday PAC expands their number of targeted races from five to eight. Mayday PAC will increase its campaign spending due to better than expected fundraising and broad citizen support. The additional three targets will be announced once field teams and campaigners are in place.  In addition, today Mayday PAC announces three more of the eight total candidates it will support.
+og_title: Exciting news - We're announcing support for three new campaigns today.  Check them out!
+og_description: Today, Mayday PAC announces three more of the eight total candidates it will support. Mayday PAC expands their number of targeted races from five to eight. Mayday PAC will increase its campaign spending due to better than expected fundraising and broad citizen support. The additional three targets will be announced soon.
 pubdate: 2014-08-11
 author: Allison Bryan
 comments: true
@@ -15,11 +15,13 @@ WASHINGTON, D.C. – Today, Mayday PAC expands their number of targeted races fr
 
 In addition, today Mayday PAC announces three more of the eight total candidates it will support: Walter Jones (R, NC-3), Carol Shea-Porter (D, NH-1) and Ruben Gallego, Democratic candidate in Arizona’s seventh congressional district to replace retiring Congressman Ed Pastor.
 
-With this announcement, Mayday PAC continues to meet its commitment to work with candidates who support reform on both sides of the aisle. Mayday PAC will be communicating directly with voters in these districts with specific messages on political cronyism and reform. With consulting help from the Progressive Change Campaign Committee (PCCC), Mayday PAC will be working to make changing the way elections are funded a fundamental issue in each of these races.
+With this announcement, Mayday PAC continues to meet its commitment to work with candidates who support reform on both sides of the aisle. Mayday PAC will be communicating directly with voters in these districts with specific messages on political cronyism and reform. Mayday PAC will be working to make changing the way elections are funded a fundamental issue in each of these races.
 
-A fact sheet and additional information on each candidate’s record on reform can be found here. Today Mayday PAC also announces the placement of its first radio ads in New Hampshire, in support of Senate candidate Jim Rubens. These ads make it clear to voters that the only way to reclaim our democracy and get government working again is to reduce money in politics. These ads can be found here.
+A fact sheet and additional information on each candidate’s record on reform can be found [here](https://mayday.us/2014/08/11/CandidateAnnouncement/#fact-sheet-on-mayday-pac-2014-targets).
 
-"Today we’re taking several big steps in Mayday’s plan to retake our Democracy. All eight of our candidates are leaders on reform and, when elected to Congress, they will help us reach our goal of electing a Congress to pass fundamental reform of the way elections are funded by 2016," said Lawrence Lessig, Mayday PAC co-founder with Mark McKinnon, Republican strategists.
+Today Mayday PAC also announces the placement of its first radio ads in New Hampshire, in support of Senate candidate Jim Rubens. These ads make it clear to voters that the only way to reclaim our democracy and get government working again is to reduce money in politics. These ads can be found [here](https://mayday.us/rubens/#radioAds).
+
+"Today we’re taking several big steps in Mayday’s plan to retake our Democracy. All eight of our candidates are leaders on reform and, when elected to Congress, they will help us reach our goal of electing a Congress to pass fundamental reform of the way elections are funded by 2016," said Lawrence Lessig, Mayday PAC co-founder with Mark McKinnon, Republican strategist.
 
 "For both Republicans and Democrats, reform is a winning issue. Our expansion to eight targets is both a testament to successful citizen-up fundraising and evidence of this movement’s broad support," added McKinnon.
 
@@ -35,7 +37,7 @@ __Mayday PAC supports Republican Walter Jones, NC-3 House general election:__
 
 Republican Congressman Walter Jones prevailed over his most competitive challenge to date in the NC-3 Republican primary — his opponent was largely funded by outside money. He is now running against Marshall Adame, a retired Marine and former U.S. diplomat, in the general election. Jones has represented the third district for 10 terms.
 
-FACTS: Congressman Walter Jones is the [only Republican](http://www.huffingtonpost.com/2014/04/23/walter-jones-taylor-griffin_n_5187262.html) House member who vocally supports campaign finance reform. He [called](https://www.youtube.com/watch?v=R13_Ud0rSQw) [Citizens United](https://www.youtube.com/watch?v=R13_Ud0rSQw) "one of the worst decisions by the Supreme Court in my adult lifetime." Jones is proof that campaign finance reform is an issue that gains [traction on both sides of the aisle](https://www.youtube.com/watch?v=R13_Ud0rSQw).
+FACTS: Congressman Walter Jones is the [only Republican](http://www.huffingtonpost.com/2014/04/23/walter-jones-taylor-griffin_n_5187262.html) House member who vocally supports changing the way elections are funded. He [called](https://www.youtube.com/watch?v=R13_Ud0rSQw) [Citizens United](https://www.youtube.com/watch?v=R13_Ud0rSQw) "one of the worst decisions by the Supreme Court in my adult lifetime." Jones is proof that campaign finance reform is an issue that gains [traction on both sides of the aisle](https://www.youtube.com/watch?v=R13_Ud0rSQw).
 
 FACTS: Congressman Jones is an original co-sponsor of the [Government By the People Act](http://www.publicampaign.org/blog/2014/02/21/republican-walter-jones-supports-government-people-act). Jones’ history of sponsoring legislation to get money out of politics includes the [Fair Elections Now Act](http://action.fairelectionsnow.org/fairelections) from 2008, which was reintroduced in the House in 2011. In 2013, he introduced H.R. 3466 or [No Political Funds for Personal Use](https://beta.congress.gov/bill/113th-congress/house-bill/3466), a bill that would close the personal use loophole for all [political committees](http://www.huffingtonpost.com/2013/11/22/republican-campaign-finance-reform_n_4324754.html).
 
@@ -51,6 +53,6 @@ __Mayday PAC supports Democrat Reuben Gallego, AZ-7 primary election:__
 
 Democrat Reuben Gallego is a former Arizona state representative running against Mary Rose Wilcox, the Maricopa County Supervisor. The district is currently represented by retiring democratic congressman Ed Pastor.
 
-FACTS: Gallego supports changing the way elections are funded. In response to a candidate questionnaire conducted by the Progressive Change Campaign Committee (PCCC), Gallego supports establishing a system of elections in which candidates who choose to accept only small donations (below a level around $150) receive matching funds, allowing candidates to spend more time talking to voters and less time calling wealthy out-of-state donors. The [public polling](http://act.boldprogressives.org/survey/post_gallego_polling/) part of this survey is available on the PCCC’s website.
+FACTS: Gallego believes that the only way to get Washington working again is to take money out of politics. [He supports](http://gallegoforarizona.com/money-in-politics/) the Government by the People Act and a constitutional amendment that would overturn the Citizens United decision.
 
 FACTS: Gallego has received several high profile endorsements, including current Rep. Raul Grijalva (D-Ariz) who has received praise from the [Fair Elections Now Coalition](http://www.prnewswire.com/news-releases/fair-elections-now-coalition-praises-rep-raul-grijalva-for-cosponsoring-fair-elections-now-act-60778672.html) for co-sponsoring the Fair Elections Now Act. Grijalva endorsed Gallego in a [written statement](http://www.politico.com/story/2014/03/raul-grijalva-arizona-2014-primary-104818.html#ixzz39ofR6WmW), saying "I worked with Ed Pastor for many years. He was the best partner I could have asked for in Phoenix, and I couldn’t think of a better candidate to replace him than Ruben Gallego."
