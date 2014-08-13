@@ -24,12 +24,12 @@ layout: none
           <link>{{ site.url }}{{ post.url }}</link>
           <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
           {% if post.image %}
-          <media:content url="http://louhiablog.files.wordpress.com/2012/10/cognos_logo.jpg" medium="image">
+          <media:content url="{{ post.image }}" medium="image">
             {% if post.imageTitle %} <media:title type="plain">{{post.imageTitle}}</media:title>{% endif %}
           </media:content>
           {% endif %}
           {% if post.thumbnail %}
-          <media:content url="http://louhiablog.files.wordpress.com/2012/10/cognos_logo.jpg" medium="thumbnail">
+          <media:content url="{{ post.thumbnail }}" medium="thumbnail">
             {% if post.thumbnailTitle %}<media:title type="plain">{{post.thumbnailTitle}}</media:title>{% endif %}
           </media:content>
           {% endif %}
