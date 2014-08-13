@@ -49,9 +49,9 @@ FACTS: Congresswoman Shea-Porter co-sponsored the [Government By the People Act]
 
 FACTS: Guinta was named one of Citizens for Responsibility and Ethics in Washington’s [Most Corrupt](http://www.crewsmostcorrupt.org/mostcorrupt/entry/frank-guinta) members of congress during his first term. He was [placed under federal investigation](http://www.citizensforethics.org/page/-/PDFs/Reports/Most Corrupt Reports/Guinta, Frank.pdf?nocdn=1) for irregularities in his 2010 campaign finances. In 2012, Guinta’s top donors included [Citizens United and Koch Industries](https://www.opensecrets.org/politicians/contrib.php?cycle=2012&cid=N00030801).
 
-__Mayday PAC supports Democrat Reuben Gallego, AZ-7 primary election:__
+__Mayday PAC supports Democrat Ruben Gallego, AZ-7 primary election:__
 
-Democrat Reuben Gallego is a former Arizona state representative running against Mary Rose Wilcox, the Maricopa County Supervisor. The district is currently represented by retiring democratic congressman Ed Pastor.
+Democrat Ruben Gallego is a former Arizona state representative running against Mary Rose Wilcox, the Maricopa County Supervisor. The district is currently represented by retiring democratic congressman Ed Pastor.
 
 FACTS: Gallego believes that the only way to get Washington working again is to take money out of politics. [He supports](http://gallegoforarizona.com/money-in-politics/) the Government by the People Act and a constitutional amendment that would overturn the Citizens United decision.
 
