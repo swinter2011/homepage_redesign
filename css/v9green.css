@@ -790,3 +790,12 @@ display:inline;
     /* inline-block space fix */
     margin-right:-4px;
 }
+
+
+/* Prefilled form styles (used w/ JS)
+======================================================================== */
+.input-group.prefilled{margin: 25px auto 15px}
+  .input-group.prefilled label{display:inline}
+    .input-group.prefilled label::after{content:":"}
+  .input-group.prefilled span{font-size: 1.1em;color:#666}
+  .input-group.prefilled input{display:none}

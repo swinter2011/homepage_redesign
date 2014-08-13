@@ -35,6 +35,25 @@ function updateTotal(totalCents) {
   $('#totalAmount').text('$' + addCommas(totalRaised));
 }
 
+//prefill form data
+function prefillFormData($storedData,dataName,inputName){
+  var $input = $('input[name='+inputName+']'),
+      dataValue = $storedData[dataName],
+      isDefined = typeof dataValue != 'undefined' && dataValue != '';
+  if(isDefined){
+    $input.val(dataValue);
+    if($input.prop('type') != 'hidden'){
+      $input.parent().addClass('prefilled');
+      $input.parent().append('<span>'+dataValue+' <small><a href="#">Change</a></small></span>');
+      $input.parent().find('span small a').on('click', function(e){
+        e.preventDefault();
+        $input.parent().removeClass('prefilled');
+        $input.parent().find('span').remove();
+      });
+    }
+  }
+}
+
 $(document).ready(function () {
   jQuery.getJSON('https://pledge.mayday.us/r/total',
                function(data) {

@@ -71,14 +71,11 @@ Thank You - Mobile Number
         }, 1000); //delay redirect to ensure form submission is good, since we can't test the ifame.
       }
     });
-    var storedData = $.cookie();
-    if(typeof storedData.userZip != 'undefined' && storedData.userZip != ''){
-      $('#zip').val(storedData.userZip);
-    }
-    if(typeof storedData.userEmail != 'undefined' && storedData.userEmail != ''){
-      $('#email').val(storedData.userEmail);
-    }
+    var $storedData = $.cookie();
+    prefillFormData($storedData,'userEmail','email')
+    prefillFormData($storedData,'userZip','zip_code')
   });
+
 </script>
 <!-- form is submited through invisible iframe to skirt around cross-domain issues. -->
 <iframe src="about:blank" name="voting-block-iframe" style="display:none"></iframe>
