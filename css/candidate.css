@@ -1,69 +1,71 @@
 .candidate-bio {
-	font-family:"Merriweather", Georgia, Times New Roman, Sans Serif;
-	font-size:10px;
-	line-height:10px;
-	margin-bottom:10px;
-	background: url(/images/header-background.jpg) repeat;
-	border:1px solid #313945;
-	padding:0;
+  font-family:"Merriweather", Georgia, Times New Roman, Sans Serif;
+  font-size:10px;
+  line-height:10px;
+  margin-bottom:10px;
+  background: url(/images/header-background.jpg) repeat;
+  border:1px solid #313945;
+  padding:0;
 }
 
 .candidate-bio .col-md-12{
-	padding-bottom:15px;
+  padding-bottom:15px;
 }
 
 .candidate-bio img {
-	margin-bottom:10px;
+  margin-bottom:10px;
 }
 
 .candidate-bio p{
-	font-family:"Merriweather", Georgia, Times New Roman, Sans Serif;
-	font-size:16px;
-	line-height:18px;
-	margin-bottom:10px;
+  font-family:"Merriweather", Georgia, Times New Roman, Sans Serif;
+  font-size:16px;
+  line-height:18px;
+  margin-bottom:10px;
 }
 
 .candidate-bio ul{
-	font-size:1.4em;
-	line-height: normal
+  font-size:1.4em;
+  line-height: normal
 }
 
 .candidate-header{
-	margin-bottom:10px;
-	color:white;
-	background-color: #313945;
-	border:1px solid #313945;
-	padding-left:20px;
-	padding-right:20px;
-	padding-top:10px;
-	overflow: hidden;
+  margin-bottom:10px;
+  color:white;
+  background-color: #313945;
+  border:1px solid #313945;
+  padding-left:20px;
+  padding-right:20px;
+  padding-top:10px;
+  overflow: hidden;
 }
 
 .candidate-header h1, h3{
-	font-family:"Merriweather", Georgia, Times New Roman, Sans Serif;
-	margin-top:0;
+  font-family:"Merriweather", Georgia, Times New Roman, Sans Serif;
+  margin-top:0;
 }
 
 .candidate-header h1{
-	font-size:60px;
+  font-size:60px;
 }
-.candidate-header h3{
+
+.candidate .candidate-header h3{
   font-size:18px;
+  color:#fff;
 }
 
 .candidate-body {
-	padding-left:20px;
-	padding-right:20px;
+  padding-left:20px;
+  padding-right:20px;
 }
 
 .officialpage{
-	font-family:"Merriweather", Georgia, Times New Roman, Sans Serif;
-	font-size:16px;
-	line-height:16px;
-font-weight: bold;
-border: none;
-display: inline-block;
-margin-bottom:10px;
+  font-family:"Merriweather", Georgia, Times New Roman, Sans Serif;
+  font-size:16px;
+  line-height:16px;
+  font-weight: bold;
+  border: none;
+  display: inline-block;
+  margin-bottom:10px;
 }
 
 .rightalign{
@@ -74,94 +76,113 @@ margin-bottom:10px;
 }
 
 .supportthiscandidate{
-	font-family:"Merriweather", Georgia, Times New Roman, Sans Serif;
-	font-size:20px;
-	line-height:20px;
-	padding:10px;
-background: #c33 no-repeat 100% 50%;
-border-radius: 20px;
-color: #FFF;
-font-weight: bold;
-text-align: center;
-border: none;
-display: inline-block;
-text-align:center;
-padding-right: 54px;
-padding-left:20px;
-background-image: url(../images/button-array.png);
+  font-family:"Merriweather", Georgia, Times New Roman, Sans Serif;
+  font-size:20px;
+  line-height:20px;
+  padding:10px;
+  background: #c33 no-repeat 100% 50%;
+  border-radius: 20px;
+  color: #FFF;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  display: inline-block;
+  text-align:center;
+  padding-right: 54px;
+  padding-left:20px;
+  background-image: url(../images/button-array.png);
 }
 
 .supportthiscandidate:hover{
-	text-decoration:none;
+  text-decoration:none;
     background-color: #b01a1a;
     color: #FFF;
 }
 
 .oppcontainer {
-	float:right;
-	width:250px;
-	margin-right:-20px;
-	margin-top:10px;
-	margin-left:20px;
-	margin-bottom:10px;
-	border:1px solid #5990a9;
+  float:right;
+  width:250px;
+  margin-right:-20px;
+  margin-top:10px;
+  margin-left:20px;
+  margin-bottom:10px;
+  border:1px solid #5990a9;
 }
 .oppopp {
-	font-family:"questrial", helvetica, arial, sans serif;
-	font-size:20px;
-	line-height:20px;
-	margin-bottom:10px;
-	margin-top:0;
-	background-color: #313945;
-	color:white;
-	padding:10px;
+  font-family:"questrial", helvetica, arial, sans serif;
+  font-size:20px;
+  line-height:20px;
+  margin-bottom:10px;
+  margin-top:0;
+  background-color: #313945;
+  color:white;
+  padding:10px;
 }
 
 .opp {
-	float:right;
-	width:250px;
-	padding:10px;
+  float:right;
+  width:250px;
+  padding:10px;
 }
 
 .opp p{
-	font-family:"questrial", helvetica, arial, sans serif;
-	font-size:12px;
-	line-height:12px;
-	margin-bottom:10px;
-	margin-top:0;
+  font-family:"questrial", helvetica, arial, sans serif;
+  font-size:12px;
+  line-height:12px;
+  margin-bottom:10px;
+  margin-top:0;
 }
 
 .opp img{
-	float:left;
-	width:75px;
-	margin-right:10px;
+  float:left;
+  width:75px;
+  margin-right:10px;
 }
 
 .opp h3{
-	font-family:"questrial", helvetica, arial, sans serif;
-	font-size:20px;
-	line-height:20px;
-	font-weight:bold;
-	margin-bottom:30px;
+  font-family:"questrial", helvetica, arial, sans serif;
+  font-size:20px;
+  line-height:20px;
+  font-weight:bold;
+  margin-bottom:30px;
 }
 
 .opp h4{
-	font-family:"questrial", helvetica, arial, sans serif;
-	font-size:16px;
-	line-height:16px;
-	font-weight:bold;
+  font-family:"questrial", helvetica, arial, sans serif;
+  font-size:16px;
+  line-height:16px;
+  font-weight:bold;
 }
 
 .opp h5{
-	font-family:"questrial", helvetica, arial, sans serif;
-	font-size:14px;
-	line-height:14px;
+  font-family:"questrial", helvetica, arial, sans serif;
+  font-size:14px;
+  line-height:14px;
 }
 
 .strategynotes h3{
-	font-size:16px;
+  font-size:16px;
 }
 
 .strategynotes p{
-	font-size:12px;
+  font-size:12px;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  margin-bottom:20px;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
