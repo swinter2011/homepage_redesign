@@ -4,7 +4,6 @@ title: The most important anti-corruption candidate in America
 pubdate: 2014-08-05
 author: Lessig
 comments: true
-draft: true
 ---
 
 ### Will you support the most important anti-corruption candidate in America today?
