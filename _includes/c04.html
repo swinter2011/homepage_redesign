@@ -1,6 +1,6 @@
 {% include header.html %}
 <!--Container for Head-->
-<link rel="stylesheet" type="text/css" href="/css/candidate.css">
+<link rel="stylesheet" type="text/css" href="/css/candidate.css?1">
 <div style="margin-top:20px;" class="rally full-width">
 
   <div class="container">
@@ -36,7 +36,7 @@
         </div>
 
         <div class="candidate-body">
-          {% if page.oppname %}          
+          {% if page.oppname %}
           <div class="oppcontainer">
             <div class="oppopp">Opponent:</div>
             <div class="opp">
@@ -48,7 +48,7 @@
             </div>
           </div>
           {% endif %}
-          
+
           {{ content | markdownify }}
           <div class="strategynotes">{{ strategynotes }}</div>
         </div>
