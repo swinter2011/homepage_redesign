@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data Release #2
+title: Data Release No. 2
 pubdate: 2014-08-18
 author: Lila Schreiber
 comments: true
