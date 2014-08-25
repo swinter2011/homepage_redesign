@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Mayday PAC</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+
+  <script src="/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+  <style type="text/css" media="screen">
+    html,body{background:#000;}
+    body {padding-top:20px;padding-bottom:20px}
+    .jumbotron-bottom hr, .donate-wrap hr{margin:0;}
+    .navbar-toggle .icon-bar{background-color:#000}
+    .navbar-brand{background:transparent url('/images/mayday-pac-logo.png') no-repeat 0 0;background-size:cover;width:272px;height:87px;position:absolute;z-index:100}
+    .navbar-social{z-index:100;position:absolute;right:20px}
+      .navbar-social .navbar-nav>li>a{padding-top:0px;padding-bottom:0px}
+        .navbar-social a.social{width:106px;height:26px;background-position:0 -10px}
+        .navbar-social a.social.facebook-share{background-image:url('/images/share-facebook.png')}
+        .navbar-social a.social.twitter-share{background-image:url('/images/share-twitter.png')}
+        .navbar-social a.social.email-share{background-image:url('/images/share-email.png')}
+    .navbar-primary{padding-left:272px;position:absolute;z-index:100;top:26px;width:100%;}
+      .navbar-primary .navbar-nav>li>a{padding:15px 40px;text-transform:uppercase;color:#444;font-weight:700;}
+        .navbar-primary .in .navbar-nav>li{background-color:rgba(255,255,255,0.8);}
+        .navbar-primary .navbar-nav>li>a small{vertical-align:top}
+        .dropdown-menu{border:0;border-radius:0;margin:0;}
+        .dropdown-menu>li>a{padding:10px 20px;}
+        .dropdown-menu>li>a:before{content:'» ';}
+    .header-bg-1, .header-bg-2{position:absolute;z-index:1;width:100%;}
+      .header-bg-1{background:#000;height:26px;top:0}
+      .header-bg-2{background:rgba(255,255,255,0.9);height:50px;top:26px}
+    .jumbotron{padding-top:80px;margin-bottom:0;background:transparent url('/images/hero-2014.08.25.jpg') no-repeat 0 0;background-size:cover;}
+      .jumbotron h2{font-size:34px;text-shadow:0px 0px 6px rgba(255,255,255,0.4)}
+      .jumbotron h4{font-size:20px;text-shadow:0px 0px 4px rgba(255,255,255,0.4)}
+      .jumbotron .form-control{background: rgba(0,0,0,0.1); color:#222; margin-right:15px;border: 0; border-radius: 0;float:left;margin-bottom:10px;}
+        .jumbotron .form-control[type="email"]{width:250px;}
+        .jumbotron .form-control.zip{width:80px;}
+        .jumbotron .form-control::-webkit-input-placeholder { color:#666;font-weight:700;text-shadow:0px 0px 2px rgba(255,255,255,0.5)}
+        .jumbotron .form-control:-moz-placeholder {color:#666;font-weight:700;text-shadow:0px 0px 2px rgba(255,255,255,0.5)}
+        .jumbotron .form-control::-moz-placeholder { color:#666;font-weight:700;text-shadow:0px 0px 2px rgba(255,255,255,0.5);opacity:1; }
+        .jumbotron .form-control:-ms-input-placeholder {color:#666;font-weight:700;text-shadow:0px 0px 2px rgba(255,255,255,0.5);opacity:1;}
+      .jumbotron .btn{background-color:#cc3333;border:0;border-radius:0;margin:0;position:relative; padding-left: 18px; padding-right: 12px;font-weight:700;color:#fff;text-transform:uppercase;box-shadow: 0 0 3px rgba(0,0,0,0.3)}
+        .jumbotron .btn:after{
+            content:"";
+            position: absolute;
+            top: 5px; /* move it down because of rounded corners */
+            width: 22px; /* same as height */
+            height: 22px; /* button_outer_height / sqrt(2) */
+            background: inherit; /* use parent background */
+            border: inherit; /* use parent border */
+            border-left-color: transparent; /* hide left border */
+            border-bottom-color: transparent; /* hide bottom border */
+            box-shadow: 1px -1px 3px rgba(0,0,0,0.3)
+            /*border-radius: 0px 4px 0px 0px; /* round arrow corner, the shorthand property doesn't accept "inherit" so it is set to 4px
+            -webkit-border-radius: 0px 4px 0px 0px;
+            -moz-border-radius: 0px 4px 0px 0px;*/
+        }
+        .jumbotron .btn:after {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+        }
+        .jumbotron .btn:after{right: -11px; }
+        .jumbotron .btn:after {z-index: 1; }
+        .jumbotron .btn:before{background-color: white;}
+
+    .jumbotron-bottom{padding-top:5px;padding-bottom: 5px;background:#fff;}
+      .jumbotron-bottom h2{margin: 16px 0 0;text-align: right;}
+      .jumbotron-bottom p{margin: 12px 0 10px;}
+    .latest-news .col-md-4>div{background:#fff;border:1px solid #ddd;}
+      article{margin-bottom:15px;}
+        .blog-image{width:100%;min-height:200px;margin:0;background-size:cover}
+        .article-details{padding:2px 15px 65px;border-top:1px solid #ddd;}
+          .article-details h5{font-size:0.8;color:#666;}
+          .article-details .btn-cta{background:transparent url('/images/btn-blog-cta.png') 0 0 no-repeat;width:218px;height:47px;display:block;position:absolute;left:0px;bottom:20px;color:#fff;font-weight:700;font-size:16px;padding:13px 0 0;text-transform: uppercase;}
+    .news-intro{padding:10px 0;margin-top:15px;}
+      .news-intro .col-md-4{text-align:center}
+        .news-intro h3{margin-top:8px;}
+        .news-intro hr{border-color:#666;}
+        .news-intro .col-md-4 a{color:#cc3333;font-weight:700;text-transform:uppercase;}
+    footer{color:#999;}
+      .donate-wrap{background:#444;text-align:center;padding:5px 0;margin:0 0 20px;}
+        .donate-wrap hr{border-color:#666;}
+        .donate-wrap .container{padding-top:20px;padding-bottom:20px}
+        .donate-wrap a{color:#fff;font-weight:700;text-transform:uppercase;}
+        .donate-wrap a.ir{background:transparent url('/images/btn-donate.png') center center no-repeat;width:289px;height:47px;display:block;margin:0 auto;}
+      .social-link{float:right;width:55px;height:54px;background:transparent 0 0 no-repeat;margin-left:10px;}
+        .social-link.facebook{background-image:url('/images/link-facebook.png');}
+        .social-link.twitter{background-image:url('/images/link-twitter.png');}
+
+    /* GLOBAL HELPER CLASSES */
+    .ir/* Image replacement*/{background-color:transparent;border:0;overflow:hidden;text-indent:-9999px}
+    .cross-stitched{width:100%;background:transparent url('/images/bg-crossstitch.jpg');}
+    .text-red{color:#cc3333 !important;}
+  </style>
+</head>
+
+<body>
+  <!--[if lt IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <header class="navbar navbar-fixed-top">
+
+    <div class="container" style="position:relative">
+      <a class="navbar-brand ir" href="#">MAYDAY.US</a>
+      <div class="row navbar-social"  style="">
+        <div class="navbar-header pull-right  hidden-xs hidden-sm">
+          <div class="">
+            <ul class="nav navbar-nav">
+              <li><a href="#" class="ir social facebook-share">Facebook</a></li>
+              <li><a href="#" class="ir social twitter-share">Twitter</a></li>
+              <li><a href="#" class="ir social email-share">Email</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row navbar-primary" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-hover="dropdown">Our Plan <small>v</small></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Our Plan</a></li>
+                <li><a href="#">Candidates</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-hover="dropdown">Get Involved <small>v</small></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">My Super Pac</a></li>
+                <li><a href="#">Emebdable Media</a></li>
+                <li><a href="#">Stay Connected</a></li>
+                <li><a href="#">Spread the Word</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-hover="dropdown">About <small>v</small></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">About Mayday PAC</a></li>
+                <li><a href="#">Donor Data</a></li>
+                <li><a href="#">Bios</a></li>
+                <li><a href="#">Videos &amp; Media</a></li>
+                <li><a href="#">FAQ</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-hover="dropdown">News <small>v</small></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Mayday PAC News</a></li>
+                <li><a href="#">In the News</a></li>
+                <li><a href="#">Press Kit</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Donate</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="header-bg-1"></div>
+    <div class="header-bg-2"></div>
+  </header>
+
+  <section class="jumbotron">
+    <div class="container">
+      <h2>Congress is Crippled by Corruption</h2>
+      <h4>It's up to us to save America from the cronies flooding cash into campaigns.</h4>
+        <form class="" role="form">
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Email" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="zip" placeholder="Zip" class="form-control zip">
+          </div>
+          <button type="submit" class="btn">Be part of the rescue!</button>
+        </form>
+    </div>
+  </section>
+
+  <section class="jumbotron-bottom">
+    <hr/>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut. <a href="#" title="Read More.">Learn More.</a></p>
+        </div>
+        <div class="col-md-6">
+          <h2><span class="text-red">50,909</span> people joined</h2>
+        </div>
+      </div>
+    </div>
+    <hr/>
+  </section>
+
+  <section class="cross-stitched latest-news">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 news-intro">
+          <div class="col-md-4"><hr/></div>
+          <div class="col-md-4"><h3><a href="" title="Latest Mayday PAC News">Latest Mayday PAC News</a></h3></div>
+          <div class="col-md-4"><hr/></div>
+        </div>
+        <article class="col-md-4">
+          <div>
+            <h5 class="blog-image ir" style="background-image:url('/images/blog/2014-08-11-CandidateAnnouncement.jpg');">Heading</h5>
+            <div class="article-details">
+              <h5>Aug 20, 2014</h5>
+              <h4>Heading</h4>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. <a href="#" title="Read More.">Read More.</a></p>
+              <p><a class="btn btn-cta" href="#" role="button">View details &raquo;</a></p>
+            </div>
+          </div>
+        </article>
+        <article class="col-md-4">
+          <div>
+            <h5 class="blog-image ir" style="background-image:url('/images/blog/2014-08-05-our-fundraising-so-far.jpg');">Heading</h5>
+            <div class="article-details">
+              <h5>Aug 20, 2014</h5>
+              <h4>Heading</h4>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. <a href="#" title="Read More.">Read More.</a></p>
+              <p><a class="btn btn-cta" href="#" role="button">View details &raquo;</a></p>
+            </div>
+          </div>
+       </article>
+        <article class="col-md-4">
+          <div>
+            <h5 class="blog-image ir" style="background-image:url('/images/blog/2014-07-29-FirstTargets.jpg');">Heading</h5>
+            <div class="article-details">
+              <h5>Aug 20, 2014</h5>
+              <h4>Heading</h4>
+              <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. <a href="#" title="Read More.">Read More.</a></p>
+              <p><a class="btn btn-cta" href="#" role="button">View details &raquo;</a></p>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <hr />
+    </div> <!-- /container -->
+  </section>
+
+  <footer>
+    <div class="donate-wrap">
+      <hr/>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="" title="" class="ir">Donate to Mayday PAC</a>
+          </div>
+        </div>
+      </div>
+      <hr/>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h4>MAYDAY.US</h4>
+          <p>Paid for by Mayday PAC. <br/> Not authorized by any candidate or any campaign committie.</p>
+          <p>&copy; 2014 Maydap PAC, Some rights reserved.</p>
+        </div>
+        <div class="col-md-6">
+          <!-- <a href="#" class="ir social-link youtube" title="Youtube Page">Youtube Page</a> -->
+          <a href="#" class="ir social-link twitter" title="Twitter Page">Twitter Page</a>
+          <a href="#" class="ir social-link facebook" title="Facebook Page">Facebook Page</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+
+  <script src="/js/vendor/bootstrap.min.js"></script>
+
+  <script src="/js/plugins.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+  <script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-XXXXX-X');ga('send','pageview');
+  </script>
+</body>
+</html>
