@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The most important anti-corruption candidate in America
-pubdate: 2014-08-05
+pubdate: 2014-08-13
 author: Lessig
 comments: true
 ---
