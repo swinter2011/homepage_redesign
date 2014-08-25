@@ -16,7 +16,9 @@
   <script src="/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
   <style type="text/css" media="screen">
-    html,body{background:#000;}
+    @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900,400italic,700italic,900italic);
+    @import url(http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic);
+    html,body{font-family: Helvetica,Arial,sans-serif; background:#000;}
     body {padding-top:20px;padding-bottom:20px}
     .jumbotron-bottom hr, .donate-wrap hr{margin:0;}
     .navbar-toggle .icon-bar{background-color:#000}
@@ -38,8 +40,8 @@
       .header-bg-1{background:#000;height:26px;top:0}
       .header-bg-2{background:rgba(255,255,255,0.9);height:50px;top:26px}
     .jumbotron{padding-top:80px;margin-bottom:0;background:transparent url('/images/hero-2014.08.25.jpg') no-repeat 0 0;background-size:cover;}
-      .jumbotron h2{font-size:34px;text-shadow:0px 0px 6px rgba(255,255,255,0.4)}
-      .jumbotron h4{font-size:20px;text-shadow:0px 0px 4px rgba(255,255,255,0.4)}
+      .jumbotron h2{color:#000000; font-family: 'Source Sans Pro', sans-serif; text-transform:uppercase; font-weight:700; font-size:50px; text-shadow:0px 0px 6px rgba(255,255,255,0.8)}
+      .jumbotron h4{font-family: 'PT Serif', Times New Roman, Times, serif; font-weight:bold; font-size:25px; text-shadow:0px 0px 4px rgba(255,255,255,0.8)}
       .jumbotron .form-control{background: rgba(0,0,0,0.1); color:#222; margin-right:15px;border: 0; border-radius: 0;float:left;margin-bottom:10px;}
         .jumbotron .form-control[type="email"]{width:250px;}
         .jumbotron .form-control.zip{width:80px;}
@@ -118,9 +120,9 @@
         <div class="navbar-header pull-right  hidden-xs hidden-sm">
           <div class="">
             <ul class="nav navbar-nav">
-              <li><a href="#" class="ir social facebook-share">Facebook</a></li>
-              <li><a href="#" class="ir social twitter-share">Twitter</a></li>
-              <li><a href="#" class="ir social email-share">Email</a></li>
+              <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://mayday.us/" class="ir social facebook-share">Facebook</a></li>
+              <li><a href="https://twitter.com/home?status=We%27re%20taking%20on%20corruption%20with%20YOUR%20help.%20https://mayday.US%20%23MaydayPAC" class="ir social twitter-share">Twitter</a></li>
+              <li><a href="mailto:?subject=Help Reduce the influence of money in politics. &amp;body=The Mayday Political Action Committee is crowdsourcing the money it needs to get a Congress committed to fundamental reform by 2016. This is our first essential step.  Will you join me by going to https://mayday.us?" class="ir social email-share">Email</a></li>
             </ul>
           </div>
         </div>
@@ -139,38 +141,38 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-hover="dropdown">Our Plan <small>v</small></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Our Plan</a></li>
-                <li><a href="#">Candidates</a></li>
+                <li><a href="/the-plan">Our Plan</a></li>
+                <li><a href="/factsheet">Candidates</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-hover="dropdown">Get Involved <small>v</small></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="#">My Super Pac</a></li>
-                <li><a href="#">Emebdable Media</a></li>
-                <li><a href="#">Stay Connected</a></li>
-                <li><a href="#">Spread the Word</a></li>
+                <li><a href="https://my.mayday.us/login">My Super Pac</a></li>
+                <li><a href="/embed">Embeddable Media</a></li>
+                <li><a href="/subscribe">Stay Connected</a></li>
+                <li><a href="/ways">Spread the Word</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-hover="dropdown">About <small>v</small></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="#">About Mayday PAC</a></li>
-                <li><a href="#">Donor Data</a></li>
-                <li><a href="#">Bios</a></li>
-                <li><a href="#">Videos &amp; Media</a></li>
-                <li><a href="#">FAQ</a></li>
+                <li><a href="/about">About Mayday PAC</a></li>
+                <li><a href="/your-donations">Donor Data</a></li>
+                <!--<li><a href="/about">Bios</a></li>-->
+                <li><a href="/videos">Videos &amp; Media</a></li>
+                <li><a href="/faq">FAQ</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-hover="dropdown">News <small>v</small></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Mayday PAC News</a></li>
-                <li><a href="#">In the News</a></li>
-                <li><a href="#">Press Kit</a></li>
+                <li><a href="/blog">Mayday PAC News</a></li>
+                <li><a href="/media">In the News</a></li>
+                <!--<li><a href="#">Press Kit</a></li>-->
               </ul>
             </li>
-            <li><a href="#">Donate</a></li>
+            <li><a href="/newpledge">Donate</a></li>
           </ul>
         </div>
       </div>
@@ -181,8 +183,8 @@
 
   <section class="jumbotron">
     <div class="container">
-      <h2>Congress is Crippled by Corruption</h2>
-      <h4>It's up to us to save America from the cronies flooding cash into campaigns.</h4>
+      <h2>Congress is&nbsp;Crippled<BR>by&nbsp;Corruption</h2>
+      <h4>It's&nbsp;up&nbsp;to&nbsp;us to&nbsp;save&nbsp;America<BR>from&nbsp;the&nbsp;cronies flooding&nbsp;cash into&nbsp;campaigns.</h4>
         <form class="" role="form">
           <div class="form-group">
             <input type="email" name="email" placeholder="Email" class="form-control">
