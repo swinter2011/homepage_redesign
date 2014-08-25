@@ -4,6 +4,8 @@ title: Mayday PAC Announces First Targets in Campaign to End Influence of Money 
 pubdate: 2014-07-29
 author: Johnathan Lipman
 comments: False
+frontpage: true
+imageURL: /images/blog/2014-07-29-FirstTargets.jpg
 ---
 
 ### PAC warns other candidates to get on right side of reform now 

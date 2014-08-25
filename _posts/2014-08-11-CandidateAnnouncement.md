@@ -6,6 +6,8 @@ og_description: Today, Mayday PAC announces three more of the eight total candid
 pubdate: 2014-08-11
 author: Allison Bryan
 comments: true
+frontpage: true
+imageURL: /images/blog/2014-08-11-CandidateAnnouncement.jpg
 ---
 
 

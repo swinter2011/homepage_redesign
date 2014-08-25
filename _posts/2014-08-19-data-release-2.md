@@ -4,6 +4,9 @@ title: Data Release No. 2
 pubdate: 2014-08-18
 author: Lila Schreiber
 comments: true
+frontpage: true
+imageURL: /images/blog/2014-08-05-our-fundraising-so-far.jpg
+
 ---
 
 ### Two more weeks of data
