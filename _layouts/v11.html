@@ -150,7 +150,7 @@
                   <div class="article-details">
                     <h5>{{ post.pubdate }}</h5>
                     <h4>{% if post.frontpageTitle %}{{ post.frontpageTitle }}{% else %}{{ post.title }}{% endif %}</h4>
-                    <p> {{ post.blurb }}<a href="{{ post.url }}" title="Read More.">Read More.</a></p>
+                    <p> {{ post.blurb }}&nbsp;&nbsp;<a href="{{ post.url }}" title="Read More.">Read More</a></p>
                     <p><a class="btn btn-cta" href="{% if post.pageURL %}{{ post.pageURL }} {% else %}{{ post.url }}{% endif %}" role="button">View details &raquo;</a></p>
                   </div>
                 </div>

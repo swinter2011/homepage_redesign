@@ -1,12 +1,13 @@
 ---
 layout: post
 title: Launch of Mayday Labs
-pubdate: 2014-08-25
+pubdate: 2014-08-26
 author: Aaron Lifshin
-draft: true
+draft: false
 comments: true
-frontpage: false
+frontpage: true
 blurb: The Mayday organization has broken new ground in online organizing of activists around the issue of corruption.  To build on this momentum, we are announcing the creation of Mayday Labs.
+imageURL: /images/blog/maydaylabs.jpg
 ---
 
 ### Launch of Mayday Labs
