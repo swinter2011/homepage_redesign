@@ -11,15 +11,15 @@ blurb: The Mayday organization has broken new ground in online organizing of act
 
 ### Launch of Mayday Labs
 
-In under four months, MAYDAY.US has broken new ground in online organizing around the issue of political corruption.  To build on this momentum, we are announcing the creation of Mayday Labs.
+In under four months, [MAYDAY.US](https://mayday.us) has broken new ground in online organizing around the issue of political corruption.  To build on this momentum, we are announcing the creation of Mayday Labs.
 
-Mayday Labs is the open source, technical project arm of Mayday.  Labs will work towards the following goals:
+Mayday Labs is the open source, technical project arm of [MAYDAY.US](https://mayday.us).  Labs will work towards the following goals:
 
- - Cultivate participation by the technical community in the campaign finance reform
+ - Cultivate participation by the technical community in the anti-corruption
 movement
  - Enable movement supporters to connect, interact, engage and take action
- - Refine the messages of campaign finance reform and increase their effectiveness
- - Incubate and facilitate technical innovation and ideas to help the campaign finance reform
+ - Refine the messages of anti-corruption movement and increase their effectiveness
+ - Incubate and facilitate technical innovation and ideas to help the anti-corruption
 movement
 
 Our technology will be an extension of the existing [Google AppEngine Python infrastructure](https://github.com/MayOneUS/wiki/wiki/Developer-Information) created by the Mayday First Responders.  We will coordinate the project via the [Mayday Labs Google Group](https://groups.google.com/forum/#!forum/mayday-labs) and the #maydaypac IRC channel on Freenode.
