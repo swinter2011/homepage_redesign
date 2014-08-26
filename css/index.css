@@ -159,7 +159,7 @@ body {
 	margin: 0;
 	position: relative;
 	padding-left: 18px;
-	padding-right: 12px;
+	padding-right: 22px;
 	font-weight: 700;
 	color: #fff;
 	text-transform: uppercase;
@@ -175,22 +175,12 @@ body {
 	border: inherit; /* use parent border */
 	border-left-color: transparent; /* hide left border */
 	border-bottom-color: transparent; /* hide bottom border */
-	box-shadow: 1px -1px 3px rgba(0,0,0,0.3)
-	/*border-radius: 0px 4px 0px 0px; /* round arrow corner, the shorthand property doesn't accept "inherit" so it is set to 4px
-	-webkit-border-radius: 0px 4px 0px 0px;
-	-moz-border-radius: 0px 4px 0px 0px;*/
-}
-.jumbotron .btn:after {
 	transform: rotate(45deg);
 	-webkit-transform: rotate(45deg);
 	-moz-transform: rotate(45deg);
 	-o-transform: rotate(45deg);
 	-ms-transform: rotate(45deg);
-}
-.jumbotron .btn:after {
 	right: -11px;
-}
-.jumbotron .btn:after {
 	z-index: 1;
 }
 .jumbotron .btn:before {
