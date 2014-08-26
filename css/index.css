@@ -23,8 +23,8 @@ body {
 }
 .navbar-social {
 	z-index: 100;
-	position: absolute;
-	right: 20px
+	position: fixed;
+	right: 15px
 }
 .navbar-social .navbar-nav>li>a {
 	padding-top: 0px;
@@ -86,15 +86,17 @@ body {
 	top: 0
 }
 .header-bg-2 {
-	background: rgba(255,255,255,0.9);
+	background: rgba(255,255,255,0.7);
 	height: 50px;
 	top: 26px
 }
 .jumbotron {
-	padding-top: 80px;
+	padding-top: 100px;
 	margin-bottom: 0;
 	background: transparent url('/images/hero-2014.08.25.jpg') no-repeat 0 0;
 	background-size: cover;
+	height:500px;
+	margin-top:-10px;
 }
 .jumbotron h2 {
 	color: #000000;
@@ -109,7 +111,8 @@ body {
 	font-family: 'Merriweather',serif;
 	font-weight: 700;
 	font-size: 130%;
-	letter-spacing:.05em
+	letter-spacing:.05em;
+	color:#494C5F
 	
 }
 .jumbotron .form-control {
@@ -198,9 +201,22 @@ body {
 	padding-top: 5px;
 	padding-bottom: 5px;
 	background: #fff;
+	height:90px;
+	margin-top:-100px;
+	opacity:.85;
+	 box-shadow: 0px 2px 2px #999
+}
+
+.jumbotron-bottom .container{
+	padding-top: 10px;
+	padding-bottom: 12px
+}
+
+.jumbotron-bottom hr{
+	
 }
 .jumbotron-bottom h2 {
-	margin: 16px 0 0;
+	margin: 0px 0 0;
 	text-align: right;
 }
 .jumbotron-bottom p {
@@ -234,12 +250,13 @@ article {
 	display: block;
 	position: absolute;
 	left: 0px;
-	bottom: 20px;
+	bottom: 30px;
 	color: #fff;
 	font-weight: 700;
 	font-size: 16px;
-	padding: 13px 0 0;
+	padding: 9px 0 0;
 	text-transform: uppercase;
+	letter-spacing: .05em
 }
 .news-intro {
 	padding: 10px 0;
@@ -252,12 +269,15 @@ article {
 	margin-top: 8px;
 }
 .news-intro hr {
-	border-color: #666;
+	border-color: #DDDDDD;
+	
 }
 .news-intro .col-md-4 a {
 	color: #cc3333;
 	font-weight: 700;
 	text-transform: uppercase;
+	font-size: 85%;
+	letter-spacing: .05em
 }
 footer {
 	color: #999;
@@ -311,9 +331,13 @@ footer {
 .cross-stitched {
 	width: 100%;
 	background: transparent url('/images/bg-crossstitch.jpg');
+	padding-bottom: 60px
 }
 .text-red {
-	color: #cc3333 !important;
+	color: #133756 !important;
+	font-size: 200%;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
 }
 
 
@@ -352,4 +376,78 @@ small{
 	
 	border-bottom:solid 1px #cccccc;
 }
+
+
+/* hero */
+
+
+.col-md-6 p{
+	font-family:'Merriweather', georgia, serif ;
+	font-style:italic;
+	font-size: 140%
+}
+
+.article-details {
+	padding-top: 15px;
+	padding-bottom:80px
+	
+}
+
+.article-details h5 {
+	
+	font-family: 'Roboto', helvetica, sans-serif;
+	font-weight: 400;
+	font-size:90%;
+	color:#777777
+}
+
+.article-details h4 {
+	
+	font-family: 'Merriweather', georgia, serif;
+	font-weight: 700;
+	font-size:120%;
+	color:#000000;
+	line-height: 140%
+}
+
+
+.article-details p {
+	
+	font-family: 'Roboto', helvetica, sans-serif;
+	font-weight: 400;
+	font-size: 100%;
+	line-height: 150%;
+	color: #777777;
+	padding-bottom: 3px
+}
+
+.article-details a {
+	
+	font-family: 'Roboto', helvetica, sans-serif;
+	font-weight: 900;
+	color: #D01424;
+	text-decoration:underline;
+	text-transform:uppercase
+	
+}
+
+.article-details .btn-cta{
+	
+	font-family: 'Roboto', helvetica, sans-serif;
+	font-weight: 900;
+	font-size: 140%;
+	color: #FFFFFF;
+	text-decoration:none
+	
+}
+
+
+
+
+
+
+
+
+
+
 
