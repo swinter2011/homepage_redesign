@@ -15,6 +15,9 @@ var validateForm = function() {
 
 <div id="content" class="row">
     <div class="row">
+      <h2>{{ subhead }}</h2>
+    </div>
+    <div class="row">
       <form name="subscribeForm" action='https://pledge.mayday.us/r/subscribe' onsubmit='return validateForm();' method='post'>
 
         <div class="row">
@@ -40,14 +43,14 @@ var validateForm = function() {
 
         <div class="row">
            <div class="input-group input-group-lg">
-         <label>Zipcode</label>
+         <label>Zip Code</label>
             <input type="text" name="zipcode" class="form-control">
           </div>
         </div>
 
         <div class="row">
            <div class="input-group input-group-lg">
-         <label class="checkbox"><input type="checkbox" name="volunteer" class="form-control" onclick="document.getElementById('skills_section').style.display = 'block';"> Are You Able to Volunteer?</label>
+         <label class="checkbox"><input type="checkbox" name="volunteer" class="form-control" onclick="document.getElementById('skills_section').style.display = 'block';"> Do you want to volunteer?</label>
           </div>
         </div>
 
