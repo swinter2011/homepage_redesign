@@ -430,6 +430,11 @@ small{
 	text-decoration:none
 	
 }
+.safeharbor {
+  border:2px solid white;
+  text-align: center;
+  padding: 10px;
+}
 
 @media screen and (max-width: 800px) {
   .jumbotron-bottom {
