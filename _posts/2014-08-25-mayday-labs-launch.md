@@ -24,7 +24,7 @@ movement
 
 The project will built on the existing [Google AppEngine Python infrastructure](https://github.com/MayOneUS/wiki/wiki/Developer-Information) created by the Mayday First Responders.  We will coordinate the project via the [Mayday Labs Google Group](https://groups.google.com/forum/#!forum/mayday-labs) and the #maydaypac IRC channel on Freenode.
 
-Please join us on these forums if you are interested in the project.
+We are inviting developers, designers, technical project managers, growth hackers and organizers to join the project.  Please join the googlegroup, or come into the IRC channel.
 
 Over the coming months, we will identify 5-7 experienced volunteer core developers for Mayday Labs, establish project process and governance, and deliver functionality to help Mayday supporters organize around campaigns.
 
