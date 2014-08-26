@@ -353,3 +353,39 @@ small{
 	border-bottom:solid 1px #cccccc;
 }
 
+
+/* hero */
+
+
+.col-md-6 p{
+	font-family:'Merriweather', georgia, serif ;
+	font-style:italic;
+	font-size: 140%
+}
+
+.article-details h5 {
+	
+	font-family: 'Roboto', helvetica, sans-serif;
+	font-weight: 400;
+	font-size:90%;
+	color:#777777
+}
+
+.article-details h4 {
+	
+	font-family: 'Merriweather', georgia, serif;
+	font-weight: 700;
+	font-size:120%;
+	color:#000000
+}
+}
+
+.article-details p {
+	
+	font-family: ;
+}
+
+.article-details a {
+	
+	font-family:  ;
+}
