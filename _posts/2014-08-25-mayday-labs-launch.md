@@ -11,7 +11,7 @@ blurb: The Mayday organization has broken new ground in online organizing of act
 
 ### Launch of Mayday Labs
 
-MAYDAY.US has broken new ground in online organizing of activists around the issue of corruption.  To build on this momentum, we are announcing the creation of Mayday Labs.
+In under four months, MAYDAY.US has broken new ground in online organizing around the issue of political corruption.  To build on this momentum, we are announcing the creation of Mayday Labs.
 
 Mayday Labs is the open source, technical project arm of Mayday.  Labs will work towards the following goals:
 
