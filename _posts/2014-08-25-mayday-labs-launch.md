@@ -28,9 +28,7 @@ We invite developers, designers, technical project managers, growth hackers and 
 
 Over the coming months, we will identify 5-7 experienced volunteer core developers for Mayday Labs, establish project process and governance, and deliver functionality to help Mayday supporters organize around campaigns.
 
-We also welcome those experienced in project management and running open source projects to act as advisors for Mayday Labs.
-
-We look forward to creating an outlet for those hackers out there looking to contribute their skills to fixing corruption, and to inventing the next generation of open source software for movement building and collaboration.
+We look forward to creating a new way for hackers to contribute their skills to fixing corruption, and to inventing the next generation of open source software for movement building and collaboration.
 
 We hope you'll join us.
 
