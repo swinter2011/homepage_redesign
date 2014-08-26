@@ -109,7 +109,8 @@ body {
 	font-family: 'Merriweather',serif;
 	font-weight: 700;
 	font-size: 130%;
-	letter-spacing:.05em
+	letter-spacing:.05em;
+	color:#494C5F
 	
 }
 .jumbotron .form-control {
@@ -234,12 +235,13 @@ article {
 	display: block;
 	position: absolute;
 	left: 0px;
-	bottom: 20px;
+	bottom: 30px;
 	color: #fff;
 	font-weight: 700;
 	font-size: 16px;
-	padding: 13px 0 0;
+	padding: 9px 0 0;
 	text-transform: uppercase;
+	letter-spacing: .05em
 }
 .news-intro {
 	padding: 10px 0;
@@ -252,12 +254,15 @@ article {
 	margin-top: 8px;
 }
 .news-intro hr {
-	border-color: #666;
+	border-color: #DDDDDD;
+	
 }
 .news-intro .col-md-4 a {
 	color: #cc3333;
 	font-weight: 700;
 	text-transform: uppercase;
+	font-size: 85%;
+	letter-spacing: .05em
 }
 footer {
 	color: #999;
@@ -311,6 +316,7 @@ footer {
 .cross-stitched {
 	width: 100%;
 	background: transparent url('/images/bg-crossstitch.jpg');
+	padding-bottom: 60px
 }
 .text-red {
 	color: #cc3333 !important;
@@ -363,6 +369,12 @@ small{
 	font-size: 140%
 }
 
+.article-details {
+	padding-top: 15px;
+	padding-bottom:80px
+	
+}
+
 .article-details h5 {
 	
 	font-family: 'Roboto', helvetica, sans-serif;
@@ -376,16 +388,41 @@ small{
 	font-family: 'Merriweather', georgia, serif;
 	font-weight: 700;
 	font-size:120%;
-	color:#000000
+	color:#000000;
+	line-height: 140%
 }
-}
+
 
 .article-details p {
 	
-	font-family: ;
+	font-family: 'Roboto', helvetica, sans-serif;
+	font-weight: 400;
+	font-size:90%;
+	color:#777777;
+	padding-bottom:3px;
 }
 
 .article-details a {
 	
 	font-family:  ;
 }
+
+.article-details .btn-cta{
+	
+	font-family: 'Roboto', helvetica, sans-serif;
+	font-weight: 900;
+	font-size: 140%;
+	color: #FFFFFF;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
