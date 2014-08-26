@@ -434,6 +434,7 @@ small{
 @media screen and (max-width: 800px) {
   .jumbotron-bottom {
     margin-top: 0px;
+    height:200px;
   }
 }
  
