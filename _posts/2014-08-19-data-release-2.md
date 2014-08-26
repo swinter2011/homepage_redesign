@@ -6,7 +6,9 @@ author: Lila Schreiber
 comments: true
 frontpage: true
 imageURL: /images/blog/2014-08-05-our-fundraising-so-far.jpg
-
+frontpageTitle: Over 50,000 donors
+blurb: Our crowd-funding effort raised over $6M from more than 50K citizens across the country. Curious about the data breakdown? Check out the details.
+pageURL: /your-donations
 ---
 
 ### Two more weeks of data

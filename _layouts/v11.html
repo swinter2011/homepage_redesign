@@ -94,14 +94,11 @@
 
   <section class="jumbotron">
     <div class="container">
-      <h2>Congress is&nbsp;Crippled<BR>by&nbsp;Corruption</h2>
-      <h4>It's&nbsp;up&nbsp;to&nbsp;us to&nbsp;save&nbsp;America<BR>from&nbsp;the&nbsp;cronies flooding&nbsp;cash into&nbsp;campaigns.</h4>
+      <h2>Congress is&nbsp;crippled<BR>by&nbsp;corruption</h2>
+      <h4>Let's&nbsp;save&nbsp;America&nbsp;from<BR>the&nbsp;cronies flooding&nbsp;cash into&nbsp;campaigns.</h4>
         <form class="" role="form">
           <div class="form-group">
             <input type="email" name="email" placeholder="Email" class="form-control">
-          </div>
-          <div class="form-group">
-            <input type="text" name="zip" placeholder="Zip" class="form-control zip">
           </div>
           <button type="submit" class="btn">Be part of the rescue!</button>
         </form>
@@ -113,10 +110,10 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut. <a href="#" title="Read More.">Learn More.</a></p>
+          <p>Let's win our democracy back!</p>
         </div>
         <div class="col-md-6">
-          <h2><span class="text-red">50,909</span> people joined</h2>
+          <h2>over <span class="text-red">50,900</span> have joined the movement</h2>
         </div>
       </div>
     </div>
@@ -128,7 +125,7 @@
       <div class="row">
         <div class="col-md-12 news-intro">
           <div class="col-md-4"><hr/></div>
-          <div class="col-md-4"><h3><a href="" title="Latest Mayday PAC News">Latest Mayday PAC News</a></h3></div>
+          <div class="col-md-4"><h3><a href="" title="Latest Mayday PAC News">MAYDAY.US News</a></h3></div>
           <div class="col-md-4"><hr/></div>
         </div>
 				{% for post in site.posts %}
@@ -139,9 +136,9 @@
                   <h5 class="blog-image ir" style="background-image:url('{{ post.imageURL }}');">Heading</h5>
                   <div class="article-details">
                     <h5>{{ post.pubdate }}</h5>
-                    <h4>{{ post.title }}</h4>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. <a href="{{ post.url }}" title="Read More.">Read More.</a></p>
-                    <p><a class="btn btn-cta" href="{{ post.url }}" role="button">View details &raquo;</a></p>
+                    <h4>{% if post.frontpageTitle %}{{ post.frontpageTitle }}{% else %}{{ post.title }}{% endif %}</h4>
+                    <p> {{ post.blurb }}<a href="{{ post.url }}" title="Read More.">Read More.</a></p>
+                    <p><a class="btn btn-cta" href="{% if post.pageURL %}{{ post.pageURL }} {% else %}{{ post.url }}{% endif %}" role="button">View details &raquo;</a></p>
                   </div>
                 </div>
               </article>
@@ -158,7 +155,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <a href="" title="" class="ir">Donate to Mayday PAC</a>
+            <a href="/newpledge/" title="" class="ir">Donate to Mayday PAC</a>
           </div>
         </div>
       </div>
