@@ -24,11 +24,15 @@ movement
 
 Our technology will be an extension of the existing [Google AppEngine Python infrastructure](https://github.com/MayOneUS/wiki/wiki/Developer-Information) created by the Mayday First Responders.  We will coordinate the project via the [Mayday Labs Google Group](https://groups.google.com/forum/#!forum/mayday-labs) and the #maydaypac IRC channel on Freenode.
 
-We are inviting developers, designers, technical project managers, growth hackers and organizers to join the project.  Please [join the googlegroup](https://groups.google.com/forum/#!forum/mayday-labs), or come into the IRC channel.
+We invite developers, designers, technical project managers, growth hackers and organizers to join the project.  Please [join the googlegroup](https://groups.google.com/forum/#!forum/mayday-labs), or come into the IRC channel.
 
 Over the coming months, we will identify 5-7 experienced volunteer core developers for Mayday Labs, establish project process and governance, and deliver functionality to help Mayday supporters organize around campaigns.
 
 We also welcome those experienced in project management and running open source projects to act as advisors for Mayday Labs.
+
+We look forward to creating an outlet for those hackers out there looking to contribute their skills to fixing corruption, and to inventing the next generation of open source software for movement building and collaboration.
+
+We hope you'll join us.
 
 Aaron Lifshin
 
