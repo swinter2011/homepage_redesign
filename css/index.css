@@ -431,9 +431,15 @@ small{
 	
 }
 .safeharbor {
-  border:2px solid white;
+  font: normal 1em/1.4 'Merriweather', Georgia, "Times New Roman", Times, serif;
+  display: inline-block;
+  color: white;
   text-align: center;
-  padding: 10px;
+  font-size: 16px;
+  padding: 10px 10px 0 10px;
+  border: 2px solid white;
+  font-variant: small-caps;
+  margin-bottom:10px;
 }
 
 @media screen and (max-width: 800px) {
