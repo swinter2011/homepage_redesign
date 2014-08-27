@@ -6,7 +6,7 @@ author: Aaron Lifshin
 draft: false
 comments: true
 frontpage: true
-blurb: The Mayday organization has broken new ground in online organizing of activists around the issue of corruption.  To build on this momentum, we are announcing the creation of Mayday Labs.
+blurb: MAYDAY.US has broken new ground in online organizing.  To build on this momentum, we are announcing the creation of Mayday Labs.
 imageURL: /images/blog/maydaylabs.jpg
 ---
 
