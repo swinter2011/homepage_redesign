@@ -1,3 +1,4 @@
+{% unless page.hideSidebarDonations %}
 <div class="block">
 <!--  <h3>Direct Contributions</h3>
     <P style="text-align:center;"><a href="http://democracy.com/MayOne/donate.aspx#form">
@@ -7,11 +8,11 @@
     <p>
       Direct donations are collected via <a href="http://democracy.com/">Democracy.com</a>. Direct contributions, unlike pledges, are not contingent upon reaching our goals and are collected immediately.</p>
 -->
+
       	<a class="pledge" href="//mayday.us/newpledge">Donate Now</a>
 		           
 </div>
 <div class="block">
-	  <h3>Sign-Up to our Mailing List</h3>
 	 <P>
 	 <form action="https://mayday.us/subscribe" method="get" style="text-align: center;"><input name="email" placeholder="E-mail Address" style="color:black;" type="text"><span style="color:black;">&nbsp;<input class="btn btn-primary"  type="submit" value="Sign Up"></span></form>
 	 </P>
@@ -28,6 +29,7 @@
       You are required to send your name, address, occupation, and employer along with your check in order for us to legally accept your donation.
     </p>
 </div>
+{% endunless %}
 <div class="block">
   <h3>Share</h3>
   <div class="social" id="sidesocial">
