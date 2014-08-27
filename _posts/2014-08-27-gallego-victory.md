@@ -3,7 +3,7 @@ layout: post
 title: Gallego Victory
 pubdate: 2014-08-27
 author: Lessig
-draft: true
+draft: false
 comments: true
 frontpage: true
 blurb: Our first Mayday reform candidate, Ruben Gallego, declared victory last night in Arizona's 7th Congressional District.
