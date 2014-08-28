@@ -9,6 +9,10 @@ body {
 	padding-bottom: 20px
 }
 
+.default-body {
+  padding-top: 70px;
+}
+
 /* START HEADER */
 .navbar-toggle .icon-bar {
 	background-color: #000
@@ -132,6 +136,7 @@ small /* header downward V */{
 /* FOOTER SECTION */
 footer {
 	color: #999;
+  background-color:black;
 }
 .donate-wrap {
 	background: #444;
