@@ -23,7 +23,7 @@ body {
 	width: 272px;
 	height: 87px;
 	position: absolute;
-	z-index: 100
+	z-index: 10000;
 }
 .navbar-social {
 	z-index: 100;
@@ -32,12 +32,12 @@ body {
 }
 .navbar-social .navbar-nav>li>a {
 	padding-top: 0px;
-	padding-bottom: 0px
+	padding-bottom: 0px;
 }
 .navbar-social a.social {
 	width: 106px;
 	height: 26px;
-	background-position: 0 -10px
+	background-position: 0 -10px;
 }
 .navbar-social a.social.facebook-share {
 	background-image: url('/images/share-facebook.png')
@@ -60,7 +60,7 @@ body {
 	text-transform: uppercase;
 	color: #444;
 	font-weight: 700;
-	letter-spacing:90%
+	letter-spacing:90%;
 }
 
 .navbar-toggle .menu-text {
@@ -107,14 +107,14 @@ body {
 
 .navbar-primary a {
 	font-family:'Roboto', Helvetica;
-	font-weight:100:
+	font-weight:100;
 	
 }
 
 .navbar-nav a {
 	font-family:'Roboto', sans-serif;
 	font-weight:100;
-	letter-spacing: .1em
+	letter-spacing: .1em;
 	
 } 
 
