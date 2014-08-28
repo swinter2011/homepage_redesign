@@ -13,6 +13,10 @@ body {
   padding-top: 70px;
 }
 
+#candidate {
+  padding-top: 90px;
+}
+
 /* START HEADER */
 .navbar-toggle .icon-bar {
 	background-color: #000
