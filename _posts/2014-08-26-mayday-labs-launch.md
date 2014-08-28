@@ -7,7 +7,7 @@ draft: false
 comments: true
 frontpage: true
 blurb: MAYDAY.US has broken new ground in online organizing.  To build on this momentum, we are announcing the creation of Mayday Labs.
-imageURL: /images/blog/maydaylabs.jpg
+imageURL: /images/blog/labCubes.jpg
 ---
 
 ### Launch of Mayday Labs
