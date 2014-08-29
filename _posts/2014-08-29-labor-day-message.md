@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Labor Day Message
+title: Labor Day
 pubdate: 2014-08-29
 author: Lessig
 draft: false
