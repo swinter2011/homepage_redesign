@@ -3,7 +3,7 @@ layout: post
 title: Labor Day Message
 pubdate: 2014-08-29
 author: Lessig
-draft: true
+draft: false
 comments: true
 frontpage: true
 blurb: Together, we have the power to fix this broken system and win our Democracy back ... nothing important is easy. And nothing could be as important as this.
