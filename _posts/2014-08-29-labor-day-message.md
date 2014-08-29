@@ -25,12 +25,15 @@ You and I both know that as long as our representatives are held hostage to thei
 
 Please watch and share with five friends in celebration of Labor Day and re-building a Democracy that we can be proud of.
 
+-Lessig 
+
 <div class="social" id="sidesocial">
   <div class="twitter"><a href="https://twitter.com/home?status=Nothing%20important%20is%20easy.%20And%20nothing%20could%20be%20as%20important%20as%20this.%20http%3A%2F%2Fyoutu.be%2FwmBGfmN6uEA%0A%23MaydayMovement" title="Share on Twitter" target="_blank"><span>Share on Twitter</span></a></div>
   <div class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=http://youtu.be/wmBGfmN6uEA" title="Share on Facebook" target="_blank"><span>Share on Facebook</span></a></div>
   <div class="email">
       <a href='mailto:?to=&subject=A%20Mayday%20call%20for%20our%20democracy&body=You%20and%20I%20both%20know%20that%20as%20long%20as%20our%20representatives%20are%20held%20hostage%20to%20their%20funders%20%E2%80%94%20and%20their%20funders%20are%20not%20all%20of%20us%20%E2%80%94%20our%20system%20will%20not%20work.%20But%20nothing%20important%20is%20easy.%20And%20nothing%20could%20be%20as%20important%20as%20this.%20%0A%0APlease%20watch%20this%20labor%20day%20message%20from%20MAYDAY.US%20and%20share%20it%20with%20five%20friends%20in%20celebration%20of%20Labor%20Day%20and%20re-building%20a%20Democracy%20that%20we%20can%20be%20proud%20of.%20http%3A%2F%2Fyoutu.be%2FwmBGfmN6uEA%20'
       target="_blank" title="Share with Email"><span>Share with Email</span></a>
+  </div>
 </div>
 
--Lessig 
+
