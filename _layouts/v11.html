@@ -71,7 +71,7 @@
           <div class="col-md-4"><h3><a href="" title="Latest Mayday PAC News">MAYDAY.US News</a></h3></div>
           <div class="col-md-4"><hr/></div>
         </div>
-				{% for post in site.posts %}
+        {% for post in site.posts limit:3 %}
           {% unless post.draft %}	  
             {% if post.frontpage %}
               <article class="col-md-4">
@@ -87,7 +87,7 @@
               </article>
              {% endif %}
            {% endunless %}	             
-			  {% endfor %}
+        {% endfor %}
       <hr />
     </div> <!-- /container -->
   </section>
