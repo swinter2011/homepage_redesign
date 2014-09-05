@@ -120,7 +120,7 @@ body {
   letter-spacing: .1em;
 }
 
-small /* header downward V */{
+.navbar-primary .navbar-nav>li>a small /* header downward V */{
   padding-left:5px;
   border-right: solid 1px #333;
   padding-right:20px ;
@@ -178,6 +178,7 @@ footer {
 .social-link.twitter {
   background-image: url('/images/link-twitter.png');
 }
+/* END FOOTER SECTION */
 
 .safeharbor {
   font: normal 1em/1.4 'Merriweather', Georgia, "Times New Roman", Times, serif;
@@ -197,7 +198,9 @@ footer {
   overflow: hidden;
   text-indent: -9999px
 }
-/* END FOOTER SECTION */
+.text-red {
+  color: #cc3333 !important;
+}
 
 
 
