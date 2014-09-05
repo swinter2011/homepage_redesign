@@ -4,6 +4,7 @@ title: PRESS RELEASE - Mayday.US Releases Senator Gordon Humphrey Endorsement Ad
 pubdate: 2014-09-05
 author: Lessig
 comments: true
+frontpage: true
 blurb: Today, Mayday.US released ads by former New Hampshire Senator Gordon Humphrey endorsing Jim Rubens for in the Republican Primary for Senate.
 imageURL: /images/blog/2014-09-05-humphery-endorsement-ad.jpg
 og_image: /images/blog/2014-09-05-humphery-endorsement-ad.jpg
