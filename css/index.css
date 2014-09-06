@@ -124,6 +124,7 @@
   .jumbotron-bottom h4 {
     font-family: 'Roboto', Helvetica, Arial, sans-serif;
     margin:0;
+    white-space: nowrap;
   }
   .jumbotron-bottom h4 span{
     display:inline-block;
@@ -150,6 +151,10 @@
     line-height: 1em;
     margin-top:5px;
   }
+  @media screen and (max-width: 1200px) {
+    .star-image{display:none;}
+  }
+
   .jumbotron-bottom p {
     margin: 12px 0 10px;
   }
@@ -164,7 +169,7 @@
     padding-top:5px;
   }
 
-  .progress-bar {
+  .progress-indicator {
     border-radius: 20px;
     border:3px solid #777;
     background:transparent;
@@ -174,19 +179,23 @@
 
     position: relative;
     display: block;
-  }
-
-  .progress-bar > span {
-    background: #999 url('/images/hero/blue-noise.jpg') 0 0;
-    border-radius: 20px;
-    padding:6px;
-    margin:2px 0 0 3px;
-
-    display: block;
-    height:29px;
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight:700;
     font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    color:#777;
+    text-align: center;
+  }
+
+  .progress-bar-count {
+    background: #999 url('/images/hero/blue-noise.jpg') 0 0;
+    border-radius: 20px;
+    /*padding:6px;*/
+    margin:2px auto auto 3px;
+
+    float:left;
+    height:29px;
+    color:#fff;
+    line-height: auto;
   }
 
 
@@ -327,4 +336,8 @@ article {
   .jumbotron .jumbotron-content{
     width:100%;
   }
+  .jumbotron-bottom h4 {
+    font-size:1.0em;
+  }
+
 }

@@ -62,7 +62,7 @@
       <div class="row">
         <div class="col-md-3">
           <h4>
-            <span class="count" id="js-count">3,000</span>
+            <span class="count" id="js-count">22,000</span>
             <span class="text">Still to go!</span>
           </h4>
         </div>
@@ -71,8 +71,10 @@
         </div>
         <div class="col-md-8 progress-wrap">
           <div class="col-md-9">
-            <div class="progress-bar">
-              <span style="width: 80%;"><span id="js-voters-called">7000</span> voters called!</span>
+            <div class="progress-indicator">
+              <span class="progress-bar-count" style="display:none">
+                <span id="js-voters-called-wrap"><span id="js-voters-called">2</span> voters called!</span>
+              </span>
             </div>
           </div>
           <div class="col-md-3">
@@ -130,9 +132,11 @@
     $.get('http://call.mayday.us/call_count', function(voters_called){
       $('#js-voters-called').text(numberWithCommas(voters_called));
       $('#js-count').text(numberWithCommas(calls_goal-voters_called));
-      var visible_precentage = Math.ceil(voters_called/calls_goal);
-      $('.progress-bar>span').prop('style','width:'+visible_precentage+'%')
-    })
+      var visible_percentage = Math.ceil((voters_called/calls_goal)*100);
+      $('.progress-bar-count').attr('style','min-width:5%;width:'+visible_percentage+'%');
+      if(visible_percentage<42){
+        $('.progress-indicator').append($('#js-voters-called-wrap'));
+      }
   })
   </script>
 
