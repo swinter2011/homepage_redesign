@@ -20,11 +20,13 @@
 
   <script src="/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
-  <link rel="stylesheet" href="/css/common.css?2">
+  <link rel="stylesheet" href="/css/common.css?3">
   <link rel="stylesheet" href="/css/index.css?8">
 
   <link href='//fonts.googleapis.com/css?family=Roboto:400,300,500,900' rel='stylesheet' type='text/css'>
   <link href='//fonts.googleapis.com/css?family=Merriweather:700,400,700italic' rel='stylesheet' type='text/css'>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  
   <!-- <link href='//fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'> -->
 </head>
 
@@ -129,7 +131,7 @@
   <script>
   $(document).ready(function(){
     var calls_goal = 22831;
-    $.get('http://call.mayday.us/call_count', function(voters_called){
+    $.get('https://mayday-d4d.herokuapp.com/call_count', function(voters_called){
       $('#js-voters-called').text(numberWithCommas(voters_called));
       $('#js-count').text(numberWithCommas(calls_goal-voters_called));
       var visible_percentage = Math.ceil((voters_called/calls_goal)*100);

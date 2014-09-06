@@ -60,11 +60,12 @@ body {
   width: 100%;
 }
 .navbar-primary .navbar-nav>li>a {
-  padding: 15px ;
+  padding: 13px 15px ;
   text-transform: uppercase;
   color: #444;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing:90%;
+  height: 45px;
 }
 
 .navbar-toggle .menu-text {
@@ -102,7 +103,7 @@ body {
 }
 .header-bg-2 {
   background: rgba(255,255,255,0.9);
-  height: 50px;
+  height: 45px;
   top: 26px
 }
 
@@ -202,7 +203,16 @@ footer {
   color: #cc3333 !important;
 }
 
+/* Darius CSS */
+.fa.fa-caret-down {
+	padding-right:20px;
+	padding-left:10px;
+  border-right:solid 1px #000;	
+}
 
+.nav>li>a:hover i{
+	border:none;
+}
 
 /* COLLAPSE THE MENU EARLY */
 @media (max-width: 1200px) {
