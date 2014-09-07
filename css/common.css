@@ -248,7 +248,10 @@ footer {
       padding-bottom: 10px;
   }
   .navbar-primary .collapse.in{
-    display:block !important;
+      display:block !important;
+  }
+  .fa.fa-caret-down {
+      border:0;
   }
 }
 
