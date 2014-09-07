@@ -252,3 +252,9 @@ footer {
   }
 }
 
+/* For iPad and smaller screens */
+@media (max-width: 768px) {
+  .navbar-primary {
+    padding-left:200px;
+  }
+}
