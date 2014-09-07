@@ -258,3 +258,16 @@ footer {
     padding-left:200px;
   }
 }
+
+/* For iPhone and smaller screens */
+@media (max-width: 320px) {
+    .navbar-primary {
+      padding-left:100px;
+    }
+    .navbar-brand {
+      width: 222px;
+      height: 70px;
+      top:10px;
+    }
+}
+
