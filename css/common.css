@@ -204,15 +204,23 @@ footer {
   color: #cc3333 !important;
 }
 
+.float-right{
+  float:right !important;
+}
+
+.float-left{
+  float:left !important;
+}
+
 /* Darius CSS */
 .fa.fa-caret-down {
-	padding-right:20px;
-	padding-left:10px;
-  border-right:solid 1px #000;	
+  padding-right:20px;
+  padding-left:10px;
+  border-right:solid 1px #000;
 }
 
 .nav>li>a:hover i{
-	border:none;
+  border:none;
 }
 
 /* COLLAPSE THE MENU EARLY */
