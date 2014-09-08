@@ -55,6 +55,8 @@
     border-radius: 0;
     float: left;
     margin-bottom: 10px;
+    box-shadow: 2px 2px 2px #bbb;
+    border: 1px solid #ccc;
   }
     .jumbotron .form-control[type="email"] {
       width: 60%;
