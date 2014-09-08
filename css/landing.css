@@ -24,8 +24,6 @@ a         { color: #00a; }
 a:hover   { color: #000; }
 a:visited { color: #a0a; }
 
-
-
 .inner {
   position: relative;
   margin: 0 auto;
@@ -45,17 +43,16 @@ a:visited { color: #a0a; }
   color: #fff;
 }
 
-
 #landing .stormflag {
   background: url('../images/full_header.jpg') no-repeat top center #0c151a;
   background-size: cover;
 }
 
 #brown-petition .stormflag {
-  background: url('../images/scott-brown-hq.png') no-repeat top center #0c151a;
+  background: url('../images/20140908-scott-brown-hq.png') no-repeat top center #0c151a;
   background-size: cover;
 }
-  
+
 #landing h1, #brown-petition h1 {
   font-size:32px;
 }
