@@ -45,12 +45,18 @@ a:visited { color: #a0a; }
   color: #fff;
 }
 
-.stormflag {
+
+#landing .stormflag {
   background: url('../images/full_header.jpg') no-repeat top center #0c151a;
   background-size: cover;
 }
+
+#brown-petition .stormflag {
+  background: url('../images/scott-brown-hq.png') no-repeat top center #0c151a;
+  background-size: cover;
+}
   
-#landing h1 {
+#landing h1, #brown-petition h1 {
   font-size:32px;
 }
 
@@ -84,23 +90,23 @@ a:visited { color: #a0a; }
   color: #999;
 }
 
-body#landing #hero {
+body#landing #hero, body#brown-petition #hero {
   height: 700px;
   color: #fff;
   padding: 30px;
   margin-top: -20px;
 }
 
-body#landing #hero h1{
+body#landing #hero h1, body#brown-petition #hero h1{
   color: #fff;
   font-size: 50px;
   font-weight: bold;
   margin-bottom: 60px;
 }
-body#landing div.email{
+body#landing div.email, body#brown-petition div.email{
   margin-top: 50px;
 }
-body#landing div.email input {
+body#landing div.email input, body#brown-petition div.email input {
   width: 255px;
   //border: 2px solid #d7e1e6;
   border: 3px solid  #666;
@@ -115,7 +121,8 @@ body#landing div.email input {
   padding: 0 10px;
   background: rgba(255,255,255,.7);
 }
-body#landing div.email button {
+
+body#landing div.email button, body#brown-petition div.email button {
 font-size: 26px;
 }
 #footer{
