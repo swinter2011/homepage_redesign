@@ -37,3 +37,6 @@ The ad is released just as new polling by Public Policy Polling, conducted betwe
 > Massachusetts doesn’t need a third Senator.
 > America needs new leadership.
 > Please, vote for Jim Rubens.
+
+#### <a href="/files/NHGOPTracker.pdf">Public Policy Polling Memo</a>
+

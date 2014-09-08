@@ -6,25 +6,28 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Mayday PAC</title>
+  <title>Mayday PAC</title>
   <meta name="description" content="MAYDAY.US - Democracy needs an upgrade. Act now.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta property="og:url" content="https://mayday.us/"/>
-  <meta property="og:image" content="https://mayday.us/images/ProfilePic.jpg"/>
-  <meta property="og:title" content="MAYDAY.US: Democracy needs an upgrade. Act now."/>
-  <meta property="og:description" content="Money has corrupted politics. Join MAYDAY.US - the movement to end this corruption."/>
-  
+  <meta property="og:image" content="https://mayday.us/images/rubens_fb_share.jpeg"/>
+  <meta property="og:title" content="MAYDAY: Democracy needs an upgrade. Act now."/>
+  <meta property="og:description" content="Help us get out the vote for our anti-corruption candidate @Jim Rubens for US Senate in the #nhsen Republican Primary on Tues. Call now: http://call.mayday.us"/>
+
   <link rel="stylesheet" href="/css/bootstrap.min.css">
   <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
 
   <script src="/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-  
-  <link rel="stylesheet" href="/css/common.css?1">
-  <link rel="stylesheet" href="/css/index.css?7">
+
+  <link rel="stylesheet" href="/css/common.css?3">
+  <link rel="stylesheet" href="/css/index.css?8">
 
   <link href='//fonts.googleapis.com/css?family=Roboto:400,300,500,900' rel='stylesheet' type='text/css'>
-  <link href='//fonts.googleapis.com/css?family=Merriweather:700,400,700italic' rel='stylesheet' type='text/css'>  
+  <link href='//fonts.googleapis.com/css?family=Merriweather:700,400,700italic' rel='stylesheet' type='text/css'>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  
+  <!-- <link href='//fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'> -->
 </head>
 
 <body>
@@ -33,35 +36,58 @@
   <![endif]-->
   {% include header.html %}
 
+<div class="jumbotron-wrap">
+
   <section class="jumbotron">
     <div class="container">
-      <h2>Congress is&nbsp;crippled<BR>by&nbsp;corruption</h2>
-      <h4>Let's&nbsp;save&nbsp;America&nbsp;from&nbsp;the&nbsp;cronies<BR>flooding&nbsp;cash into&nbsp;campaigns.</h4>
+      <div class="jumbotron-content">
+        <hr />
+        <h2>Make This Count</h2>
+        <p>Jim Rubens is the only Republican running for Senate who puts our issue front and center. Help Republicans send their party a message: voters care about corruption.</p>
+        <h5>Help Get Out The Vote</h5>
         <form action="https://pledge.mayday.us/r/subscribe" role="form" method="post" accept-charset="utf-8">
-          <input type="hidden" name="redirect" value="https://mayday.us/subscribe/" />
-          <input type="hidden" name="source" value="frontpage" />            
-          <div class="form-group">            
+          <input type="hidden" name="redirect" value="http://shpg.org/220/9198" />
+          <input type="hidden" name="source" value="rubenshome" />
+          <div class="form-group">
             <input type="email" name="email" placeholder="Email" class="form-control">
           </div>
-          <button type="submit" class="btn">Join the rescue! </button>
+          <button type="submit" class="btn">Join Us </button>
         </form>
+        <hr />
+      </div>
     </div>
   </section>
 
-  <section class="jumbotron-bottom">
+  <div class="jumbotron-bottom">
     <hr/>
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
-          <p>Let's win our democracy back!</p>
+        <div class="col-md-3">
+          <h4>
+            <span class="count" id="js-count">22,000</span>
+            <span class="text">Still to go!</span>
+          </h4>
         </div>
-        <div class="col-md-6">
-          <h2><span class="text-red">50,900+</span> have joined</h2>
+        <div class="col-md-1">
+          <span class="ir star-image">&nbsp;</span>
+        </div>
+        <div class="col-md-8 progress-wrap">
+          <div class="col-md-9">
+            <div class="progress-indicator">
+              <span class="progress-bar-count" style="display:none">
+                <span id="js-voters-called-wrap"><span id="js-voters-called">2</span> voters called!</span>
+              </span>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h5><span class="text-red">22,831</span> Goal</h5>
+          </div>
         </div>
       </div>
     </div>
     <hr/>
-  </section>
+  </div>
+</div>
 
   <section class="cross-stitched latest-news">
     <div class="container">
@@ -72,7 +98,7 @@
           <div class="col-md-4"><hr/></div>
         </div>
         {% for post in site.posts limit:3 %}
-          {% unless post.draft %}	  
+          {% unless post.draft %}
             {% if post.frontpage %}
               <article class="col-md-4">
                 <div>
@@ -86,7 +112,7 @@
                 </div>
               </article>
              {% endif %}
-           {% endunless %}	             
+           {% endunless %}
         {% endfor %}
       <hr />
     </div> <!-- /container -->
@@ -99,9 +125,24 @@
 
   <script src="/js/vendor/bootstrap.min.js"></script>
 
-  <script src="/js/plugins.js"></script>
-	<script src="https://cdn.optimizely.com/js/210578001.js"></script>
-  
+  <script src="/js/plugins.js?1"></script>
+  <script src="https://cdn.optimizely.com/js/210578001.js"></script>
+
+  <script>
+  $(document).ready(function(){
+    var calls_goal = 22831;
+    $.get('https://mayday-d4d.herokuapp.com/call_count', function(voters_called){
+      $('#js-voters-called').text(numberWithCommas(voters_called));
+      $('#js-count').text(numberWithCommas(calls_goal-voters_called));
+      var visible_percentage = Math.ceil((voters_called/calls_goal)*100);
+      $('.progress-bar-count').attr('style','min-width:5%;width:'+visible_percentage+'%');
+      if(visible_percentage<42){
+        $('.progress-indicator').append($('#js-voters-called-wrap'));
+      }
+    });
+  });
+  </script>
+
   <script>
     (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
     function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
@@ -109,12 +150,12 @@
     e.src='//www.google-analytics.com/analytics.js';
     r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
 
-		ga('create', 'UA-50367295-1', 'mayday.us');
-		ga('require', 'displayfeatures');
-		window.optimizely = window.optimizely || [];
-		window.optimizely.push("activateUniversalAnalytics");
-		ga('send', 'pageview');
-    
+    ga('create', 'UA-50367295-1', 'mayday.us');
+    ga('require', 'displayfeatures');
+    window.optimizely = window.optimizely || [];
+    window.optimizely.push("activateUniversalAnalytics");
+    ga('send', 'pageview');
+
   </script>
 </body>
 </html>
