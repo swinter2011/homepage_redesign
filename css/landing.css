@@ -100,10 +100,10 @@ body#landing #hero h1, body#brown-petition #hero h1{
   font-weight: bold;
   margin-bottom: 60px;
 }
-body#landing div.email, body#brown-petition div.email{
+body#landing div.email{
   margin-top: 50px;
 }
-body#landing div.email input, body#brown-petition div.email input {
+body#landing div.email input{
   width: 255px;
   //border: 2px solid #d7e1e6;
   border: 3px solid  #666;
@@ -119,12 +119,11 @@ body#landing div.email input, body#brown-petition div.email input {
   background: rgba(255,255,255,.7);
 }
 
-body#landing div.email button, body#brown-petition div.email button {
+body#landing div.email button{
 font-size: 26px;
 }
 #footer{
   margin-top: 20px;
-  
 }
 .jumbotron{
   //opacity:0.5;
