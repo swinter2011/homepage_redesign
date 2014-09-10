@@ -3,7 +3,7 @@
 }
 
 .jumbotron-wrap{
-  background: transparent url('/images/hero/2014-09-05-jim-rubens.jpg') no-repeat 0 0;
+  background: transparent url('/images/campaigns/20140908-scott-brown-small.jpg') no-repeat center center;
   padding-top: 100px;
   background-size: cover;
   /*overflow: hidden;*/
@@ -16,7 +16,8 @@
 }
 
   .jumbotron .jumbotron-content{
-    width:60%;
+    width:40%;
+    float:right;
   }
   .jumbotron h2 {
     color: #000000;
