@@ -191,8 +191,16 @@ li.step.active {
 		font-size: 18px;
 		
 	}
-
-	
+}
+/* iPhone screens */
+@media (max-width: 320px){
+    .jumbotron {
+        margin-top:40px;
+    }
+    #pledgeTopBar h3 {
+        margin-top:15px;
+        font-size:3em;
+    }
 }
 .step-2-container{
 display:none;
