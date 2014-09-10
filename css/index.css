@@ -337,13 +337,16 @@ article {
   }
   .jumbotron-bottom {
     margin-top: 0px;
-    height:200px;
   }
   .jumbotron .jumbotron-content{
     width:100%;
   }
   .jumbotron-bottom h4 {
     font-size:1.0em;
+  }
+
+  .news-intro{
+    padding:0;
   }
 
 }
