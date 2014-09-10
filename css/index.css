@@ -332,6 +332,9 @@ article {
 }
 
 @media screen and (max-width: 800px) {
+  .jumbotron > .container{
+    background: rgba(255,255,255,0.8);
+  }
   .jumbotron-bottom {
     margin-top: 0px;
     height:200px;
