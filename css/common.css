@@ -60,11 +60,12 @@ body {
   width: 100%;
 }
 .navbar-primary .navbar-nav>li>a {
-  padding: 15px ;
+  padding: 13px 15px;
   text-transform: uppercase;
   color: #444;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing:90%;
+  height: 45px;
 }
 
 .navbar-toggle .menu-text {
@@ -102,8 +103,8 @@ body {
 }
 .header-bg-2 {
   background: rgba(255,255,255,0.9);
-  height: 50px;
-  top: 26px
+  height: 45px;
+  top: 26px;
 }
 
 
@@ -148,6 +149,7 @@ footer {
 }
 .donate-wrap hr {
   border-color: #666;
+  margin:0;
 }
 .donate-wrap .container {
   padding-top: 20px;
@@ -201,10 +203,24 @@ footer {
 .text-red {
   color: #cc3333 !important;
 }
+.float-right{
+  float:right !important;
+}
 
+.float-left{
+  float:left !important;
+}
 
+/* Darius CSS */
+.fa.fa-caret-down {
+  padding-right:20px;
+  padding-left:10px;
+  border-right:solid 1px #000;
+}
 
-
+.nav>li>a:hover i{
+  border:none;
+}
 
 /* COLLAPSE THE MENU EARLY */
 @media (max-width: 1200px) {
@@ -242,5 +258,27 @@ footer {
   .navbar-primary .collapse.in{
     display:block !important;
   }
+  .fa.fa-caret-down {
+      border:0;
+  }
+}
+
+/* For iPad and smaller screens */
+@media (max-width: 768px) {
+  .navbar-primary {
+    padding-left:200px;
+  }
+}
+
+/* For iPhone and smaller screens */
+@media (max-width: 320px) {
+    .navbar-primary {
+      padding-left:100px;
+    }
+    .navbar-brand {
+      width: 222px;
+      height: 70px;
+      top:10px;
+    }
 }
 

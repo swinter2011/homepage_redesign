@@ -10,16 +10,16 @@
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" id="googlefonts-css" type="text/css" media="all" href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|Lato:400,700&amp;subset=latin" />
 
-  <link rel="stylesheet" href="/css/common.css?2">
+  <link rel="stylesheet" href="{{ '/css/common.css' | md5_cache_bust }}">
 
-  <link rel="stylesheet" href="/css/style.css?7" />
-  <link rel="stylesheet" href="/css/sidebar.css " />
+  <link rel="stylesheet" href="{{ '/css/style.css' | md5_cache_bust }}">
+  <link rel="stylesheet" href="{{ '/css/sidebar.css' | md5_cache_bust }}">
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Questrial" />
 
-  <link rel="stylesheet" href="/css/reset.css" />
-  <link rel="stylesheet" href="/css/v9green.css?5" />
+  <link rel="stylesheet" href="{{ '/css/reset.css' | md5_cache_bust }}">
+  <link rel="stylesheet" href="{{ '/css/v9green.css' | md5_cache_bust }}">
 
 
   <meta property="og:url" content="https://mayday.us{{ page.url }}"/>
@@ -37,11 +37,12 @@ https://mayday.us/images/ProfilePic.jpg{% endif %}"/>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script src="//c.shpg.org/220/sp.js"></script>
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script src="//cdn.optimizely.com/js/210578001.js"></script>
     <script async src="/js/v8.js?6"></script>
-    <script  src="/js/plugins.js?6"></script>
+    <script  src="/js/plugins.js?7"></script>
 
   {% include analytics.html %}
   <script src="https://www.google.com/moderator/static/moderator-embed-api.js" type="text/javascript"></script>
