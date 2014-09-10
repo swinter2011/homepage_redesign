@@ -23,11 +23,10 @@
   <link rel="stylesheet" href="{{ 'common.css' | md5_cache_bust }}">
   <link rel="stylesheet" href="{{ 'index.css' | md5_cache_bust }}">
 
-
   <link href='//fonts.googleapis.com/css?family=Roboto:400,300,500,900' rel='stylesheet' type='text/css'>
   <link href='//fonts.googleapis.com/css?family=Merriweather:700,400,700italic' rel='stylesheet' type='text/css'>
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-  
+
   <!-- <link href='//fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'> -->
 </head>
 
@@ -43,17 +42,17 @@
     <div class="container">
       <div class="jumbotron-content">
         <hr />
-        <h2>Make This Count</h2>
-        <p>Jim Rubens is the only Republican running for Senate who puts our issue front and center. Help Republicans send their party a message: voters care about corruption.</p>
-        <h5>Help Get Out The Vote</h5>
-        <form action="https://pledge.mayday.us/r/subscribe" role="form" method="post" accept-charset="utf-8">
+        <h2>Scott Brown is a Lobbyist.</h2>
+        <p>Lawrence Lessig, co-founder of Mayday.US, has called out Scott Brown for being "lobbyist." But Scott Brown calls Lessig a "liar," because he wasnt "registered." Join us in demanding a debate!</p>
+        <h5><a href="https://mayday.us/campaigns/of-course-brown-is-a-lobbyist/" class="text-red">Sign the petition calling for a debate!</a></h5>
+        <!-- <form action="https://pledge.mayday.us/r/subscribe" role="form" method="post" accept-charset="utf-8">
           <input type="hidden" name="redirect" value="http://shpg.org/220/9198" />
           <input type="hidden" name="source" value="rubenshome" />
           <div class="form-group">
             <input type="email" name="email" placeholder="Email" class="form-control">
           </div>
           <button type="submit" class="btn">Join Us </button>
-        </form>
+        </form> -->
         <hr />
       </div>
     </div>
@@ -61,12 +60,12 @@
 
   <div class="jumbotron-bottom">
     <hr/>
-    <div class="container">
-      <div class="row">
+    <div class="container" style="padding-top:0;padding-bottom:0">
+      <!-- <div class="row">
         <div class="col-md-3">
           <h4>
-            <span class="count" id="js-count">22,000</span>
-            <span class="text">Still to go!</span>
+            <span class="count" id="js-count">4,000</span>
+            <span class="text">Calls to go!</span>
           </h4>
         </div>
         <div class="col-md-1">
@@ -81,10 +80,10 @@
             </div>
           </div>
           <div class="col-md-3">
-            <h5><span class="text-red">22,831</span> Goal</h5>
+            <h5><span class="text-red">5,000</span> Goal</h5>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
     <hr/>
   </div>
@@ -98,9 +97,11 @@
           <div class="col-md-4"><h3><a href="" title="Latest Mayday PAC News">MAYDAY.US News</a></h3></div>
           <div class="col-md-4"><hr/></div>
         </div>
-        {% for post in site.posts limit:3 %}
+        {% assign counter = '.' %}
+        {% for post in site.posts limit:6 %}
           {% unless post.draft %}
-            {% if post.frontpage %}
+            {% if post.frontpage and counter.size <= 3 %}
+              {% capture counter %}{{ counter | append:'.' }}{% endcapture %}
               <article class="col-md-4">
                 <div>
                   <h5 class="blog-image ir" style="background-image:url('{{ post.imageURL }}');">Heading</h5>
@@ -131,7 +132,7 @@
 
   <script>
   $(document).ready(function(){
-    var calls_goal = 22831;
+    var calls_goal = 5000;//22831;
     $.get('https://mayday-d4d.herokuapp.com/call_count', function(voters_called){
       $('#js-voters-called').text(numberWithCommas(voters_called));
       $('#js-count').text(numberWithCommas(calls_goal-voters_called));
