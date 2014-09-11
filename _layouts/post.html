@@ -2,49 +2,50 @@
 <html>
   {% include head.html %}
   <body id="{{page.cssid}}" class="default-body">
-	{% include header.html %}
-		  <!--Container for Head-->
-	<div class="rally full-width">  	
-	<div class="container">
-		 <div class="row">
-		          <div class="subpage-content col-md-8">
-		          <div style="text-align:right;"><a href="/feed.xml"><img src="/images/rss.png"></a></div>
-		          	<h1>{{ page.title }}</h1>
-		          		<H5>{{ page.author }}&nbsp;&mdash;&nbsp;{{ page.pubdate }}</H5>
-		          		{{content | markdownify}}
-		          		<BR /><Hr />
-		          		{% if page.comments %}
- 							 {% include discus_code.html %}
-						{% endif %}
+    {% include header.html %}
+    <!--Container for Head-->
+    <div class="rally full-width">
+      <div class="container">
 
-		          		<br /><hr />
-		          		<H3>Other posts:</H3>
-							<ul>
-								{% for post in site.posts %}
-								  <LI>
-								    <a href="{{ post.url }}">{{ post.pubdate}}&nbsp;&mdash;&nbsp;{{ post.title }}</a>
-								   </LI>
-							   {% endfor %}
-							</ul>
+        <div class="row">
+          <div class="subpage-content col-md-8">
+            <div style="text-align:right;"><a href="/feed.xml"><img src="/images/rss.png"></a></div>
+            <h1>{{ page.title }}</h1>
+            <h5>{{ page.author }}&nbsp;&mdash;&nbsp;{{ page.pubdate }}</h5>
+            {{content | markdownify}}
+            <br /><hr />
+            {% if page.comments %}
+            {% include discus_code.html %}
+            {% endif %}
 
-					</div>
-		          <div class="col-md-4">
-                            {% include pledgeform-newpledge.html %}
-                            {% include pledge-rules.html %}
-                          </div>
-		      </div>
-		  
-		</div>
-		</div>
+            <br /><hr />
+            <h3>Other posts:</h3>
+            <ul>
+              {% for post in site.posts %}
+                <li>
+                  <a href="{{ post.url }}">{{ post.pubdate}}&nbsp;&mdash;&nbsp;{{ post.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
 
-		{% include footer.html %}
-		  <!-- /container -->
+          </div>
+          <div class="col-md-4">
+            {% include pledgeform-newpledge.html %}
+            {% include pledge-rules.html %}
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    {% include footer.html %}
+    <!-- /container -->
 
 
-		    <!-- Bootstrap core JavaScript
-		    ================================================== -->
-		    <!-- Placed at the end of the document so the pages load faster -->
-		  </body>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  </body>
 </html>
 
 
