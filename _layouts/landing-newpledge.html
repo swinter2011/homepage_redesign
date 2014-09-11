@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   {% include head.html %}
-  <link rel="stylesheet" href="{{ '/css/landing-newpledge.css' | md5_cache_bust }}" />
+  <link rel="stylesheet" href="/{{ 'css/landing-newpledge.css' | md5_cache_bust }}" />
   <script src="//cdn.optimizely.com/js/210578001.js"></script>
   <body id="{{page.cssid}}" class="default-body">
     {{ content }}
