@@ -1,0 +1,67 @@
+<style type="text/css">
+.jumbotron-wrap{
+  background-image: url('/images/campaigns/20140910-6-to-go.jpg');
+  background-position: center;
+  height: 600px;
+  background-color: #25282d;
+  position: relative;
+}
+.jumbotron-bottom{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+
+@media screen and (min-width: 800px) {
+  .jumbotron h2,
+  .jumbotron p{
+    color:rgba(255,255,255,0.7);
+  }
+  .jumbotron hr{
+    border-color:rgba(255,255,255,0.7);
+  }
+  .jumbotron .form-control{
+    box-shadow:none;
+  }
+}
+@media screen and (max-width: 800px) {
+  .jumbotron-wrap{
+    background-image: url('/images/campaigns/20140910-6-to-go-small.jpg');
+  }
+  .jumbotron > .container{
+    background: rgba(255,255,255,0.8);
+  }
+  .jumbotron-wrap{
+    height: auto;
+  }
+
+}
+</style>
+<div class="jumbotron-wrap">
+  <section class="jumbotron">
+    <div class="container">
+      <div class="jumbotron-content">
+        <hr />
+        <h2>The Race is On.</h2>
+        <p>Mayday is electing candidates who champion reducing the influence of big money in politics. But we need your help.</p>
+        <h5><a href="https://mayday.us/campaigns/of-course-brown-is-a-lobbyist/" class="text-red">Commit to join the #MaydayMovement</a></h5>
+        <form action="https://pledge.mayday.us/r/subscribe" role="form" method="post" accept-charset="utf-8">
+          <input type="hidden" name="redirect" value="http://shpg.org/220/9220" />
+          <input type="hidden" name="source" value="brownlobbyist" />
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Email" class="form-control">
+          </div>
+          <button type="submit" class="btn">Sign Now</button>
+        </form>
+        <hr />
+      </div>
+    </div>
+  </section>
+
+  <div class="jumbotron-bottom">
+    <hr/>
+    <div class="container" style="padding-top:0;padding-bottom:0"></div>
+    <hr/>
+  </div>
+</div>
