@@ -6,14 +6,19 @@
   background-color: #25282d;
   position: relative;
 }
-.jumbotron-bottom{
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
 
+  .jumbotron .col-md-7 > .ir{
+    display:block;
+    width:100%;
+    height:500px;
+  }
+  .jumbotron-bottom{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 992px) {
   .jumbotron h2,
   .jumbotron p{
     color:rgba(255,255,255,0.7);
@@ -24,8 +29,15 @@
   .jumbotron .form-control{
     box-shadow:none;
   }
+  .jumbotron .jumbotron-content{
+    margin-top:20px;
+  }
+  .jumbotron-wrap{
+    padding-top: 0;
+    margin-top: 50px;
+  }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 992px) {
   .jumbotron-wrap{
     background-image: url('/images/campaigns/20140910-6-to-go-small.jpg');
   }
@@ -35,13 +47,18 @@
   .jumbotron-wrap{
     height: auto;
   }
-
+  .jumbotron .col-md-7  > .ir{
+    display: none;
+  }
 }
 </style>
 <div class="jumbotron-wrap">
   <section class="jumbotron">
     <div class="container">
-      <div class="jumbotron-content">
+      <div class="col-md-7">
+        <a href="/factsheet/" title="Candidates Factsheet" class="ir">&nbsp;</a>
+      </div>
+      <div class="jumbotron-content col-md-5">
         <hr />
         <h2>The Race is On.</h2>
         <p>Mayday is electing candidates who champion reducing the influence of big money in politics. But we need your help.</p>
