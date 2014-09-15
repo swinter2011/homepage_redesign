@@ -218,10 +218,6 @@ footer {
   border-right:solid 1px #000;
 }
 
-.nav>li>a:hover i{
-  border:none;
-}
-
 /* COLLAPSE THE MENU EARLY */
 @media (max-width: 1200px) {
   .navbar-primary .navbar-header {
