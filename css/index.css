@@ -65,10 +65,22 @@
     .jumbotron .form-control.zip {
       width: 80px;
     }
-    .jumbotron .form-control::-webkit-input-placeholder {color: #bbb; font-weight: 700; }
-    .jumbotron .form-control:-moz-placeholder {color: #bbb; font-weight: 700; }
-    .jumbotron .form-control::-moz-placeholder {color: #bbb; font-weight: 700;  opacity: 1; }
-    .jumbotron .form-control:-ms-input-placeholder {color: #bbb; font-weight: 700;  opacity: 1; }
+    .jumbotron .form-control::-webkit-input-placeholder {
+      color: #222;
+      opacity: 0.4;
+    }
+    .jumbotron .form-control:-moz-placeholder {
+      color: #222;
+      opacity: 0.4;
+    }
+    .jumbotron .form-control::-moz-placeholder {
+      color: #222;
+      opacity: 0.4;
+    }
+    .jumbotron .form-control:-ms-input-placeholder {
+      color: #222;
+      opacity: 0.4;
+    }
 
   .jumbotron .btn {
     background-color: #cc3333;
