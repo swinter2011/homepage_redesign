@@ -69,7 +69,10 @@ body {
     background-color: rgba(255,255,255,0.8);
   }
   .navbar-primary .navbar-nav>li>a small {
-    vertical-align: top
+    vertical-align: top;
+    padding-left:5px;
+    border-right: solid 1px #333;
+    padding-right:20px ;
   }
   .dropdown-menu {
     border: 0;
@@ -107,11 +110,6 @@ body {
   font-family:'Roboto', sans-serif;
   font-weight:100;
   letter-spacing: .1em;
-}
-.navbar-primary .navbar-nav>li>a small /* header downward V */{
-  padding-left:5px;
-  border-right: solid 1px #333;
-  padding-right:20px ;
 }
 
 
@@ -187,10 +185,15 @@ footer {
 .float-right{
   float:right !important;
 }
-
 .float-left{
   float:left !important;
 }
+.cross-stitched {
+  width: 100%;
+  background: transparent url('/images/bg-crossstitch.jpg');
+  padding-bottom: 60px
+}
+
 
 /* Darius CSS */
 .fa.fa-caret-down {

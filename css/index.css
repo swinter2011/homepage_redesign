@@ -6,19 +6,12 @@
   background:  transparent url('') no-repeat center center;
   padding-top: 100px;
   background-size: cover;
-  /*overflow: hidden;*/
 }
-
 .jumbotron {
   margin-bottom: 0;
   padding-top:0;
   background:transparent;
 }
-
-  .jumbotron .jumbotron-content{
-    width:40%;
-    float:right;
-  }
   .jumbotron h2 {
     color: #000000;
     font-family: 'Roboto', Helvetica, Arial, sans-serif;
