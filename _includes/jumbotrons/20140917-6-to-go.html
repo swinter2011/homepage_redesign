@@ -16,13 +16,14 @@
     width: 100%;
   }
 
+
 @media screen and (min-width: 992px) {
   .jumbotron h2,
   .jumbotron p{
-    color:rgba(255,255,255,0.7);
+    color:rgba(255,255,255,0.9);
   }
   .jumbotron hr{
-    border-color:rgba(255,255,255,0.7);
+    border-color:rgba(255,255,255,0.9);
   }
   .jumbotron .form-control{
     box-shadow:none;
@@ -38,6 +39,7 @@
   }
   .jumbotron > .container{
     background: rgba(255,255,255,0.8);
+    margin-top: 50px;
   }
   .jumbotron-wrap{
     padding-top: 50px;
@@ -63,7 +65,7 @@
           <input type="hidden" name="redirect" value="http://shpg.org/220/9220" />
           <input type="hidden" name="source" value="" />
           <div class="form-group">
-            <input type="email" name="email" placeholder="Email" class="form-control">
+            <input type="email" name="email" placeholder="Email" class="form-control" required />
           </div>
           <button type="submit" class="btn">Join Now</button>
         </form>

@@ -42,7 +42,7 @@
     border-top:3px solid #111;
   }
   .jumbotron .form-control {
-    background: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.6);
     color: #222;
     margin-right: 15px;
     border: 0;
@@ -52,6 +52,17 @@
     box-shadow: 2px 2px 2px #bbb;
     border: 1px solid #ccc;
   }
+    .jumbotron .form-control.error{
+      border:1px solid #cc3333;
+    }
+    .jumbotron label.error{
+      position: absolute;
+      left: 15px;
+      bottom: 16px;
+      color: #cc3333;
+      font-size: 14px;
+    }
+    @media screen and (max-width: 991px) {.jumbotron label.error{ bottom: -3px;} }
     .jumbotron .form-control[type="email"] {
       width: 60%;
     }

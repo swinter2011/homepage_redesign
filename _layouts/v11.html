@@ -79,6 +79,23 @@
   <script src="https://cdn.optimizely.com/js/210578001.js"></script>
 
   <script>
+    $(document).ready(function(){
+      $(".jumbotron-content form").validate({
+        rules: {
+          email: {
+                required: true,
+                email: true
+              }
+          }, errorPlacement: function(error, element) {
+              error.appendTo(element.parents('form'));
+          },
+        });
+    });
+  </script>
+
+  {{footer_after_js}}
+
+  <script>
     (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
     function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
     e=o.createElement(i);r=o.getElementsByTagName(i)[0];
