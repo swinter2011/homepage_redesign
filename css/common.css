@@ -159,19 +159,18 @@ footer {
     .social-link.twitter {
       background-image: url('/images/link-twitter.png');
     }
+  .safeharbor{
+    font: normal 1em/1.4 'Merriweather', Georgia, "Times New Roman", Times, serif;
+    display: inline-block;
+    color: #aaa;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px 10px 0 10px;
+    border: 2px solid #aaa;
+    font-variant: small-caps;
+    margin-bottom:10px;
+  }
 /* END FOOTER SECTION */
-
-.safeharbor {
-  font: normal 1em/1.4 'Merriweather', Georgia, "Times New Roman", Times, serif;
-  display: inline-block;
-  color: white;
-  text-align: center;
-  font-size: 16px;
-  padding: 10px 10px 0 10px;
-  border: 2px solid white;
-  font-variant: small-caps;
-  margin-bottom:10px;
-}
 
 .ir/* Image replacement: header social share, footer FB/Twitter */ {
   background-color: transparent;
