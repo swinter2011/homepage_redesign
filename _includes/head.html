@@ -21,12 +21,17 @@
   <link rel="stylesheet" href="/{{ 'css/reset.css' | md5_cache_bust }}">
   <link rel="stylesheet" href="/{{ 'css/v9green.css' | md5_cache_bust }}">
 
-
+  {% unless page.meta_content %}
   <meta property="og:url" content="https://mayday.us{{ page.url }}"/>
   <meta property="og:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}
 https://mayday.us/images/ProfilePic.jpg{% endif %}"/>
   <meta property="og:title" content="{% if page.og_title %}{{ page.og_title }}{% else %}MAYDAY: Democracy needs an upgrade. Act now.{% endif %}"/>
   <meta property="og:description" content="{% if page.og_description %}{{ page.og_description }}{% else %}Money has corrupted politics. We’re kickstarting a political experiment big enough to win a Congress committed to fundamental reform -- Join us!{% endif %}"/>
+  {% else %}
+    {{ page.meta_content }}
+  {% endunless %}
+  {{ metacontent }}
+
   {% if page.twitter_image %}
     <meta property="twitter:card" content="photo" />
     <meta property="twitter:image" content="{{page.twitter_image}}" />
