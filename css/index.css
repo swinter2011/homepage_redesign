@@ -12,9 +12,13 @@
   padding-top:0;
   background:transparent;
 }
-  .jumbotron h2 {
-    color: #000000;
+  .jumbotron h2,
+  .jumbotron h5,
+  .jumbotron p{
     font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  }
+  .jumbotron h2{
+    color: #000000;
     text-transform: uppercase;
     font-weight: 900;
     font-size: 310%;
@@ -28,14 +32,10 @@
     color:#494C5F
   }
   .jumbotron h5 {
-    font-family: 'Roboto', Helvetica, Arial, sans-serif;
     color: #cc3333;
     font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
-  }
-  .jumbotron p{
-    font-family: 'Roboto', Helvetica, Arial, sans-serif;
   }
   .jumbotron hr{
     border:none;
@@ -69,22 +69,10 @@
     .jumbotron .form-control.zip {
       width: 80px;
     }
-    .jumbotron .form-control::-webkit-input-placeholder {
-      color: #222;
-      opacity: 0.4;
-    }
-    .jumbotron .form-control:-moz-placeholder {
-      color: #222;
-      opacity: 0.4;
-    }
-    .jumbotron .form-control::-moz-placeholder {
-      color: #222;
-      opacity: 0.4;
-    }
-    .jumbotron .form-control:-ms-input-placeholder {
-      color: #222;
-      opacity: 0.4;
-    }
+    .jumbotron .form-control::-webkit-input-placeholder {color: #222; opacity: 0.4}
+    .jumbotron .form-control:-moz-placeholder {color: #222; opacity: 0.4}
+    .jumbotron .form-control::-moz-placeholder {color: #222; opacity: 0.4}
+    .jumbotron .form-control:-ms-input-placeholder {color: #222; opacity: 0.4}
 
   .jumbotron .btn {
     background-color: #cc3333;
@@ -145,23 +133,23 @@
     margin:0;
     white-space: nowrap;
   }
-  .jumbotron-bottom h4 span{
-    display:inline-block;
-    vertical-align: middle;
-  }
-  .jumbotron-bottom h4 span.count{
-    font-size:2.3em;
-    font-weight: 400;
-  }
-  .jumbotron-bottom h4 span.text{
-    display:inline-block;
-    color:#cc3333;
-    padding:0 0 6px;
-    font-weight: 700;
-    text-transform: uppercase;
-    border-bottom:4px solid #999;
-    margin: 0 0 0 20px;
-  }
+    .jumbotron-bottom h4 span{
+      display:inline-block;
+      vertical-align: middle;
+    }
+    .jumbotron-bottom h4 span.count{
+      font-size:2.3em;
+      font-weight: 400;
+    }
+    .jumbotron-bottom h4 span.text{
+      display:inline-block;
+      color:#cc3333;
+      padding:0 0 6px;
+      font-weight: 700;
+      text-transform: uppercase;
+      border-bottom:4px solid #999;
+      margin: 0 0 0 20px;
+    }
   .star-image{
     width:42px;
     height:42px;
