@@ -10,6 +10,11 @@
     bottom: 0;
     width: 100%;
   }
+  .jumbotron .col-md-8 > .ir{
+    display:block;
+    width:100%;
+    min-height: 290px
+  }
   .jumbotron h2,
   .jumbotron p{
     color:#232a50;
@@ -56,12 +61,18 @@
   .jumbotron-wrap{
     padding-top: 30px;
   }
+  .jumbotron .col-md-8 > .ir{
+    display: none;
+  }
 }
 </style>
 <div class="jumbotron-wrap">
   <section class="jumbotron">
     <div class="container">
-      <div class="jumbotron-content col-md-offset-8 col-md-4">
+     <div class="col-md-8">
+        <a href="https://mayday.us/campaigns/maydayin30/" title="Candidates Factsheet" class="ir">&nbsp;</a>
+      </div>
+      <div class="jumbotron-content col-md-4">
         <hr />
         <h2>Enter The Contest</h2>
         <!-- <h5>Enter Now: </h5> -->
