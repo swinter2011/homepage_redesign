@@ -1,6 +1,6 @@
 <style type="text/css">
 .jumbotron-wrap{
-  background-image: url('/images/hero/20140922_maydayin30.jpg');
+  background-image: url('/images/hero/20140922_maydayin30_v3.jpg');
   background-position: center;
   background-color: #25282d;
   position: relative;
@@ -19,6 +19,10 @@
   }
   .jumbotron p{
     text-shadow: 0 0 3px #fff;
+  }
+
+  .jumbotron .form-control[type="email"]{
+    width:50%;
   }
 
 
@@ -43,16 +47,14 @@
 }
 @media screen and (max-width: 991px) {
   .jumbotron-wrap{
-    background-position: top right;
-    background-size: auto;
+    background-image: url('/images/hero/20140922_maydayin30_v2_small.jpg');
   }
   .jumbotron > .container{
     background: rgba(255,255,255,0.9);
     margin-top: 50px;
   }
   .jumbotron-wrap{
-    padding-top: 50px;
-    margin-top: 30px
+    padding-top: 30px;
   }
 }
 </style>
@@ -65,7 +67,7 @@
         <!-- <h5>Enter Now: </h5> -->
         <p>Make a 30-second video ad for national TV #MAYDAYin30</p>
         <form action="https://pledge.mayday.us/r/subscribe" role="form" method="post" accept-charset="utf-8">
-          <input type="hidden" name="redirect" value="http://shpg.org/220/9220" />
+          <input type="hidden" name="redirect" value="https://mayday.us/campaigns/maydayin30/" />
           <input type="hidden" name="source" value="" />
           <div class="form-group">
             <input type="email" name="email" placeholder="Email" class="form-control" required />
